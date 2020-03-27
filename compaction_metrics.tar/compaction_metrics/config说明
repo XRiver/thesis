@@ -1,0 +1,62 @@
+leg:
+    legacy
+    stream control不限
+    Memtable.size = 2097152     （2MB）——每个L0文件与experimental一致
+    compression level = -,-,-,-
+    bloom level = -,-,-,-
+    pick.file=4,4,8,2		
+    file.size=16,16,2048,8192		(MB)
+
+exp1: —— 25min
+    experimental
+    stream control不限
+    Memtable.size=10485760		(10MB)
+    split count = 5
+    compression level = -,-,-,-
+    bloom level = -,-,-,-
+    pick.file=4,4,8,2		
+    file.size=16,16,2048,8192		(MB)
+
+exp2:
+    配置同exp1，改进了Metrics，增加一些自动计算项目
+
+exp3：—— 23min
+    在exp2的基础上，memtable.size与split.count翻倍，即memtable为20MB， 分10片，每个L0文件预期为2MB
+
+exp4:
+    在exp3的基础上，改用2号策略
+
+exp5:   sf1单shard压力测试（仅本次测试为sf1，其他均为sf10）
+    加入单次输入容量限制：限制mainWrappers总大小 / viceWrappers总大小的比例（可以直接对应为设置了RA的下限）
+    CompactionTimeout保持与之前一样为5000ms，replica=1
+    可以观察到：
+        L0 compaction调度经常被L1的所阻塞。现实用时28min，但是L0的单线程compaction只调度了18.4min
+        从memtable全部flush完成后，在被L1阻塞时，L0的compaction调度动力主要就靠CompactionTimeoutEvent
+    我认为单shard测试随机性较大，可能遭遇多shard中L0 compaction被迫等待L1，也可能不遭遇。所以此测试意义不大。
+
+exp6:  sf10
+    使用exp5中加入的策略，重新进行性能测试. 
+    可以看到在leader shard基本可以保持没有L0 Segment积压。L0 compaction速度与写memtable的写入和flush速度差不多。这与exp4是一样的。
+    只是由于导入程序是在lev1上运行的，还是多线程，导致lev1的worker没有线程可用，lev1严重滞后。
+    但即使不考虑lev1的情况，也发现lev3上的一部分leader的L0由于L1阻塞而调度很不积极，300+的segment数与旁边shard的个位数对比鲜明。
+    RA从exp4的80%变为90%，仍可以接受。
+
+exp7:
+    在exp6的基础上，调度时先检查L1相邻文件间的row key间隔能否直接放入L0 compaction task
+    从metrics观察到“使用0个viceWrapper”的compaction task数目依然稀少，此变更影响很有限，但有帮助性能提升的潜力，值得保留；
+    同时依然可以观察到大约1/3的shard存在L0调度受阻的情况（当然是由于L1的compaction所致）
+
+exp8:
+    在exp7基础上，最后一层改为row key不重叠；而且在handleCompactionTimeoutEvent中，加入了一厢情愿的shuffle，有可能有帮助。
+    测试数据与exp7相同，被明显阻塞的shard数目没有减少，于是不保存此次测试性能数据。
+    将GRAPH_COMPACTION_LEVELED_THREAD_NUMBERS改为15,4,4,6重新测试，看能否在前中期尽量提高L0 compaction容量。
+    过程中观察到L0同时使用到超过8个线程的时间极少，原来的线程应该没有被线程数所限制。所得的测试数据与exp基本相同。
+
+exp9：
+    GRAPH_COMPACTION_LEVELED_THREAD_NUMBERS改为15,15,4,6；
+    改良输入大小控制条件，在避免过大输入的同时，避免由于偶尔单个L1文件过小导致不能生成compaction plan
+    可以观察到不再存在“一小部分shard L0 compaction受阻”的情况，compaction线程利用率较高；
+    随着导入脚本运行完成，L0 compaction也完成（compaction速度比导入脚本后期写入速度快），其他Level的文件数也正常，一直在使用旧式compaction策略
+    至此可以确定“L0 compaction受阻”是由不合理的输入限制+随机出现的L1小文件导致的，受阻后一直等待L1的LeftTimeout与L0的更多数据。
+    从性能数据上面看，总体RA率有所升高，在导入脚本降速之前（导入脚本是每个线程parse一个csv，但是一些较短的csv一段时间后消耗完，就只有几个线程还在parse剩的长csv），
+    RA可以保持80~85%，降速之后，RA逐步上升，最终变为将近120%。不过RA并不是目的，当数据变少，RA上升是意料中的，只要compaction速度跟得上就没有问题。

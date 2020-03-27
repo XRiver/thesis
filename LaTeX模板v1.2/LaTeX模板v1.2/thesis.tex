@@ -1,0 +1,236 @@
+%%]dvipdfm
+\documentclass[twoside, master, review]{NJUthesis}
+%\documentclass[twoside, master]{NJUthesis}
+
+% 可选参数：
+%   review 审阅模式，激活后个人、导师与学校信息均被隐去
+%   oneside/twoside 单面/双面打印
+%   phd/master 博士/硕士论文
+% 下面三个选一个：
+% dvi2pdf 使用 dvi2pdf(x) 生成最终的 PDF 文档 (缺省设置，不建议修改）
+% dvips 使用 dvips 生成最终的 PS 文档
+% pdftex 使用 pdfLaTeX 生成最终的 PDF 文档
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 导言区
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 小节标题靠左对齐
+\CTEXsetup[format+={\flushleft}]{section}
+
+% 设置链接颜色
+\hypersetup{
+% pdf 属性
+             pdftitle={LaTeX Thesis Template of Nanjing University}, %
+            pdfauthor={San Zhang}
+}
+
+% 表格
+\usepackage{longtable, multirow}
+% 英文使用 Times 字体
+\usepackage{times}
+% 源代码
+\usepackage{fancyvrb}
+% 自定义列表样式
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{moreverb}
+\usepackage{txfonts}
+\usepackage{mathcomp}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage[linesnumbered,boxed,ruled,vlined]{algorithm2e}
+\usepackage{array}
+\usepackage{multirow}
+
+%%	added by Jiang
+\usepackage{extarrows}	%使用长箭头
+\usepackage{nomencl}	%与术语表有关的包
+\usepackage{booktabs}
+\usepackage{ccmap}
+
+
+\makenomenclature
+
+\setcounter{topnumber}{5}
+
+\theoremstyle{plain}
+\newtheorem{definition}{\hspace{2em}定义}[chapter]
+\newtheorem{lemma}{\hspace{2em}引理}[chapter]
+\newtheorem{theorem}{\hspace{2em}定理}[chapter]
+\newtheorem{property}{\hspace{2em}性质}[chapter]
+\newtheorem{example}{\hspace{2em}例}[chapter]
+\newtheorem{myrule}{\hspace{2em}规则}[chapter]
+
+
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}% 表格内换行
+\renewcommand{\footnoterule}{%脚注线
+  \kern -3pt
+  \hrule width 2.3in height 0.4pt
+  \kern 2pt
+}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 封面部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 国家图书馆封面内容字符串
+% 仅博士需要填写并保证模板参数选择了 phd
+\classification{}
+\confidential{}
+\UDC{}
+\titlelinea{南京大学学位论文}
+\titlelineb{~\LaTeX{}~模板}
+\titlelinec{}
+\advisorinfo{南京大学~软件学院}
+\chairman{XXX 教授}
+\reviewera{某某某某　副研究员}
+\reviewerb{XXX 教授}
+\reviewerc{XXX 教授}
+\reviewerd{XXX 教授}
+\nlcfootdate{~年~~月~~日}
+
+% 南大中文封面内容字符串
+\title{图数据库StellarDB存储模块性能优化的设计实现}
+\author{\kaishu 徐江河}
+\studentnum{MF1832198}
+\grade{2020}
+\advisor{\kaishu 邵栋~~教授}
+
+\major{\kaishu 工程硕士（软件工程领域）}
+\researchfield{\kaishu 软件工程}
+\footdate{\kaishu2020~年~2~月}
+\submitdate{\kaishu2020~年~2~月~27~日}
+\defenddate{\kaishu20xx~年~x~月~xx~日}
+
+
+
+% 英文封面内容字符串
+\englishtitle{The Design and Implementation of a Performance Optimization on Storage Module of a Graph Database}
+\englishauthor{Jianghe Xu}
+\englishadvisor{Advisor Title}
+\englishadvisorname{~~Dong Shao}
+\englishinstitute{Software Institute}
+\englishdegree{Master of Engineering}
+\englishmajor{Software Engineering}
+\englishdate{Feb 2020}
+
+% 制作封面命令
+\maketitle
+
+%\makechinesetitle
+
+% 制作英文封面命令
+\makeenglishtitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 前言部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+
+\begin{abstract}
+
+今天，图数据库由于其在现实生产生活场景中的建模优势、在关系查找方面的性能优势，称为越来越炙手可热的软件产品。国内外许多软件厂商都在推出自己的图数据库产品。StellarDB是星环公司的图存储引擎，可以与其他组件配合，实现图存储、图分析、图可视化等重要功能。
+
+StellarDB存储引擎采用日志结构合并树（Log-Structured Merge-Tree，下称LSM树）数据结构作为底层数据存储方式。但是，在实际部署过程中，遭遇了“高并发写入之后读请求响应超时”的问题。本文介绍了对问题的分析过程，对flush算法与compaction算法的联合创新性优化方案的设计与实现，并展示了优化过程中的多次性能测试结果，从中解释算法逐步优化的根据与效果。另外，本文通过对StellarDB的存储模块进行抽象简化，实现了一个存储模块模拟程序，用于再次测试、验证优化算法的有效性。
+
+经过优化，StellarDB在高并发写入情况下compaction遭遇性能瓶颈的问题已经解决，数据文件可以在LSM树种顺畅流动到底层。目前优化后算法已经在StellarDB中稳定运行约半年，证明了其稳定性。
+  
+
+%这是注释，不影响正文
+
+\keywords{图数据库，StellarDB，日志结构合并树，flush，compaction}
+
+\end{abstract}
+
+% 英文摘要
+\begin{englishabstract}
+Nowadays, graph database is becoming more and more popular because of its advantage in modeling real life and performance advantage in relationship search. Many software companys, countrywide or worldwide, are building their own graph database systems. StellarDB is the graph storage engine of Transwarp Inc. Combined with other Transwarp products, it can support various big data analysis requirements, including graph storage, graph analysis, graph visualization, etc..
+
+StellarDB storage engine adopted Log-Structured Merge-Tree(i.e. LSM-tree) as its underlying data structure for record storage. However, during deployment and tests on clients' hosts, performance issues were encountered that read requests timeouted after high concurrency write operation. The thesis introduces the analyze process on the issue and the design and implementation of a combined innovative optimization on flush algorithm and compaction algorithm. Then the thesis demostrated results of performance tests during the optimization process, explaining the evidences on which the optimization was based. Moreover, the thesis implemented an simulator of the storage module for more testing and verification of the influence of the new algorithms.
+
+After this optimization, the performance bottleneck of StellarDB performing compaction under  high concurrency write operation was successfully solved. Now the data files can be compacted to the bottom level of LSM-tree easily. The optimized algorithm has been running in deployed StellarDB instances for about 6 months, which proved its steadiness.
+
+
+\englishkeywords{Graph database, StellarDB, Log-Structured Merge-Tree, flush, compaction}
+\end{englishabstract}
+
+% 生成目录命令（目录中不包含目录本身）
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+\tableofcontents
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+
+
+% 以下两个目录可根据具体情况注释掉（将表格目录和图形目录重命名后加入目录）
+% 生成表格目录命令
+\renewcommand*{\listtablename}{表~~目~~录}
+\listoftables
+\addcontentsline{toc}{chapter}{表~~目~~录}
+% 生成插图目录命令
+\renewcommand*{\listtablename}{图~~目~~录}
+\listoffigures
+\addcontentsline{toc}{chapter}{图~~目~~录}
+
+%生成术语表命令
+%\include{chapter/Nomenclatures}
+%\def\nomname{缩略语对照表}
+%\printnomenclature[5em]
+\hyphenation{mem-table Mem-table Graph-Shard trans-warp graph-search com-pac-tion Com-pac-tion Compaction-Handler Compaction-Executor Flush-Handler Flush-Executor}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+\input{chapter/c1.tex}
+\input{chapter/c2.tex}
+\input{chapter/c3.tex}
+\input{chapter/c4.tex}
+\input{chapter/c5.tex}
+
+% 参考文献
+
+\bibliography{reference}
+
+
+
+%个人简介
+\Nchapter{简历与科研成果}
+\noindent {\heiti 基本情况}
+\vspace{1ex}
+\noindent 徐江河，男，汉族，1996~年~3~月出生，山东省淄博市人。
+\vspace{2ex}
+
+\noindent {\heiti 教育背景}
+\begin{description}[labelindent=0em, leftmargin=8em, style=sameline]
+\item[2018.9～2020.6] 南京大学软件学院 \hfill 硕士
+\item[2014.9～2018.7] 南京大学软件学院 \hfill 本科
+\end{description}
+% 发表文章目录
+
+
+\backmatter
+
+
+\begin{thanks}
+
+\vskip 18pt
+
+在本篇论文完成之际，也就意味着我在南京大学软件学院的学习生涯也将要结束了。我要向曾经帮助过我的导师、同学和朋友致以最诚挚的感谢。首先要感谢我的论文指导老师邵栋老师。在整个论文写作的过程中，邵老师对我耐心帮助，在论文不足之处他总是及时耐心地提出修改和优化的建议。每一次和邵老师交谈，我都能感受到邵老师作为师长的责任与担当。邵老师对待学术严谨的态度和平易近人的生活作风深深的影响着我，使我受益终身。
+
+
+同时，我要感谢实习期间给予我帮助的"buddy"王志平和公司给予我帮助的所有同事们。他们在项目完成和技术指导上给了我很大的帮助，感谢他们在忙于工作的同时还能抽出时间对我进行指导。这段经历，我相信在我以后的工作生活中一定会有很大的借鉴意义。
+
+最后我要感谢南京大学软件学院和南京大学软件学院所有的教职工人员。是他们为能来到南京软件学院读研的同学们提供了一个开放的包容的成长环境，他们高远的学术视野和严谨的工作作风深深的影响着每一个南京大学软件学院的学子们。在南京读硕士的这两年，让我对自己的认识更清晰，对自己的未来更有信心。谢谢大家！
+
+\end{thanks}
+
+
+\end{document}
+
+

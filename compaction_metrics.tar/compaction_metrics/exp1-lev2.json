@@ -1,0 +1,129 @@
+{
+    "requestTime": 0,
+    "data": {
+        "resultDataType": 3,
+        "value": {
+            "0": {
+                "BeforeLevelIds": [
+                    0,
+                    1
+                ],
+                "maxTotalBeforeFileSize(MB)": 188.88196563720703,
+                "totalDeltaFileSize(MB)": -14183.461294174194,
+                "maxDeltaFileSize(MB)": -0.027479171752929688,
+                "compactionTimeByViceWrapperSize": {
+                    "0": 4898,
+                    "1": 1414966,
+                    "2": 2563082,
+                    "3": 3547444,
+                    "4": 2233625,
+                    "5": 131300
+                },
+                "maxCompactionCost(ms)": 46413,
+                "maxTotalBeforeFileNumber": 74,
+                "AfterLevelId": 1,
+                "totalBeforeFileSizes(MB)": [
+                    18690.47301387787,
+                    28937.841632843018
+                ],
+                "totalAfterFileNumber": 2762,
+                "totalCompactionCount": 1153,
+                "totalCompactionCost(ms)": 9895315,
+                "minDeltaFileSize(MB)": -116.74235248565674,
+                "compactionCountByViceWrapperSize": {
+                    "0": 34,
+                    "1": 396,
+                    "2": 300,
+                    "3": 296,
+                    "4": 122,
+                    "5": 5
+                },
+                "totalBeforeFileNumbers": [
+                    9653,
+                    2397
+                ],
+                "totalAfterFileSize(MB)": 33444.85335254669
+            },
+            "1": {
+                "BeforeLevelIds": [
+                    1,
+                    2
+                ],
+                "maxTotalBeforeFileSize(MB)": 182.69460487365723,
+                "totalDeltaFileSize(MB)": 24.87666606903076,
+                "maxDeltaFileSize(MB)": 1.6139240264892578,
+                "compactionTimeByViceWrapperSize": {
+                    "0": 326760,
+                    "2": 190360,
+                    "3": 253858,
+                    "4": 416091,
+                    "5": 180974,
+                    "6": 381289,
+                    "7": 271941,
+                    "8": 116225,
+                    "9": 63141
+                },
+                "maxCompactionCost(ms)": 63141,
+                "maxTotalBeforeFileNumber": 13,
+                "AfterLevelId": 2,
+                "totalBeforeFileSizes(MB)": [
+                    3638.9981956481934,
+                    3207.585235595703
+                ],
+                "totalAfterFileNumber": 475,
+                "totalCompactionCount": 75,
+                "totalCompactionCost(ms)": 2200639,
+                "minDeltaFileSize(MB)": -0.2991065979003906,
+                "compactionCountByViceWrapperSize": {
+                    "0": 26,
+                    "2": 9,
+                    "3": 9,
+                    "4": 11,
+                    "5": 4,
+                    "6": 8,
+                    "7": 5,
+                    "8": 2,
+                    "9": 1
+                },
+                "totalBeforeFileNumbers": [
+                    300,
+                    217
+                ],
+                "totalAfterFileSize(MB)": 6871.460097312927
+            },
+            "lastUpdateTimestamp": "2019-06-17 04:53:15",
+            "2": {
+                "BeforeLevelIds": [
+                    2,
+                    -1
+                ],
+                "maxTotalBeforeFileSize(MB)": 127.46998882293701,
+                "totalDeltaFileSize(MB)": -25.840479850769043,
+                "maxDeltaFileSize(MB)": -1.621830940246582,
+                "compactionTimeByViceWrapperSize": {
+                    "0": 170163
+                },
+                "maxCompactionCost(ms)": 12723,
+                "maxTotalBeforeFileNumber": 8,
+                "AfterLevelId": 3,
+                "totalBeforeFileSizes(MB)": [
+                    1769.5297498703003,
+                    0
+                ],
+                "totalAfterFileNumber": 15,
+                "totalCompactionCount": 15,
+                "totalCompactionCost(ms)": 170163,
+                "minDeltaFileSize(MB)": -1.858388900756836,
+                "compactionCountByViceWrapperSize": {
+                    "0": 15
+                },
+                "totalBeforeFileNumbers": [
+                    120,
+                    0
+                ],
+                "totalAfterFileSize(MB)": 1743.6892700195312
+            }
+        }
+    },
+    "messageCode": 601
+}

@@ -1,0 +1,106 @@
+\chapter{StellarDB存储模块的分析与设计}
+
+StellarDB是一款包含了图可视化、API外部调用、自我监控管理等丰富功能的数据库系统，可以与星环科技的多款大数据分析软件协作。本章，我们主要分析其存储模块（即图~\ref{structure-overview}中的Distributed Graph Storage Engine），并介绍其核心设计：采用LSM树数据结构进行数据存储。
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=5in]{FIGs/c3/StellarDB-structure.jpg}
+  \caption{StellarDB宏观架构图}\label{structure-overview}
+\end{figure}
+
+\section{StellarDB存储模块功能与协作}
+
+StellarDB使用Java与Scala语言开发，其存储模块位于io.transwarp.graphsearch.storage程序包。存储模块承接消息处理模块的读写请求，完成异步处理之后发送回复。存储模块同时可以向一些星环产品提供越过正常请求机制的改动存储的接口，以实现一些提高计算速度的底层优化。
+
+存储模块内部包含了基于Raft一致性协议的多副本热备份功能，使得一份写入请求可以应用到多台主机上。当一台主机失效，上层的消息处理模块可以检测到失效的发生，从而将Master地位的主机进行切换，使得客户的读写请求处理不受影响。
+
+在底层，存储模块直接通过文件系统控制对磁盘的读写。存储模块拥有对多块磁盘的使用率平衡功能，使各块磁盘的负载比较均匀，避免负载不均带来的请求处理瓶颈。
+
+\section{StellarDB存储模块内部设计简述}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=5in]{FIGs/c3/storage-overview.png}
+  \caption{StellarDB存储模块外部协作关系}\label{storage-overview}
+\end{figure}
+
+图~\ref{storage-inner}是经过简化后的存储模块核心类设计。图中的箭头表示了单台主机写入数据过程中的数据流动过程。下面以写入过程为例说明StellarDB存储模块内部各类交互过程。
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=5in]{FIGs/c3/storage-inner.pdf}
+  \caption{StellarDB存储模块内部协作关系简述}\label{storage-inner}
+\end{figure}
+
+首先，上层的消息处理模块把封装为写入事件的数据发送给GraphDB。在StellarDB中，数据库的每一个图对应一个GraphDB实例。为了实现上文提到的磁盘读写均衡功能，每一个图被划分成多个GraphShard，而数据记录会被按照其哈希值分配到对应的GraphShard中。同一张图的不同GraphShard可以拥有不同磁盘上的的数据存储路径。这样就通过数据的分桶实现了磁盘的充分利用。
+
+StellarDB的多副本备份的单位就是GraphShard。在GraphShard类中，包含了Raft消息同步机制。Raft帮助GraphShard将从GraphDB收到的写入事件在多个主机的同一个GraphShard之间进行同步。所以GraphShard并不会在收到GraphDB传来的写入事件之后立即将事件解析为写入数据。写入动作实际上是由Raft master在集群间同步的写入事件触发的。
+
+通过Raft协议收到了写入事件之后，GraphShard会将数据写入自己的Memtable。虽然LSM树存储是基于磁盘的，但StellarDB选择先将写入数据缓存在内存中，也就是Memtable类，之后通过flush过程将缓存的数据写到磁盘，将其纳入LSM树的维护机制中。CompactionHandler通过定期检查机制与flush、compaction的自动触发对于本GraphShard的LSM树状态进行即时检查。如果发现了进行compaction的需要，CompactionHandler就会启动compaction任务，使数据流向LSM树下层，或者使LSM树最下层的文件合并。
+
+LSM树存储结构帮助StellarDB实现了读写事件的处理与数据维护过程的异步化。这使得频繁写入操作对于读取操作的性能变得较小。如果能够实现高效的flush、compaction算法，充分利用硬件的性能维护LSM树存储，数据库便可以同时应对高并发的写入与读取请求。
+
+\section{LSM树的基本维护方式}
+
+StellarDB将图的点或边都以键值对的形式作为记录存储，其中主键是字节数组，可以排序；对于数据的额外写入操作，比如修改点或边的属性值、删除某点或边，StellarDB也会把它作为拥有对应的主键的键值对来存储。这样一来，每一条数据的所有写入历史都能够对应LSM树的一个节点。在StellarDB中，数据存储文件称为Segment；在Segment中，数据按照其主键依序存储。所以，Segment就成为了LSM树中的一棵子树。
+
+如图~\ref{LSMT-basic}是StellarDB某GraphShard的数据在磁盘上的分布示例。逻辑上，数据文件被划分在4层中，L0为上层，拥有最新写入的数据；L3为下层，拥有时间上最早写入的数据。如果对于某一条记录A在创建后，又将其删除，那么就可能在下层有“创建A”的一条记录，在上层有“删除A”的一条记录。
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=5in]{FIGs/c3/LSMT-basic-sample.pdf}
+  \caption{某Shard内数据文件分布示意图}\label{LSMT-basic}
+\end{figure}
+
+记录被划分在L0到L3的不同层次中，对应着节点分布在LSM树的不同高度。最下层的记录，位于LSM树的根；而刚刚写入的记录，则是LSM树的叶节点。需要从LSM树中搜索、读取某一条记录时，就从下层开始查找其主键，一直找到上层，将找到的所有写入记录按照时间顺序合并，就可以得到最新状态的这条记录。这就是从LSM树中读取数据的方法。
+
+显然，在数据库系统的长期运行中，对于某个主键对应的记录，可能会有许多次写入操作。一方面，如果把所有操作记录都存储起来，在查找、合并的时候时间开销会很大，也会占用大量磁盘空间；另一方面，数据的逻辑分层也应该有一定的限制，无限制扩充分层也会给LSM树的维护带来麻烦。所以需要将对于一条记录的操作过程压缩合并，删除无用的历史状态，仅保留最新状态。这种压缩合并的过程便称为compaction。
+
+如图~\ref{compaction-sample-1} ，在L1与L2各有两个数据文件，分隔开的区域表示其中包含的记录，数字表示主键。对于许多主键，L1与L2中都包含与之对应的写入记录。比如对于主键为3的查询，（暂时不考虑可能存在的其他层次）就需要从Segment-3与Segment-1中分别查询到它的写入记录，合并得到最终结果。
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=5in]{FIGs/c3/compaction-detail-sample-1.pdf}
+  \caption{Compaction操作-原状态}\label{compaction-sample-1}
+\end{figure}
+
+如果我们想要减少文件数目，压缩存储空间，就需要用新的写入记录去合并或覆盖旧的记录。我们希望将Segment-2消除，将其中的记录全部合并进入下层，就需要找到所有包含有重叠的主键的L2数据文件，把他们当成数据源，在L2中生成一个新的文件Segment-5. 如图~\ref{compaction-sample-2}，对于L2中原有的旧条目，我们用来自L1的新纪录将其覆盖，同时保持记录在文件中按主键排序。这样，我们就可以删除三个源文件，只保留一个生成文件。值得注意的是，StellarDB会保持同一层（L0除外）内的各个数据文件彼此记录的主键互不重叠，这样，每次从上下两层取用进行compaction操作的数据文件也在逻辑上是“相邻的”，生成的新的数据文件也就不会与没被取用的数据文件有主键上的范围重叠。
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=5in]{FIGs/c3/compaction-detail-sample-2.pdf}
+  \caption{Compaction操作-操作结果}\label{compaction-sample-2}
+\end{figure}
+
+\section{优化模拟测试程序}
+
+对于下一章描述的算法优化，除了在StellarDB中实际的实现与验证，本文还实现了一个对于优化的模拟程序，用于在更严格的条件控制之下测试优化算法效果。
+
+\subsection{目标}
+
+StellarDB使用模拟数据在集群环境上进行测试虽然可以展示最接近实际生产环境下的优化效果，但是由于系统内部高度异步化，实际的数据处理能力会受到集群负载的显著影响。当集群同时有其他数据库实例运行，CPU与磁盘负载较大时，性能测试获取的数据容易出现波动的情况。所以为了验证“新实现的flush算法与compaction算法的优化确实能够降低写入过程中的读写扩大”，应当使用事件处理具有确定性的系统模拟StellarDB的算法优化，在一个稳定的计算环境中进行测试，观察读写扩大是否真的发生了改变。
+
+\subsection{功能设计}
+
+程序应对StellarDB存储模块进行抽象简化，去除：
+
+\begin{enumerate}
+    \item 多副本备份功能
+    \item 多图多GraphShard管理功能
+    \item 异步响应客户读写请求功能
+    \item 对于LSM结构进行持久化的功能
+\end{enumerate}
+
+保留：
+
+\begin{enumerate}
+  \item 对LSM树的基本读写功能
+  \item LSM树的版本管理功能
+  \item flush功能，包括实现基于跳表的内存缓冲区
+  \item compaction功能
+  \item compaction性能统计功能，包含读写数据量的详细统计
+\end{enumerate}
+
+\section{本章小结}
+
+本章介绍了StellarDB的存储模块的设计，包括模块功能、内部协作、LSM树的维护方式。这为下一章的性能问题分析铺垫了背景。本章也介绍了对于优化模拟测试程序的设计目的与预期效果的说明。

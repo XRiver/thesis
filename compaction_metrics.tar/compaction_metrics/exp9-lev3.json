@@ -1,0 +1,118 @@
+{
+    "requestTime": 0,
+    "data": {
+        "resultDataType": 3,
+        "value": {
+            "lastUpdateTimestamp": "2019-06-26 02:48:22",
+            "singleMetric": {
+                "BeforeLevelIds": [
+                    0,
+                    1
+                ],
+                "maxTotalBeforeFileSize(MB)": 104.80795860290527,
+                "totalDeltaFileSize(MB)": -14207.116648674011,
+                "maxDeltaFileSize(MB)": 0,
+                "maxCompactionCost(ms)": 28109,
+                "compactionTimeByViceSegmentCount": {
+                    "0": 56602,
+                    "1": 6786366,
+                    "2": 1371415,
+                    "3": 1169,
+                    "4": 29574
+                },
+                "consumeMainSizeByViceSegmentCount": {
+                    "0": 1466.745994567871,
+                    "1": 15039.357192993164,
+                    "2": 2122.726643562317,
+                    "3": 9.845779418945312,
+                    "4": 10.59142017364502
+                },
+                "maxTotalBeforeFileNumber": 43,
+                "AfterLevelId": 1,
+                "totalBeforeFileSizes(MB)": [
+                    18649.267030715942,
+                    22230.715507507324
+                ],
+                "totalAfterFileNumber": 3696,
+                "consumeViceSizeByViceSegmentCount": {
+                    "0": 0,
+                    "1": 18598.95520401001,
+                    "2": 3546.013129234314,
+                    "3": 5.979889869689941,
+                    "4": 79.76728439331055
+                },
+                "totalCompactionCount": 3047,
+                "totalCompactionCost(ms)": 8245126,
+                "conclusion": {
+                    "avgFileSize": {
+                        "vice": 7.227150685145424,
+                        "main": 1.3516900072998437
+                    },
+                    "avgFileConsume": {
+                        "avgTotalViceCount": 1.0095175582540203,
+                        "For compactions that used 0 vice segments": {
+                            "avgMainCount": 3.9218241042345277,
+                            "avgCompactionTime": 184,
+                            "avgViceSize": 0,
+                            "totalCompactionCount": 307,
+                            "avgMainSize": 4.777674249406746
+                        },
+                        "For compactions that used 4 vice segments": {
+                            "avgMainCount": 4.333333333333333,
+                            "avgCompactionTime": 9858,
+                            "avgViceSize": 26.589094797770183,
+                            "totalCompactionCount": 3,
+                            "avgMainSize": 3.5304733912150064
+                        },
+                        "For compactions that used 3 vice segments": {
+                            "avgMainCount": 5,
+                            "avgCompactionTime": 1169,
+                            "avgViceSize": 5.979889869689941,
+                            "totalCompactionCount": 1,
+                            "avgMainSize": 9.845779418945312
+                        },
+                        "avgTotalMainSize": 6.120533977917933,
+                        "For compactions that used 2 vice segments": {
+                            "avgMainCount": 4.113846153846154,
+                            "avgCompactionTime": 4219,
+                            "avgViceSize": 10.910809628413274,
+                            "totalCompactionCount": 325,
+                            "avgMainSize": 6.53146659557636
+                        },
+                        "avgTotalMainCount": 4.528060387266163,
+                        "For compactions that used 1 vice segments": {
+                            "avgMainCount": 4.661136457901286,
+                            "avgCompactionTime": 2814,
+                            "avgViceSize": 7.714207882210705,
+                            "totalCompactionCount": 2411,
+                            "avgMainSize": 6.237808873078873
+                        },
+                        "ReadAmplificationRate": 1.1920423183867022,
+                        "avgTotalViceSize": 7.295935512801878
+                    }
+                },
+                "consumeMainCountByViceSegmentCount": {
+                    "0": 1204,
+                    "1": 11238,
+                    "2": 1337,
+                    "3": 5,
+                    "4": 13
+                },
+                "minDeltaFileSize(MB)": -66.7489242553711,
+                "totalBeforeFileNumbers": [
+                    13797,
+                    3076
+                ],
+                "totalAfterFileSize(MB)": 26672.865889549255,
+                "compactionCountByViceSegmentCount": {
+                    "0": 307,
+                    "1": 2411,
+                    "2": 325,
+                    "3": 1,
+                    "4": 3
+                }
+            }
+        }
+    },
+    "messageCode": 601
+}

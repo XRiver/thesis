@@ -1,0 +1,47 @@
+\chapter{技术综述}
+
+本章介绍StellarDB存储引擎系统在设计与开发过程中用到的相关理论和技术。由于StellarDB是数据库，在应用中位于底层，所以使用的技术偏向数据结构与算法，而开源框架一类的较少。
+
+\section{Log-Structured Merge-Tree数据结构}
+
+日志结构合并树（Log-Structured Merge-tree，下文称LSM树）是基于磁盘的数据结构，旨在在长期运行过程中在文件上提供记录的高频率插入和删除，以及低成本索引。 LSM树使用延迟和批量索引更改的算法，将更改从内存中的组件通过一个或多个磁盘组件进行级联。这种高效的方式类似于到合并排序。在此过程中，所有索引值都可以通过内存组件或磁盘组件连续访问。相比B树等传统访问方法，该算法大大减少了磁盘臂的移动。LSM树还可以推广到其他操作，比如插入和删除。
+~\cite{DBLP:journals/acta/ONeilCGO96}
+
+包括Google Bigtable、Apache Cassandra等数据库都采用了LSM树作为数据存储结构。
+~\cite{CompactionInCass}
+StellarDB也采用LSM树作为数据记录的存储结构。StellarDB目前没有支持使用多种磁盘组件的级联，数据仅在逻辑上有额外的层次划分。StellarDB将数据从内存组件向磁盘的流动操作称为flush，将数据在磁盘中多个逻辑分层之间的流动称为compaction。这两种操作是维护LSM树的主要操作，其具体算法将在本文第三章详细说明。
+
+
+\section{Raft一致性协议}
+
+为了保证多副本数据最终状态一致，StellarDB使用Raft一致性协议作为多副本的协调机制，并利用Raft的日志（log）来短期备份写入的数据。
+
+\subsection{Raft概念}
+
+Raft是由Diego Ongaro与John Ousterhout的一篇论文~\cite{DBLP:conf/usenix/OngaroO14}中所提出的分布式存储一致性算法。在分布式系统中，为了防止服务器数据由于只存一份而导致在服务时由于一个存储节点故障就产生服务完全不可用或数据丢失的严重后果，数据的存储会有多个备份副本，分别存储于不同的存储服务器上，都可以提供服务。这样一来，如果有合适的算法能保障各服务器对同一份数据存储的内容一致，并且在一台服务的存储服务器故障时，这个集群能以适当的逻辑切换到其他正常服务器提供服务，那么就可以实实在在地保障分布式存储服务的质量。Raft就是为这样的系统服务的。
+
+\subsection{Raft的特点}
+
+简单易学。Paxos算法由Leslie Lamport发表于1990年，是当时最实用的分布式存储一致性算法。~\cite{DBLP:journals/tocs/Lamport98}而Raft是由Paxos简化得来。Diego Ongaro与John Ousterhout指出：经过对比，学生学习Paxos所需时间明显长于学习Raft所需时间。
+
+最终一致性。存储一致性根据对于各个服务器的同一份数据之间允许差异的严格程度不同，可以分为强一致性、最终一致性、弱一致性。根据“CAP定理”，一个分布式系统不能同时保障一致性（Consistency）、可用性（Availability）与分区容错性（Partition tolerence）。但是经过权衡，系统可以达到“BASE”效果：基本可用（Basically available）、软状态（Soft state）、最终一致性（Eventually consistent）。Raft所达到的最终一致性，是指各节点上的数据在经过足够的时间之后，最终会达到一致的状态。
+
+\subsection{Raft的选举}
+
+Raft集群各机之间的RPC报文可分为两种：添加条目RPC（AppendEntries RPC，以下简称AE）与请求投票RPC（RequestVote RPC，以下简称RV）。AE是leader用来向follower加entry使用的。RV是“候选人"（candidate，是除了leader、follower以外的第三种状态，只出现于选举时）用来向其他follower要求给自己投票的。
+
+如果超过一定时间，follower检测不到来自leader的周期性心跳消息（leader将不含实际entry的AE作为心跳使用），就会变为candidate状态。此时，Raft集群就会开始选举leader。在Raft中，时间上有着term的概念，表示一个leader的统治期；每个term有着独特的递增的序号，称为term ID。leader会在自己发送的AE中都附上自己的term ID。当新的candidate产生，它会在上一个leader的term ID基础上加1，作为自己的term ID，并在广播给所有其他机的RV中也附上新的term ID。任何非candidate的节点收到了带有比自己已经见过的任何ID更大的term ID的RV时，就会回复这个RV，并更新“自己已经见过的最大ID”。如果同时这个RV中说明的candidate含有的日志足够新（详细说明见下一小节），follower就会为这个candidate投票。这样一来，任何节点就都不会为同一个term ID投两票。如果一个candidate收到了足够的票数（票数加上自己的一票能够占集群的多数），就会开始发送心跳，宣告自己在这个term内的leader地位，开始服务。
+
+由于在一个leader失效时，可能有多个follower超时的时刻相同，发出RV广播的时刻也大致相同，结果在新term都得不到足够的票数，所以candidate存在等票超时与随机等待机制，避免一致冲突，选不出leader。candidate在等足够的票时当然也会看有没有其他candidate宣布胜利。如果都没有发生的话，在一段超时后，candidate们会再开启新term ID，但会随机等待一段时间，然后才广播RV请求投票（广播RV前相当于follower，可以投票）。由于随机等待的时间有长有短，最终一定会由率先结束等待的candidate获胜。
+
+\subsection{Raft的日志复制}
+
+前面提到，Raft集群由leader统一处理所有客户端请求，会将写请求转换为log entry，然后用AE向follower发送来复制log。Leader创建日志条目时，会给它附上两个属性：term ID与log index。term ID即为自己统治期的ID，在当前term的日志条目都用这个ID；而log index也是一种递增序号，但它是在集群的整个运行期间连续的。跨term时，log index会在前面的的基础上递增1，而非归零重计。如此一来，考虑到选举机制保证了一个term ID一定对应确定的一个leader节点，我们由term ID+log index这个组合就一定可以确定唯一的一条日志。
+
+Leader生成了写操作的日志之后，就通过AE将日志条目发送到各个follower处，让它们把日志按早晚顺序加入自己的日志存储中。如果有集群多数的节点（包含leader自己）都成功存储了一条日志（follower会回复自己的存储情况），那么leader就认为这条日志及更早的日志的存储都是安全的，会回复客户端写操作成功，并会告知集群已经可以将到此条的所有日志中的写操作实际进行，修改自己的存储数据。
+
+当leader上台时，会以自己自己的日志存储为准，使其他节点与自己对齐。如果比自己快，就截掉多的；比自己慢，就用自己的日志存储给它慢慢补足。但是在复制日志的过程中，各个follower可能因各种原因速度差异较大。那么如果leader突然故障，而一个复制的特别慢的follower选举为leader，那么不就会导致大量写操作失效吗？之所以要保证日志已经复制到了多数机上，才可认为写操作成功，就是为了避免这种情况。之前在讲解选举机制时提到：RV要包含candidate的日志存储版本消息，也就就是最后一条日志的term ID+log index。如果投票的follower发现这candidate的版本消息比自己的还要旧，就会拒绝给它投票。由于只有复制到了多数节点的日志的写操作才被回报为“成功”，而选举时必须要获得多数票才能当选，所以最终当选的leader一定拥有上一个leader所回报为成功的操作的所有日志，不会缺失。
+
+\section{本章小结}
+
+本章介绍了StellarDB存储模块主要使用的几种技术：用于保存数据、提高写入性能的LSM树数据结构，与用于保障多副本数据一致性的Raft一致性协议。对于LSM树的详细介绍会与系统设计一起包含于下一章。
