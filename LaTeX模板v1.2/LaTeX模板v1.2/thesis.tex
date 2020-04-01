@@ -138,9 +138,14 @@
 
 ½ñÌì£¬Í¼Êı¾İ¿âÓÉÓÚÆäÔÚÏÖÊµÉú²úÉú»î³¡¾°ÖĞµÄ½¨Ä£ÓÅÊÆ¡¢ÔÚ¹ØÏµ²éÕÒ·½ÃæµÄĞÔÄÜÓÅÊÆ£¬³ÆÎªÔ½À´Ô½ÖËÊÖ¿ÉÈÈµÄÈí¼ş²úÆ·¡£¹úÄÚÍâĞí¶àÈí¼ş³§ÉÌ¶¼ÔÚÍÆ³ö×Ô¼ºµÄÍ¼Êı¾İ¿â²úÆ·¡£StellarDBÊÇĞÇ»·¹«Ë¾µÄÍ¼´æ´¢ÒıÇæ£¬¿ÉÒÔÓëÆäËû×é¼şÅäºÏ£¬ÊµÏÖÍ¼´æ´¢¡¢Í¼·ÖÎö¡¢Í¼¿ÉÊÓ»¯µÈÖØÒª¹¦ÄÜ¡£
 
-StellarDB´æ´¢ÒıÇæ²ÉÓÃÈÕÖ¾½á¹¹ºÏ²¢Ê÷£¨Log-Structured Merge-Tree£¬ÏÂ³ÆLSMÊ÷£©Êı¾İ½á¹¹×÷Îªµ×²ãÊı¾İ´æ´¢·½Ê½¡£µ«ÊÇ£¬ÔÚÊµ¼Ê²¿Êğ¹ı³ÌÖĞ£¬ÔâÓöÁË¡°¸ß²¢·¢Ğ´ÈëÖ®ºó¶ÁÇëÇóÏìÓ¦³¬Ê±¡±µÄÎÊÌâ¡£±¾ÎÄ½éÉÜÁË¶ÔÎÊÌâµÄ·ÖÎö¹ı³Ì£¬¶ÔflushËã·¨ÓëcompactionËã·¨µÄÁªºÏ´´ĞÂĞÔÓÅ»¯·½°¸µÄÉè¼ÆÓëÊµÏÖ£¬²¢Õ¹Ê¾ÁËÓÅ»¯¹ı³ÌÖĞµÄ¶à´ÎĞÔÄÜ²âÊÔ½á¹û£¬´ÓÖĞ½âÊÍËã·¨Öğ²½ÓÅ»¯µÄ¸ù¾İÓëĞ§¹û¡£ÁíÍâ£¬±¾ÎÄÍ¨¹ı¶ÔStellarDBµÄ´æ´¢Ä£¿é½øĞĞ³éÏó¼ò»¯£¬ÊµÏÖÁËÒ»¸ö´æ´¢Ä£¿éÄ£Äâ³ÌĞò£¬ÓÃÓÚÔÙ´Î²âÊÔ¡¢ÑéÖ¤ÓÅ»¯Ëã·¨µÄÓĞĞ§ĞÔ¡£
+StellarDB´æ´¢ÒıÇæ²ÉÓÃÈÕÖ¾½á¹¹ºÏ²¢Ê÷£¨Log-Structured Merge-Tree£¬ÏÂ³ÆLSMÊ÷£©Êı¾İ½á¹¹×÷Îªµ×²ãÊı¾İ´æ´¢·½Ê½¡£
+µ«ÊÇ£¬ÔÚÊµ¼Ê²¿Êğ¹ı³ÌÖĞ£¬ÔâÓöÁË¡°¸ß²¢·¢Ğ´ÈëÖ®ºó¶ÁÇëÇóÏìÓ¦³¬Ê±¡±µÄÎÊÌâ£ºÊı¾İ¶Ñ»ıÔÚLSMÊ÷µÄ×î¶¥²ã£¬ÏòÏÂÁ÷¶¯ËÙ¶È¼«Âı£¬µ¼ÖÂ¶ÁÇëÇóËÑË÷Êı¾İÌõÄ¿Ö÷¼üµÄÊ±ºòĞèÒª·ÃÎÊ¶à´ïÉÏÇ§¸öÊı¾İÎÄ¼ş£¬´Ó¶øÊ¹ÏµÍ³ÎŞ·¨ÔÚ³¬Ê±Ê±¼äÄÚ»Ø¸´¡£
 
-¾­¹ıÓÅ»¯£¬StellarDBÔÚ¸ß²¢·¢Ğ´ÈëÇé¿öÏÂcompactionÔâÓöĞÔÄÜÆ¿¾±µÄÎÊÌâÒÑ¾­½â¾ö£¬Êı¾İÎÄ¼ş¿ÉÒÔÔÚLSMÊ÷ÖÖË³³©Á÷¶¯µ½µ×²ã¡£Ä¿Ç°ÓÅ»¯ºóËã·¨ÒÑ¾­ÔÚStellarDBÖĞÎÈ¶¨ÔËĞĞÔ¼°ëÄê£¬Ö¤Ã÷ÁËÆäÎÈ¶¨ĞÔ¡£
+±¾ÎÄ½éÉÜÁË¶ÔÎÊÌâµÄ·ÖÎö¹ı³Ì£ºÍ¨¹ıĞŞ¸ÄflushËã·¨ÓÅ»¯ÎÄ¼şÖĞµÄÊı¾İ·Ö²¼£¬¸¨ÒÔ¸ü¾«Ï¸compactionËã·¨£¬ÄÜ½µµÍcompaction¹ı³ÌÖĞµÄ´ÅÅÌI/OÀË·Ñ£¬¼ÓËÙÊı¾İÔÚLSMÊ÷ÏòÏÂÁ÷¶¯¡£ËùÒÔ£¬ĞÂµÄflushËã·¨¶ÔÄÚ´æ»º³åÇø½øĞĞÇ¿ÖÆ·ÖÆ¬£¬ĞÂµÄcompactionËã·¨»á¸ù¾İÏÂ²ãÊı¾İÎÄ¼şµÄÖ÷¼ü·¶Î§Ñ¡Ôñ¾¡Á¿¶àµÄÉÏ²ãÊı¾İÎÄ¼ş£¬²¢¼ÆËãI/OÀË·Ñ×îµÍµÄ·½°¸¡£
+±¾ÎÄÏêÏ¸ËµÃ÷ÁË¶ÔflushËã·¨ÓëcompactionËã·¨µÄÁªºÏ´´ĞÂĞÔÓÅ»¯·½°¸µÄÉè¼ÆÓëÊµÏÖ£¬²¢Õ¹Ê¾ÁËÓÅ»¯¹ı³ÌÖĞµÄ¶à´ÎĞÔÄÜ²âÊÔ½á¹û£¬´ÓÖĞ½âÊÍËã·¨Öğ²½ÓÅ»¯µÄ¸ù¾İÓëĞ§¹û¡£×îÖÕ²âÊÔ½á¹ûÏÔÊ¾£¬´ÓL0µ½L1µÄcompaction¶ÁÀ©´óÂÊ´Ó419\%ÏÂ½µÖÁ119\%¡£
+ÁíÍâ£¬±¾ÎÄÍ¨¹ı¶ÔStellarDBµÄ´æ´¢Ä£¿é½øĞĞ³éÏó¼ò»¯£¬ÊµÏÖÁËÒ»¸ö´æ´¢Ä£¿éÄ£Äâ³ÌĞò£¬ÓÃÓÚÔÙ´Î²âÊÔ¡¢ÑéÖ¤ÓÅ»¯Ëã·¨µÄÓĞĞ§ĞÔ¡£
+
+¾­¹ıÓÅ»¯£¬StellarDBÔÚ¸ß²¢·¢Ğ´ÈëÇé¿öÏÂcompactionÔâÓöĞÔÄÜÆ¿¾±µÄÎÊÌâÒÑ¾­½â¾ö£¬Êı¾İÎÄ¼ş¿ÉÒÔÔÚLSMÊ÷ÖÖË³³©Á÷¶¯µ½µ×²ã¡£Ä¿Ç°ÓÅ»¯ºóËã·¨ÒÑ¾­ÔÚStellarDBÖĞÔËĞĞÔ¼Ò»Äê£¬ĞÔÄÜÎÈ¶¨¡£
   
 
 %ÕâÊÇ×¢ÊÍ£¬²»Ó°ÏìÕıÎÄ
@@ -153,9 +158,13 @@ StellarDB´æ´¢ÒıÇæ²ÉÓÃÈÕÖ¾½á¹¹ºÏ²¢Ê÷£¨Log-Structured Merge-Tree£¬ÏÂ³ÆLSMÊ÷£©Êı¾İ½
 \begin{englishabstract}
 Nowadays, graph database is becoming more and more popular because of its advantage in modeling real life and performance advantage in relationship search. Many software companys, countrywide or worldwide, are building their own graph database systems. StellarDB is the graph storage engine of Transwarp Inc. Combined with other Transwarp products, it can support various big data analysis requirements, including graph storage, graph analysis, graph visualization, etc..
 
-StellarDB storage engine adopted Log-Structured Merge-Tree(i.e. LSM-tree) as its underlying data structure for record storage. However, during deployment and tests on clients' hosts, performance issues were encountered that read requests timeouted after high concurrency write operation. The thesis introduces the analyze process on the issue and the design and implementation of a combined innovative optimization on flush algorithm and compaction algorithm. Then the thesis demostrated results of performance tests during the optimization process, explaining the evidences on which the optimization was based. Moreover, the thesis implemented an simulator of the storage module for more testing and verification of the influence of the new algorithms.
+StellarDB storage engine adopted Log-Structured Merge-Tree(i.e. LSM-tree) as its underlying data structure for record storage. However, during deployment and tests on clients' hosts, performance issues were encountered that read requests timeouted after high concurrency write operation. The data couldn't flow into lower levels of the LSM-tree, causing the system to scan over one thousand data files just for searching one record's key. Therefore, StellarDB couldn't respond to read requests within read timeout. 
 
-After this optimization, the performance bottleneck of StellarDB performing compaction under  high concurrency write operation was successfully solved. Now the data files can be compacted to the bottom level of LSM-tree easily. The optimized algorithm has been running in deployed StellarDB instances for about 6 months, which proved its steadiness.
+The thesis introduces the analyze process on the issue and the design and implementation of a combined innovative optimization on flush algorithm and compaction algorithm. Disk I/O wasted during the compaction process can be reduced with a modified flush algorithm which can optimize files' data distribution and a more delicate compaction algorithm. As the result, the new flush algorithm forces memory buffer to be sliced, and the new compaction algorithm will choose files in upper level basing on lower level key range and calculate the compaction schedule plan with least I/O waste.
+Then the thesis demostrated results of performance test during the optimization process, explaining the evidences on which the optimization was based. The results of the performance test showed that the read amplification rate of compaction from L1 to L2 dropped from 419\% to 119\%.
+Moreover, the thesis implemented an simulator of the storage module for more testing and verification of the influence of the new algorithms.
+
+After this optimization, the performance bottleneck of StellarDB performing compaction under high concurrency write operation was successfully solved. Now the data files can be compacted to the bottom level of LSM-tree easily. The optimized algorithm has been running in deployed StellarDB instances for about one year with steady performance.
 
 
 \englishkeywords{Graph database, StellarDB, Log-Structured Merge-Tree, flush, compaction}
