@@ -1,5 +1,5 @@
 %%]dvipdfm
-\documentclass[twoside, master, review]{NJUthesis}
+\documentclass[oneside, master, review]{NJUthesis}
 %\documentclass[twoside, master]{NJUthesis}
 
 % 可选参数：
@@ -96,10 +96,10 @@
 \nlcfootdate{~年~~月~~日}
 
 % 南大中文封面内容字符串
-\title{图数据库StellarDB存储模块性能优化的设计实现}
+\title{图数据库StellarDB存储模块性能优化的设计与实现}
 \author{\kaishu 徐江河}
 \studentnum{MF1832198}
-\grade{2020}
+\grade{2018}
 \advisor{\kaishu 邵栋~~教授}
 
 \major{\kaishu 工程硕士（软件工程领域）}
@@ -136,7 +136,7 @@
 
 \begin{abstract}
 
-今天，图数据库由于其在现实生产生活场景中的建模优势、在关系查找方面的性能优势，称为越来越炙手可热的软件产品。国内外许多软件厂商都在推出自己的图数据库产品。StellarDB是星环公司的图存储引擎，可以与其他组件配合，实现图存储、图分析、图可视化等重要功能。
+今天，图数据库由于其在现实生产生活场景中的建模优势、在关系查找方面的性能优势，成为越来越炙手可热的软件产品。国内外许多软件厂商都在推出自己的图数据库产品。StellarDB是星环公司的图存储引擎，可以与其他组件配合，实现图存储、图分析、图可视化等重要功能。
 
 StellarDB存储引擎采用日志结构合并树（Log-Structured Merge-Tree，下称LSM树）数据结构作为底层数据存储方式。
 但是，在实际部署过程中，遭遇了“高并发写入之后读请求响应超时”的问题：数据堆积在LSM树的最顶层，向下流动速度极慢，导致读请求搜索数据条目主键的时候需要访问多达上千个数据文件，从而使系统无法在超时时间内回复。
@@ -167,7 +167,7 @@ Moreover, the thesis implemented an simulator of the storage module for more tes
 After this optimization, the performance bottleneck of StellarDB performing compaction under high concurrency write operation was successfully solved. Now the data files can be compacted to the bottom level of LSM-tree easily. The optimized algorithm has been running in deployed StellarDB instances for about one year with steady performance.
 
 
-\englishkeywords{Graph database, StellarDB, Log-Structured Merge-Tree, flush, compaction}
+\englishkeywords{Graph database, StellarDB, Log-Structured Merge-Tree, Flush, Compaction}
 \end{englishabstract}
 
 % 生成目录命令（目录中不包含目录本身）

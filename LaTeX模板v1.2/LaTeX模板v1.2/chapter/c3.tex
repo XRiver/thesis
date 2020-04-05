@@ -48,7 +48,7 @@ StellarDB½«Í¼µÄµã»ò±ß¶¼ÒÔ¼üÖµ¶ÔµÄĞÎÊ½×÷Îª¼ÇÂ¼´æ´¢£¬ÆäÖĞÖ÷¼üÊÇ×Ö½ÚÊı×é£¬¿ÉÒÔÅÅĞò£
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=5in]{FIGs/c3/LSMT-basic-sample.pdf}
+  \includegraphics[width=5in]{FIGs/c3/LSMT-basic-sample.png}
   \caption{Ä³ShardÄÚÊı¾İÎÄ¼ş·Ö²¼Ê¾ÒâÍ¼}\label{LSMT-basic}
 \end{figure}
 
@@ -60,7 +60,7 @@ StellarDB½«Í¼µÄµã»ò±ß¶¼ÒÔ¼üÖµ¶ÔµÄĞÎÊ½×÷Îª¼ÇÂ¼´æ´¢£¬ÆäÖĞÖ÷¼üÊÇ×Ö½ÚÊı×é£¬¿ÉÒÔÅÅĞò£
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=5in]{FIGs/c3/compaction-detail-sample-1.pdf}
+  \includegraphics[width=5in]{FIGs/c3/compaction-detail-sample-1.png}
   \caption{Compaction²Ù×÷-Ô­×´Ì¬}\label{compaction-sample-1}
 \end{figure}
 
@@ -68,7 +68,7 @@ StellarDB½«Í¼µÄµã»ò±ß¶¼ÒÔ¼üÖµ¶ÔµÄĞÎÊ½×÷Îª¼ÇÂ¼´æ´¢£¬ÆäÖĞÖ÷¼üÊÇ×Ö½ÚÊı×é£¬¿ÉÒÔÅÅĞò£
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=5in]{FIGs/c3/compaction-detail-sample-2.pdf}
+  \includegraphics[width=5in]{FIGs/c3/compaction-detail-sample-2.png}
   \caption{Compaction²Ù×÷-²Ù×÷½á¹û}\label{compaction-sample-2}
 \end{figure}
 
@@ -82,24 +82,8 @@ StellarDBÊ¹ÓÃÄ£ÄâÊı¾İÔÚ¼¯Èº»·¾³ÉÏ½øĞĞ²âÊÔËäÈ»¿ÉÒÔÕ¹Ê¾×î½Ó½üÊµ¼ÊÉú²ú»·¾³ÏÂµÄÓÅ»¯Ğ
 
 \subsection{¹¦ÄÜÉè¼Æ}
 
-³ÌĞòÓ¦¶ÔStellarDB´æ´¢Ä£¿é½øĞĞ³éÏó¼ò»¯£¬È¥³ı£º
-
-\begin{enumerate}
-    \item ¶à¸±±¾±¸·İ¹¦ÄÜ
-    \item ¶àÍ¼¶àGraphShard¹ÜÀí¹¦ÄÜ
-    \item Òì²½ÏìÓ¦¿Í»§¶ÁĞ´ÇëÇó¹¦ÄÜ
-    \item ¶ÔÓÚLSM½á¹¹½øĞĞ³Ö¾Ã»¯µÄ¹¦ÄÜ
-\end{enumerate}
-
-±£Áô£º
-
-\begin{enumerate}
-  \item ¶ÔLSMÊ÷µÄ»ù±¾¶ÁĞ´¹¦ÄÜ
-  \item LSMÊ÷µÄ°æ±¾¹ÜÀí¹¦ÄÜ
-  \item flush¹¦ÄÜ£¬°üÀ¨ÊµÏÖ»ùÓÚÌø±íµÄÄÚ´æ»º³åÇø
-  \item compaction¹¦ÄÜ
-  \item compactionĞÔÄÜÍ³¼Æ¹¦ÄÜ£¬°üº¬¶ÁĞ´Êı¾İÁ¿µÄÏêÏ¸Í³¼Æ
-\end{enumerate}
+³ÌĞòÓ¦¶ÔStellarDB´æ´¢Ä£¿é½øĞĞ³éÏó¼ò»¯£¬È¥³ı¶à¸±±¾±¸·İ¹¦ÄÜ¡¢¶àÍ¼¶àGraphShard¹ÜÀí¹¦ÄÜ¡¢Òì²½ÏìÓ¦¿Í»§¶ÁĞ´ÇëÇó¹¦ÄÜºÍ¶ÔÓÚLSM½á¹¹½øĞĞ³Ö¾Ã»¯µÄ¹¦ÄÜ¡£
+³ÌĞò±£Áô¶ÔLSMÊ÷µÄ»ù±¾¶ÁĞ´¹¦ÄÜ¡¢LSMÊ÷µÄ°æ±¾¹ÜÀí¹¦ÄÜ¡¢flush¹¦ÄÜ£¨°üÀ¨ÊµÏÖ»ùÓÚÌø±íµÄÄÚ´æ»º³åÇø£©¡¢compaction¹¦ÄÜ¡¢compactionĞÔÄÜÍ³¼Æ¹¦ÄÜ£¨°üº¬¶ÁĞ´Êı¾İÁ¿µÄÏêÏ¸Í³¼Æ£©¡£
 
 \section{±¾ÕÂĞ¡½á}
 

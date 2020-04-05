@@ -40,7 +40,7 @@ Raft¼¯Èº¸÷»úÖ®¼äµÄRPC±¨ÎÄ¿É·ÖÎªÁ½ÖÖ£ºÌí¼ÓÌõÄ¿RPC£¨AppendEntries RPC£¬ÒÔÏÂ¼ò³ÆAE£
 
 LeaderÉú³ÉÁËÐ´²Ù×÷µÄÈÕÖ¾Ö®ºó£¬¾ÍÍ¨¹ýAE½«ÈÕÖ¾ÌõÄ¿·¢ËÍµ½¸÷¸öfollower´¦£¬ÈÃËüÃÇ°ÑÈÕÖ¾°´ÔçÍíË³Ðò¼ÓÈë×Ô¼ºµÄÈÕÖ¾´æ´¢ÖÐ¡£Èç¹ûÓÐ¼¯Èº¶àÊýµÄ½Úµã£¨°üº¬leader×Ô¼º£©¶¼³É¹¦´æ´¢ÁËÒ»ÌõÈÕÖ¾£¨follower»á»Ø¸´×Ô¼ºµÄ´æ´¢Çé¿ö£©£¬ÄÇÃ´leader¾ÍÈÏÎªÕâÌõÈÕÖ¾¼°¸üÔçµÄÈÕÖ¾µÄ´æ´¢¶¼ÊÇ°²È«µÄ£¬»á»Ø¸´¿Í»§¶ËÐ´²Ù×÷³É¹¦£¬²¢»á¸æÖª¼¯ÈºÒÑ¾­¿ÉÒÔ½«µ½´ËÌõµÄËùÓÐÈÕÖ¾ÖÐµÄÐ´²Ù×÷Êµ¼Ê½øÐÐ£¬ÐÞ¸Ä×Ô¼ºµÄ´æ´¢Êý¾Ý¡£
 
-µ±leaderÉÏÌ¨Ê±£¬»áÒÔ×Ô¼º×Ô¼ºµÄÈÕÖ¾´æ´¢Îª×¼£¬Ê¹ÆäËû½ÚµãÓë×Ô¼º¶ÔÆë¡£Èç¹û±È×Ô¼º¿ì£¬¾Í½Øµô¶àµÄ£»±È×Ô¼ºÂý£¬¾ÍÓÃ×Ô¼ºµÄÈÕÖ¾´æ´¢¸øËüÂýÂý²¹×ã¡£µ«ÊÇÔÚ¸´ÖÆÈÕÖ¾µÄ¹ý³ÌÖÐ£¬¸÷¸öfollower¿ÉÄÜÒò¸÷ÖÖÔ­ÒòËÙ¶È²îÒì½Ï´ó¡£ÄÇÃ´Èç¹ûleaderÍ»È»¹ÊÕÏ£¬¶øÒ»¸ö¸´ÖÆµÄÌØ±ðÂýµÄfollowerÑ¡¾ÙÎªleader£¬ÄÇÃ´²»¾Í»áµ¼ÖÂ´óÁ¿Ð´²Ù×÷Ê§Ð§Âð£¿Ö®ËùÒÔÒª±£Ö¤ÈÕÖ¾ÒÑ¾­¸´ÖÆµ½ÁË¶àÊý»úÉÏ£¬²Å¿ÉÈÏÎªÐ´²Ù×÷³É¹¦£¬¾ÍÊÇÎªÁË±ÜÃâÕâÖÖÇé¿ö¡£Ö®Ç°ÔÚ½²½âÑ¡¾Ù»úÖÆÊ±Ìáµ½£ºRVÒª°üº¬candidateµÄÈÕÖ¾´æ´¢°æ±¾ÏûÏ¢£¬Ò²¾Í¾ÍÊÇ×îºóÒ»ÌõÈÕÖ¾µÄterm ID+log index¡£Èç¹ûÍ¶Æ±µÄfollower·¢ÏÖÕâcandidateµÄ°æ±¾ÏûÏ¢±È×Ô¼ºµÄ»¹Òª¾É£¬¾Í»á¾Ü¾ø¸øËüÍ¶Æ±¡£ÓÉÓÚÖ»ÓÐ¸´ÖÆµ½ÁË¶àÊý½ÚµãµÄÈÕÖ¾µÄÐ´²Ù×÷²Å±»»Ø±¨Îª¡°³É¹¦¡±£¬¶øÑ¡¾ÙÊ±±ØÐëÒª»ñµÃ¶àÊýÆ±²ÅÄÜµ±Ñ¡£¬ËùÒÔ×îÖÕµ±Ñ¡µÄleaderÒ»¶¨ÓµÓÐÉÏÒ»¸öleaderËù»Ø±¨Îª³É¹¦µÄ²Ù×÷µÄËùÓÐÈÕÖ¾£¬²»»áÈ±Ê§¡£
+µ±leaderÉÏÌ¨Ê±£¬»áÒÔ×Ô¼º×Ô¼ºµÄÈÕÖ¾´æ´¢Îª×¼£¬Ê¹ÆäËû½ÚµãÓë×Ô¼º¶ÔÆë¡£Èç¹û±È×Ô¼º¿ì£¬¾Í½Øµô¶àµÄ£»±È×Ô¼ºÂý£¬¾ÍÓÃ×Ô¼ºµÄÈÕÖ¾´æ´¢¸øËüÂýÂý²¹×ã¡£µ«ÊÇÔÚ¸´ÖÆÈÕÖ¾µÄ¹ý³ÌÖÐ£¬¸÷¸öfollower¿ÉÄÜÒò¸÷ÖÖÔ­ÒòËÙ¶È²îÒì½Ï´ó¡£ÄÇÃ´Èç¹ûleaderÍ»È»¹ÊÕÏ£¬¶øÒ»¸ö¸´ÖÆµÄÌØ±ðÂýµÄfollowerÑ¡¾ÙÎªleader£¬¾Í¿ÉÄÜ»áµ¼ÖÂ´óÁ¿Ð´²Ù×÷Ê§Ð§¡£Ö®ËùÒÔÒª±£Ö¤ÈÕÖ¾ÒÑ¾­¸´ÖÆµ½ÁË¶àÊý»úÉÏ£¬²Å¿ÉÈÏÎªÐ´²Ù×÷³É¹¦£¬¾ÍÊÇÎªÁË±ÜÃâÕâÖÖÇé¿ö¡£Ö®Ç°ÔÚ½²½âÑ¡¾Ù»úÖÆÊ±Ìáµ½£ºRVÒª°üº¬candidateµÄÈÕÖ¾´æ´¢°æ±¾ÏûÏ¢£¬Ò²¾Í¾ÍÊÇ×îºóÒ»ÌõÈÕÖ¾µÄterm ID+log index¡£Èç¹ûÍ¶Æ±µÄfollower·¢ÏÖÕâcandidateµÄ°æ±¾ÏûÏ¢±È×Ô¼ºµÄ»¹Òª¾É£¬¾Í»á¾Ü¾ø¸øËüÍ¶Æ±¡£ÓÉÓÚÖ»ÓÐ¸´ÖÆµ½ÁË¶àÊý½ÚµãµÄÈÕÖ¾µÄÐ´²Ù×÷²Å±»»Ø±¨Îª¡°³É¹¦¡±£¬¶øÑ¡¾ÙÊ±±ØÐëÒª»ñµÃ¶àÊýÆ±²ÅÄÜµ±Ñ¡£¬ËùÒÔ×îÖÕµ±Ñ¡µÄleaderÒ»¶¨ÓµÓÐÉÏÒ»¸öleaderËù»Ø±¨Îª³É¹¦µÄ²Ù×÷µÄËùÓÐÈÕÖ¾£¬²»»áÈ±Ê§¡£
 
 \section{±¾ÕÂÐ¡½á}
 
