@@ -34,6 +34,10 @@
 % 自定义列表样式
 \usepackage{enumitem}
 \usepackage{url}
+
+\def\UrlBreaks{\do\/\do-}
+\usepackage{breakurl}
+
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{moreverb}
@@ -55,6 +59,7 @@
 \makenomenclature
 
 \setcounter{topnumber}{5}
+\Urlmuskip=0mu plus 1mu
 
 \theoremstyle{plain}
 \newtheorem{definition}{\hspace{2em}定义}[chapter]
@@ -98,7 +103,7 @@
 % 南大中文封面内容字符串
 \title{图数据库StellarDB存储模块性能优化的设计与实现}
 \author{\kaishu 徐江河}
-\studentnum{MF1832198}
+\studentnum{-}
 \grade{2018}
 \advisor{\kaishu 邵栋~~教授}
 
@@ -190,7 +195,7 @@ After this optimization, the performance bottleneck of StellarDB performing comp
 %\include{chapter/Nomenclatures}
 %\def\nomname{缩略语对照表}
 %\printnomenclature[5em]
-\hyphenation{mem-table Mem-table Graph-Shard trans-warp graph-search com-pac-tion Com-pac-tion Compaction-Handler Compaction-Executor Flush-Handler Flush-Executor}
+\hyphenation{mem-table Mem-table Graph-Shard trans-warp graph-search com-pac-tion Com-pac-tion Com-pac-tion-Hand-ler Com-pac-tion-Exe-cutor Flush-Handler Flush-Executor Elastic-Search Janus-Graph}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 正文部分
@@ -209,17 +214,17 @@ After this optimization, the performance bottleneck of StellarDB performing comp
 
 
 %个人简介
-\Nchapter{简历与科研成果}
-\noindent {\heiti 基本情况}
-\vspace{1ex}
-\noindent 徐江河，男，汉族，1996~年~3~月出生，山东省淄博市人。
-\vspace{2ex}
+% \Nchapter{简历与科研成果}
+% \noindent {\heiti 基本情况}
+% \vspace{1ex}
+% \noindent 徐江河，男，汉族，1996~年~3~月出生，山东省淄博市人。
+% \vspace{2ex}
 
-\noindent {\heiti 教育背景}
-\begin{description}[labelindent=0em, leftmargin=8em, style=sameline]
-\item[2018.9～2020.6] 南京大学软件学院 \hfill 硕士
-\item[2014.9～2018.7] 南京大学软件学院 \hfill 本科
-\end{description}
+% \noindent {\heiti 教育背景}
+% \begin{description}[labelindent=0em, leftmargin=8em, style=sameline]
+% \item[2018.9～2020.6] 南京大学软件学院 \hfill 硕士
+% \item[2014.9～2018.7] 南京大学软件学院 \hfill 本科
+% \end{description}
 % 发表文章目录
 
 
@@ -230,12 +235,12 @@ After this optimization, the performance bottleneck of StellarDB performing comp
 
 \vskip 18pt
 
-在本篇论文完成之际，也就意味着我在南京大学软件学院的学习生涯也将要结束了。我要向曾经帮助过我的导师、同学和朋友致以最诚挚的感谢。首先要感谢我的论文指导老师邵栋老师。在整个论文写作的过程中，邵老师对我耐心帮助，在论文不足之处他总是及时耐心地提出修改和优化的建议。每一次和邵老师交谈，我都能感受到邵老师作为师长的责任与担当。邵老师对待学术严谨的态度和平易近人的生活作风深深的影响着我，使我受益终身。
+% 在本篇论文完成之际，也就意味着我在南京大学软件学院的学习生涯也将要结束了。我要向曾经帮助过我的导师、同学和朋友致以最诚挚的感谢。首先要感谢我的论文指导老师邵栋老师。在整个论文写作的过程中，邵老师对我耐心帮助，在论文不足之处他总是及时耐心地提出修改和优化的建议。每一次和邵老师交谈，我都能感受到邵老师作为师长的责任与担当。邵老师对待学术严谨的态度和平易近人的生活作风深深的影响着我，使我受益终身。
 
 
-同时，我要感谢实习期间给予我帮助的"buddy"王志平和公司给予我帮助的所有同事们。他们在项目完成和技术指导上给了我很大的帮助，感谢他们在忙于工作的同时还能抽出时间对我进行指导。这段经历，我相信在我以后的工作生活中一定会有很大的借鉴意义。
+% 同时，我要感谢实习期间给予我帮助的"buddy"王志平和公司给予我帮助的所有同事们。他们在项目完成和技术指导上给了我很大的帮助，感谢他们在忙于工作的同时还能抽出时间对我进行指导。这段经历，我相信在我以后的工作生活中一定会有很大的借鉴意义。
 
-最后我要感谢南京大学软件学院和南京大学软件学院所有的教职工人员。是他们为能来到南京软件学院读研的同学们提供了一个开放的包容的成长环境，他们高远的学术视野和严谨的工作作风深深的影响着每一个南京大学软件学院的学子们。在南京读硕士的这两年，让我对自己的认识更清晰，对自己的未来更有信心。谢谢大家！
+% 最后我要感谢南京大学软件学院和南京大学软件学院所有的教职工人员。是他们为能来到南京软件学院读研的同学们提供了一个开放的包容的成长环境，他们高远的学术视野和严谨的工作作风深深的影响着每一个南京大学软件学院的学子们。在南京读硕士的这两年，让我对自己的认识更清晰，对自己的未来更有信心。谢谢大家！
 
 \end{thanks}
 

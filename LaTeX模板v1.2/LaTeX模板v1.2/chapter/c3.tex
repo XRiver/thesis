@@ -1,16 +1,50 @@
-\chapter{StellarDB´æ´¢Ä£¿éµÄ·ÖÎöÓëÉè¼Æ}
+\chapter{StellarDB¼°Æä´æ´¢Ä£¿éÉè¼ÆËµÃ÷}
 
-StellarDBÊÇÒ»¿î°üº¬ÁËÍ¼¿ÉÊÓ»¯¡¢APIÍâ²¿µ÷ÓÃ¡¢×ÔÎÒ¼à¿Ø¹ÜÀíµÈ·á¸»¹¦ÄÜµÄÊý¾Ý¿âÏµÍ³£¬¿ÉÒÔÓëÐÇ»·¿Æ¼¼µÄ¶à¿î´óÊý¾Ý·ÖÎöÈí¼þÐ­×÷¡£±¾ÕÂ£¬ÎÒÃÇÖ÷Òª·ÖÎöÆä´æ´¢Ä£¿é£¨¼´Í¼~\ref{structure-overview}ÖÐµÄDistributed Graph Storage Engine£©£¬²¢½éÉÜÆäºËÐÄÉè¼Æ£º²ÉÓÃLSMÊ÷Êý¾Ý½á¹¹½øÐÐÊý¾Ý´æ´¢¡£
+StellarDBÊÇÒ»¿î°üº¬ÁËÍ¼¿ÉÊÓ»¯¡¢APIÍâ²¿µ÷ÓÃ¡¢×ÔÎÒ¼à¿Ø¹ÜÀíµÈ·á¸»¹¦ÄÜµÄÊý¾Ý¿âÏµÍ³£¬¿ÉÒÔÓëÐÇ»·¿Æ¼¼µÄ¶à¿î´óÊý¾Ý·ÖÎöÈí¼þÐ­×÷£¨ÈçÍ¼~\ref{stellardb-overview}£©¡£±¾ÕÂ£¬ÎÒÃÇ½éÉÜStellarDBµØÄ£¿é»®·Ö£¬·ÖÎöÆä´æ´¢Ä£¿é£¬²¢½éÉÜ´æ´¢Ä£¿éºËÐÄÉè¼Æ£º²ÉÓÃLSMÊ÷Êý¾Ý½á¹¹½øÐÐÊý¾Ý´æ´¢¡£
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=5in]{FIGs/c3/StellarDB-structure.jpg}
-  \caption{StellarDBºê¹Û¼Ü¹¹Í¼}\label{structure-overview}
+  \includegraphics[width=5in]{FIGs/c3/StellarDB-structure.png}
+  \caption{StellarDBºê¹Û¼Ü¹¹Í¼}\label{stellardb-overview}
 \end{figure}
+
+\section{StellarDB¼Ü¹¹}
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=5in]{FIGs/c3/stellarDB-modules.png}
+  \caption{StellarDBÄ£¿é»®·Ö}\label{stellardb-modules}
+\end{figure}
+
+ÈçÍ¼~\ref{stellardb-modules}£¬×÷ÎªÐÇ»·´óÊý¾ÝÆ½Ì¨µÄÖØÒª×é¼þ£¬StellarDB¼Ü¹¹Ö÷ÒªÓÉÒÔÏÂ²¿·Ö×é³É£º
+
+\subsection{´æ´¢ÒýÇæ}
+
+Í¼Êý¾ÝÒÔ¸ßÐ§µÄÑ¹Ëõ¸ñÊ½´æ´¢ÓÚÐÇ»··Ö²¼Ê½´æ´¢ÒýÇæShivaÖÐ£¬½èÖúÍ¼·ÖÇøËã·¨£¬Í¼Êý¾Ý¿É°´²ßÂÔ·ÖÉ¢´æ´¢ÓÚ¼¯ÈºÖÐ£¬ÓµÓÐÁ¼ºÃµÄ¿ÉÀ©Õ¹ÐÔ£¬²¢¾ß±¸´æ´¢ÈÎÒâ¹æÄ£Í¼µÄÀíÂÛÄÜÁ¦¡£
+
+´æ´¢ÒýÇæ¼Ü¹¹ÎªMaster-Worker½á¹¹£¬¶à¸öMaster×é³ÉMaster Group¸ºÔðÔªÐÅÏ¢¹ÜÀí¡¢ÈÎÎñµ÷¶È¡¢¸ºÔØ¾ùºâµÈ¹¦ÄÜ£»Worker´æ´¢Í¼Êý¾Ý£¬ ²¢Ìá¹©Êý¾Ý¶ÁÈ¡¡¢¸üÐÂºÍÉ¾³ý¹¦ÄÜ¡£´æ´¢ÒýÇæÍ¨¹ýRaftÐ­ÒéÀ´±£Ö¤Êý¾ÝÒ»ÖÂÐÔºÍ¸ß¿ÉÓÃÐÔ¡£
+
+\subsection{¼ÆËãÒýÇæ}
+
+½èÖúÐÇ»··Ö²¼Ê½¼ÆËãÒýÇæInceptorµÄ¼ÆËã·ÖÎöÄÜÁ¦£¬¼ÆËãÄÜÁ¦Ëæ×Å½ÚµãÊýÄ¿Ôö³¤ÏßÐÔÀ©Õ¹¡£StellarDB¿ÉÍ¬Ê±ÎªÓÃ»§Ìá¹©ÊµÊ±Í¼²éÑ¯ºÍÀëÏßËã·¨·ÖÎö£¬Ö§³Öº£Á¿±ßµãµÄ´óÍ¼·ÖÎö¡£
+
+¼ÆËãÒýÇæºÍ´æ´¢ÒýÇæÍ¬»ú²¿Êð£¬ÀûÓÃÊý¾ÝlocalityÌØÐÔ¼ÓËÙÍ¼¼ÆËãºÍ·ÖÎöÈÎÎñ¡£¼ÆËãÒýÇæÄÚÖÃÁË²¿·Ö³£ÓÃÍ¼Ëã·¨£¬²¢ÒÔRDDµÄ·½Ê½Ìá¹©Êý¾ÝºÍ¼ÆËãµÄ½Ó¿Ú¡£
+
+\subsection{À©Õ¹OpenCypher}
+
+OpenCypherÔÚÀú¾­ÁË¶àÄêµÄ²úÒµ½çÑéÖ¤ºó£¬³ÉÎªÁËµ±Ç°×îÖ÷Á÷µÄ¿ªÔ´Í¼Êý¾Ý¿â·ÃÎÊÓïÑÔ¡£StellarDBÊµÏÖÁËOpenCypher£¬ÔÚÌá¹©±ê×¼¹¦ÄÜÖ®Íâ£¬»¹Ìá¹©ÁËÒ»Ð©À©Õ¹ÓïÑÔ£¬ÒÔÂú×ãÍ¼¼ÆËãºÍ¸´ÔÓ²éÑ¯Á÷³ÌµÄÐèÇó¡£
+
+\subsection{¿ÉÊÓ»¯ÒýÇæ}
+
+ÓÃ»§Í¨¹ý²éÑ¯Óï·¨£¬¿ÉÒÔÍê³ÉÍ¼Êý¾ÝµÄ²éÑ¯ºÍ·ÖÎö¡£StellarDBÌá¹©ÍøÒ³¿É½»»¥·ÖÎö¹¤¾ß£¬ÓÃ»§¿É»ùÓÚ²éÑ¯½á¹û×ö½øÒ»²½µÄÊý¾Ý·ÖÎö£¬»òÕßÍ¨¹ýÒµÎñÊý¾ÝºÍÍ¼Æ×Ä£ÐÍÀ´¹¹½¨ÐÂÍ¼Æ×¡£
+
+\subsection{ÆäËûÄ£¿é}
+
+³ýÁËÉÏÊöÄ£¿é£¬StellarDB»¹½èÖúÐÇ»·ÆäËû²úÆ·Ìá¹©·á¸»µÄ¹¦ÄÜ£¬ÈçÍ¨¹ýTranswarp GuadianÌá¹©ÓÃ»§ÈÏÖ¤¡¢È¨ÏÞ¹ÜÀí¹¦ÄÜ£¬Transwarp ManagerÌá¹©°²×°ºÍ×ÊÔ´¼à¿Ø·þÎñ¡£
 
 \section{StellarDB´æ´¢Ä£¿é¹¦ÄÜÓëÐ­×÷}
 
-StellarDBÊ¹ÓÃJavaÓëScalaÓïÑÔ¿ª·¢£¬Æä´æ´¢Ä£¿éÎ»ÓÚio.transwarp.graphsearch.storage³ÌÐò°ü¡£´æ´¢Ä£¿é³Ð½ÓÏûÏ¢´¦ÀíÄ£¿éµÄ¶ÁÐ´ÇëÇó£¬Íê³ÉÒì²½´¦ÀíÖ®ºó·¢ËÍ»Ø¸´¡£´æ´¢Ä£¿éÍ¬Ê±¿ÉÒÔÏòÒ»Ð©ÐÇ»·²úÆ·Ìá¹©Ô½¹ýÕý³£ÇëÇó»úÖÆµÄ¸Ä¶¯´æ´¢µÄ½Ó¿Ú£¬ÒÔÊµÏÖÒ»Ð©Ìá¸ß¼ÆËãËÙ¶ÈµÄµ×²ãÓÅ»¯¡£
+StellarDBÊ¹ÓÃJavaÓëScalaÓïÑÔ¿ª·¢£¬Æä´æ´¢Ä£¿éÎ»ÓÚio.~transwarp.~graphsearch.~storage³ÌÐò°ü¡£´æ´¢Ä£¿é³Ð½ÓÏûÏ¢´¦ÀíÄ£¿éµÄ¶ÁÐ´ÇëÇó£¬Íê³ÉÒì²½´¦ÀíÖ®ºó·¢ËÍ»Ø¸´¡£´æ´¢Ä£¿éÍ¬Ê±¿ÉÒÔÏòÒ»Ð©ÐÇ»·²úÆ·Ìá¹©Ô½¹ýÕý³£ÇëÇó»úÖÆµÄ¸Ä¶¯´æ´¢µÄ½Ó¿Ú£¬ÒÔÊµÏÖÒ»Ð©Ìá¸ß¼ÆËãËÙ¶ÈµÄµ×²ãÓÅ»¯¡£
 
 ´æ´¢Ä£¿éÄÚ²¿°üº¬ÁË»ùÓÚRaftÒ»ÖÂÐÔÐ­ÒéµÄ¶à¸±±¾ÈÈ±¸·Ý¹¦ÄÜ£¬Ê¹µÃÒ»·ÝÐ´ÈëÇëÇó¿ÉÒÔÓ¦ÓÃµ½¶àÌ¨Ö÷»úÉÏ¡£µ±Ò»Ì¨Ö÷»úÊ§Ð§£¬ÉÏ²ãµÄÏûÏ¢´¦ÀíÄ£¿é¿ÉÒÔ¼ì²âµ½Ê§Ð§µÄ·¢Éú£¬´Ó¶ø½«MasterµØÎ»µÄÖ÷»ú½øÐÐÇÐ»»£¬Ê¹µÃ¿Í»§µÄ¶ÁÐ´ÇëÇó´¦Àí²»ÊÜÓ°Ïì¡£
 
@@ -36,7 +70,7 @@ StellarDBÊ¹ÓÃJavaÓëScalaÓïÑÔ¿ª·¢£¬Æä´æ´¢Ä£¿éÎ»ÓÚio.transwarp.graphsearch.storage
 
 StellarDBµÄ¶à¸±±¾±¸·ÝµÄµ¥Î»¾ÍÊÇGraphShard¡£ÔÚGraphShardÀàÖÐ£¬°üº¬ÁËRaftÏûÏ¢Í¬²½»úÖÆ¡£Raft°ïÖúGraphShard½«´ÓGraphDBÊÕµ½µÄÐ´ÈëÊÂ¼þÔÚ¶à¸öÖ÷»úµÄÍ¬Ò»¸öGraphShardÖ®¼ä½øÐÐÍ¬²½¡£ËùÒÔGraphShard²¢²»»áÔÚÊÕµ½GraphDB´«À´µÄÐ´ÈëÊÂ¼þÖ®ºóÁ¢¼´½«ÊÂ¼þ½âÎöÎªÐ´ÈëÊý¾Ý¡£Ð´Èë¶¯×÷Êµ¼ÊÉÏÊÇÓÉRaft masterÔÚ¼¯Èº¼äÍ¬²½µÄÐ´ÈëÊÂ¼þ´¥·¢µÄ¡£
 
-Í¨¹ýRaftÐ­ÒéÊÕµ½ÁËÐ´ÈëÊÂ¼þÖ®ºó£¬GraphShard»á½«Êý¾ÝÐ´Èë×Ô¼ºµÄMemtable¡£ËäÈ»LSMÊ÷´æ´¢ÊÇ»ùÓÚ´ÅÅÌµÄ£¬µ«StellarDBÑ¡ÔñÏÈ½«Ð´ÈëÊý¾Ý»º´æÔÚÄÚ´æÖÐ£¬Ò²¾ÍÊÇMemtableÀà£¬Ö®ºóÍ¨¹ýflush¹ý³Ì½«»º´æµÄÊý¾ÝÐ´µ½´ÅÅÌ£¬½«ÆäÄÉÈëLSMÊ÷µÄÎ¬»¤»úÖÆÖÐ¡£CompactionHandlerÍ¨¹ý¶¨ÆÚ¼ì²é»úÖÆÓëflush¡¢compactionµÄ×Ô¶¯´¥·¢¶ÔÓÚ±¾GraphShardµÄLSMÊ÷×´Ì¬½øÐÐ¼´Ê±¼ì²é¡£Èç¹û·¢ÏÖÁË½øÐÐcompactionµÄÐèÒª£¬CompactionHandler¾Í»áÆô¶¯compactionÈÎÎñ£¬Ê¹Êý¾ÝÁ÷ÏòLSMÊ÷ÏÂ²ã£¬»òÕßÊ¹LSMÊ÷×îÏÂ²ãµÄÎÄ¼þºÏ²¢¡£
+Í¨¹ýRaftÐ­ÒéÊÕµ½ÁËÐ´ÈëÊÂ¼þÖ®ºó£¬GraphShard»á½«Êý¾ÝÐ´Èë×Ô¼ºµÄMem-~table¡£ËäÈ»LSMÊ÷´æ´¢ÊÇ»ùÓÚ´ÅÅÌµÄ£¬µ«StellarDBÑ¡ÔñÏÈ½«Ð´ÈëÊý¾Ý»º´æÔÚÄÚ´æÖÐ£¬Ò²¾ÍÊÇMemtableÀà£¬Ö®ºóÍ¨¹ýflush¹ý³Ì½«»º´æµÄÊý¾ÝÐ´µ½´ÅÅÌ£¬½«ÆäÄÉÈëLSMÊ÷µÄÎ¬»¤»úÖÆÖÐ¡£CompactionHandlerÍ¨¹ý¶¨ÆÚ¼ì²é»úÖÆÓëflush¡¢compaction~µÄ×Ô¶¯´¥·¢¶ÔÓÚ±¾GraphShardµÄLSMÊ÷×´Ì¬½øÐÐ¼´Ê±¼ì²é¡£Èç¹û·¢ÏÖÁË½øÐÐcompaction~µÄÐèÒª£¬CompactionHandler¾Í»áÆô¶¯compactionÈÎÎñ£¬Ê¹Êý¾ÝÁ÷ÏòLSMÊ÷ÏÂ²ã£¬»òÕßÊ¹LSMÊ÷×îÏÂ²ãµÄÎÄ¼þºÏ²¢¡£
 
 LSMÊ÷´æ´¢½á¹¹°ïÖúStellarDBÊµÏÖÁË¶ÁÐ´ÊÂ¼þµÄ´¦ÀíÓëÊý¾ÝÎ¬»¤¹ý³ÌµÄÒì²½»¯¡£ÕâÊ¹µÃÆµ·±Ð´Èë²Ù×÷¶ÔÓÚ¶ÁÈ¡²Ù×÷µÄÐÔÄÜ±äµÃ½ÏÐ¡¡£Èç¹ûÄÜ¹»ÊµÏÖ¸ßÐ§µÄflush¡¢compactionËã·¨£¬³ä·ÖÀûÓÃÓ²¼þµÄÐÔÄÜÎ¬»¤LSMÊ÷´æ´¢£¬Êý¾Ý¿â±ã¿ÉÒÔÍ¬Ê±Ó¦¶Ô¸ß²¢·¢µÄÐ´ÈëÓë¶ÁÈ¡ÇëÇó¡£
 
@@ -64,7 +98,7 @@ StellarDB½«Í¼µÄµã»ò±ß¶¼ÒÔ¼üÖµ¶ÔµÄÐÎÊ½×÷Îª¼ÇÂ¼´æ´¢£¬ÆäÖÐÖ÷¼üÊÇ×Ö½ÚÊý×é£¬¿ÉÒÔÅÅÐò£
   \caption{Compaction²Ù×÷-Ô­×´Ì¬}\label{compaction-sample-1}
 \end{figure}
 
-Èç¹ûÎÒÃÇÏëÒª¼õÉÙÎÄ¼þÊýÄ¿£¬Ñ¹Ëõ´æ´¢¿Õ¼ä£¬¾ÍÐèÒªÓÃÐÂµÄÐ´Èë¼ÇÂ¼È¥ºÏ²¢»ò¸²¸Ç¾ÉµÄ¼ÇÂ¼¡£ÎÒÃÇÏ£Íû½«Segment-2Ïû³ý£¬½«ÆäÖÐµÄ¼ÇÂ¼È«²¿ºÏ²¢½øÈëÏÂ²ã£¬¾ÍÐèÒªÕÒµ½ËùÓÐ°üº¬ÓÐÖØµþµÄÖ÷¼üµÄL2Êý¾ÝÎÄ¼þ£¬°ÑËûÃÇµ±³ÉÊý¾ÝÔ´£¬ÔÚL2ÖÐÉú³ÉÒ»¸öÐÂµÄÎÄ¼þSegment-5. ÈçÍ¼~\ref{compaction-sample-2}£¬¶ÔÓÚL2ÖÐÔ­ÓÐµÄ¾ÉÌõÄ¿£¬ÎÒÃÇÓÃÀ´×ÔL1µÄÐÂ¼ÍÂ¼½«Æä¸²¸Ç£¬Í¬Ê±±£³Ö¼ÇÂ¼ÔÚÎÄ¼þÖÐ°´Ö÷¼üÅÅÐò¡£ÕâÑù£¬ÎÒÃÇ¾Í¿ÉÒÔÉ¾³ýÈý¸öÔ´ÎÄ¼þ£¬Ö»±£ÁôÒ»¸öÉú³ÉÎÄ¼þ¡£ÖµµÃ×¢ÒâµÄÊÇ£¬StellarDB»á±£³ÖÍ¬Ò»²ã£¨L0³ýÍâ£©ÄÚµÄ¸÷¸öÊý¾ÝÎÄ¼þ±Ë´Ë¼ÇÂ¼µÄÖ÷¼ü»¥²»ÖØµþ£¬ÕâÑù£¬Ã¿´Î´ÓÉÏÏÂÁ½²ãÈ¡ÓÃ½øÐÐcompaction²Ù×÷µÄÊý¾ÝÎÄ¼þÒ²ÔÚÂß¼­ÉÏÊÇ¡°ÏàÁÚµÄ¡±£¬Éú³ÉµÄÐÂµÄÊý¾ÝÎÄ¼þÒ²¾Í²»»áÓëÃ»±»È¡ÓÃµÄÊý¾ÝÎÄ¼þÓÐÖ÷¼üÉÏµÄ·¶Î§ÖØµþ¡£
+Èç¹ûÎÒÃÇÏëÒª¼õÉÙÎÄ¼þÊýÄ¿£¬Ñ¹Ëõ´æ´¢¿Õ¼ä£¬¾ÍÐèÒªÓÃÐÂµÄÐ´Èë¼ÇÂ¼È¥ºÏ²¢»ò¸²¸Ç¾ÉµÄ¼ÇÂ¼~\cite{DBLP:conf/icpp/GongHGL19}¡£ÎÒÃÇÏ£Íû½«Segment-2Ïû³ý£¬½«ÆäÖÐµÄ¼ÇÂ¼È«²¿ºÏ²¢½øÈëÏÂ²ã£¬¾ÍÐèÒªÕÒµ½ËùÓÐ°üº¬ÓÐÖØµþµÄÖ÷¼üµÄL2Êý¾ÝÎÄ¼þ£¬°ÑËûÃÇµ±³ÉÊý¾ÝÔ´£¬ÔÚL2ÖÐÉú³ÉÒ»¸öÐÂµÄÎÄ¼þSegment-5. ÈçÍ¼~\ref{compaction-sample-2}£¬¶ÔÓÚL2ÖÐÔ­ÓÐµÄ¾ÉÌõÄ¿£¬ÎÒÃÇÓÃÀ´×ÔL1µÄÐÂ¼ÍÂ¼½«Æä¸²¸Ç£¬Í¬Ê±±£³Ö¼ÇÂ¼ÔÚÎÄ¼þÖÐ°´Ö÷¼üÅÅÐò¡£ÕâÑù£¬ÎÒÃÇ¾Í¿ÉÒÔÉ¾³ýÈý¸öÔ´ÎÄ¼þ£¬Ö»±£ÁôÒ»¸öÉú³ÉÎÄ¼þ¡£ÖµµÃ×¢ÒâµÄÊÇ£¬StellarDB»á±£³ÖÍ¬Ò»²ã£¨L0³ýÍâ£©ÄÚµÄ¸÷¸öÊý¾ÝÎÄ¼þ±Ë´Ë¼ÇÂ¼µÄÖ÷¼ü»¥²»ÖØµþ£¬ÕâÑù£¬Ã¿´Î´ÓÉÏÏÂÁ½²ãÈ¡ÓÃ½øÐÐcompaction²Ù×÷µÄÊý¾ÝÎÄ¼þÒ²ÔÚÂß¼­ÉÏÊÇ¡°ÏàÁÚµÄ¡±£¬Éú³ÉµÄÐÂµÄÊý¾ÝÎÄ¼þÒ²¾Í²»»áÓëÃ»±»È¡ÓÃµÄÊý¾ÝÎÄ¼þÓÐÖ÷¼üÉÏµÄ·¶Î§ÖØµþ¡£
 
 \begin{figure}[htb]
   \centering
@@ -87,4 +121,4 @@ StellarDBÊ¹ÓÃÄ£ÄâÊý¾ÝÔÚ¼¯Èº»·¾³ÉÏ½øÐÐ²âÊÔËäÈ»¿ÉÒÔÕ¹Ê¾×î½Ó½üÊµ¼ÊÉú²ú»·¾³ÏÂµÄÓÅ»¯Ð
 
 \section{±¾ÕÂÐ¡½á}
 
-±¾ÕÂ½éÉÜÁËStellarDBµÄ´æ´¢Ä£¿éµÄÉè¼Æ£¬°üÀ¨Ä£¿é¹¦ÄÜ¡¢ÄÚ²¿Ð­×÷¡¢LSMÊ÷µÄÎ¬»¤·½Ê½¡£ÕâÎªÏÂÒ»ÕÂµÄÐÔÄÜÎÊÌâ·ÖÎöÆÌµæÁË±³¾°¡£±¾ÕÂÒ²½éÉÜÁË¶ÔÓÚÓÅ»¯Ä£Äâ²âÊÔ³ÌÐòµÄÉè¼ÆÄ¿µÄÓëÔ¤ÆÚÐ§¹ûµÄËµÃ÷¡£
+±¾ÕÂ½éÉÜÁËStellarDBµÄ¼Ü¹¹£¬·ÖÎöÁË¸÷¸öÄ£¿éµØ×÷ÓÃ£¬È»ºóÏêÏ¸½éÉÜÁË´æ´¢Ä£¿éµÄÉè¼Æ£¬°üÀ¨Ä£¿é¹¦ÄÜ¡¢ÄÚ²¿Ð­×÷¡¢LSMÊ÷µÄÎ¬»¤·½Ê½¡£ÕâÎªÏÂÒ»ÕÂµÄÐÔÄÜÎÊÌâ·ÖÎöÆÌµæÁË±³¾°¡£±¾ÕÂÒ²½éÉÜÁË¶ÔÓÚÓÅ»¯Ä£Äâ²âÊÔ³ÌÐòµÄÉè¼ÆÄ¿µÄÓëÔ¤ÆÚÐ§¹ûµÄËµÃ÷¡£
