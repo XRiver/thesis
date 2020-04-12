@@ -1,6 +1,6 @@
 \chapter{StellarDB¼°Æä´æ´¢Ä£¿éÉè¼ÆËµÃ÷}
 
-StellarDBÊÇÒ»¿î°üº¬ÁËÍ¼¿ÉÊÓ»¯¡¢APIÍâ²¿µ÷ÓÃ¡¢×ÔÎÒ¼à¿Ø¹ÜÀíµÈ·á¸»¹¦ÄÜµÄÊý¾Ý¿âÏµÍ³£¬¿ÉÒÔÓëÐÇ»·¿Æ¼¼µÄ¶à¿î´óÊý¾Ý·ÖÎöÈí¼þÐ­×÷£¨ÈçÍ¼~\ref{stellardb-overview}£©¡£±¾ÕÂ£¬ÎÒÃÇ½éÉÜStellarDBµØÄ£¿é»®·Ö£¬·ÖÎöÆä´æ´¢Ä£¿é£¬²¢½éÉÜ´æ´¢Ä£¿éºËÐÄÉè¼Æ£º²ÉÓÃLSMÊ÷Êý¾Ý½á¹¹½øÐÐÊý¾Ý´æ´¢¡£
+StellarDBÊÇÒ»¿î°üº¬ÁËÍ¼¿ÉÊÓ»¯¡¢APIÍâ²¿µ÷ÓÃ¡¢×ÔÎÒ¼à¿Ø¹ÜÀíµÈ·á¸»¹¦ÄÜµÄÊý¾Ý¿âÏµÍ³£¬¿ÉÒÔÓëÐÇ»·¿Æ¼¼µÄ¶à¿î´óÊý¾Ý·ÖÎöÈí¼þÐ­×÷£¨ÈçÍ¼~\ref{stellardb-overview}£©¡£±¾ÕÂ½éÉÜÁËStellarDBµÄÄ£¿é»®·Ö£¬·ÖÎöÁËÆä´æ´¢Ä£¿é£¬°üÀ¨´æ´¢Ä£¿éºËÐÄÉè¼Æ£º²ÉÓÃLSMÊ÷Êý¾Ý½á¹¹½øÐÐÊý¾Ý´æ´¢¡£±¾ÕÂÄ©Î²½éÉÜÁË×÷Îª¼ò»¯°æStellarDB´æ´¢Ä£¿éµÄÓÅ»¯Ä£Äâ²âÊÔ³ÌÐòµÄÉè¼Æ¡£
 
 \begin{figure}[htb]
   \centering
@@ -38,9 +38,18 @@ OpenCypherÔÚÀú¾­ÁË¶àÄêµÄ²úÒµ½çÑéÖ¤ºó£¬³ÉÎªÁËµ±Ç°×îÖ÷Á÷µÄ¿ªÔ´Í¼Êý¾Ý¿â·ÃÎÊÓïÑÔ¡£St
 
 ÓÃ»§Í¨¹ý²éÑ¯Óï·¨£¬¿ÉÒÔÍê³ÉÍ¼Êý¾ÝµÄ²éÑ¯ºÍ·ÖÎö¡£StellarDBÌá¹©ÍøÒ³¿É½»»¥·ÖÎö¹¤¾ß£¬ÓÃ»§¿É»ùÓÚ²éÑ¯½á¹û×ö½øÒ»²½µÄÊý¾Ý·ÖÎö£¬»òÕßÍ¨¹ýÒµÎñÊý¾ÝºÍÍ¼Æ×Ä£ÐÍÀ´¹¹½¨ÐÂÍ¼Æ×¡£
 
+
+
 \subsection{ÆäËûÄ£¿é}
 
 ³ýÁËÉÏÊöÄ£¿é£¬StellarDB»¹½èÖúÐÇ»·ÆäËû²úÆ·Ìá¹©·á¸»µÄ¹¦ÄÜ£¬ÈçÍ¨¹ýTranswarp GuadianÌá¹©ÓÃ»§ÈÏÖ¤¡¢È¨ÏÞ¹ÜÀí¹¦ÄÜ£¬Transwarp ManagerÌá¹©°²×°ºÍ×ÊÔ´¼à¿Ø·þÎñ¡£
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=5in]{FIGs/c3/storage-overview.png}
+  \caption{StellarDB´æ´¢Ä£¿éÍâ²¿Ð­×÷¹ØÏµ}\label{storage-overview}
+\end{figure}
+
 
 \section{StellarDB´æ´¢Ä£¿é¹¦ÄÜÓëÐ­×÷}
 
@@ -52,13 +61,15 @@ StellarDBÊ¹ÓÃJavaÓëScalaÓïÑÔ¿ª·¢£¬Æä´æ´¢Ä£¿éÎ»ÓÚio.~transwarp.~graphsearch.~stor
 
 \section{StellarDB´æ´¢Ä£¿éÄÚ²¿Éè¼Æ¼òÊö}
 
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=5in]{FIGs/c3/storage-overview.png}
-  \caption{StellarDB´æ´¢Ä£¿éÍâ²¿Ð­×÷¹ØÏµ}\label{storage-overview}
-\end{figure}
+
 
 Í¼~\ref{storage-inner}ÊÇ¾­¹ý¼ò»¯ºóµÄ´æ´¢Ä£¿éºËÐÄÀàÉè¼Æ¡£Í¼ÖÐµÄ¼ýÍ·±íÊ¾ÁËµ¥Ì¨Ö÷»úÐ´ÈëÊý¾Ý¹ý³ÌÖÐµÄÊý¾ÝÁ÷¶¯¹ý³Ì¡£ÏÂÃæÒÔÐ´Èë¹ý³ÌÎªÀýËµÃ÷StellarDB´æ´¢Ä£¿éÄÚ²¿¸÷Àà½»»¥¹ý³Ì¡£
+
+Ê×ÏÈ£¬ÉÏ²ãµÄÏûÏ¢´¦ÀíÄ£¿é°Ñ·â×°ÎªÐ´ÈëÊÂ¼þµÄÊý¾Ý·¢ËÍ¸øGraphDB¡£ÔÚStellarDBÖÐ£¬Êý¾Ý¿âµÄÃ¿Ò»¸öÍ¼¶ÔÓ¦Ò»¸öGraphDBÊµÀý¡£ÎªÁËÊµÏÖÉÏÎÄÌáµ½µÄ´ÅÅÌ¶ÁÐ´¾ùºâ¹¦ÄÜ£¬Ã¿Ò»¸öÍ¼±»»®·Ö³É¶à¸öGraphShard£¬¶øÊý¾Ý¼ÇÂ¼»á±»°´ÕÕÆä¹þÏ£Öµ·ÖÅäµ½¶ÔÓ¦µÄGraphShardÖÐ¡£Í¬Ò»ÕÅÍ¼µÄ²»Í¬GraphShard¿ÉÒÔÓµÓÐ²»Í¬´ÅÅÌÉÏµÄµÄÊý¾Ý´æ´¢Â·¾¶¡£ÕâÑù¾ÍÍ¨¹ýÊý¾ÝµÄ·ÖÍ°ÊµÏÖÁË´ÅÅÌµÄ³ä·ÖÀûÓÃ¡£
+
+StellarDBµÄ¶à¸±±¾±¸·ÝµÄµ¥Î»¾ÍÊÇGraphShard¡£ÔÚGraphShardÀàÖÐ£¬°üº¬ÁËRaftÏûÏ¢Í¬²½»úÖÆ¡£Raft°ïÖúGraphShard½«´ÓGraphDBÊÕµ½µÄÐ´ÈëÊÂ¼þÔÚ¶à¸öÖ÷»úµÄÍ¬Ò»¸öGraphShardÖ®¼ä½øÐÐÍ¬²½¡£ËùÒÔGraphShard²¢²»»áÔÚÊÕµ½GraphDB´«À´µÄÐ´ÈëÊÂ¼þÖ®ºóÁ¢¼´½«ÊÂ¼þ½âÎöÎªÐ´ÈëÊý¾Ý¡£Ð´Èë¶¯×÷Êµ¼ÊÉÏÊÇÓÉRaft masterÔÚ¼¯Èº¼äÍ¬²½µÄÐ´ÈëÊÂ¼þ´¥·¢µÄ¡£
+
+
 
 \begin{figure}[htb]
   \centering
@@ -66,15 +77,13 @@ StellarDBÊ¹ÓÃJavaÓëScalaÓïÑÔ¿ª·¢£¬Æä´æ´¢Ä£¿éÎ»ÓÚio.~transwarp.~graphsearch.~stor
   \caption{StellarDB´æ´¢Ä£¿éÄÚ²¿Ð­×÷¹ØÏµ¼òÊö}\label{storage-inner}
 \end{figure}
 
-Ê×ÏÈ£¬ÉÏ²ãµÄÏûÏ¢´¦ÀíÄ£¿é°Ñ·â×°ÎªÐ´ÈëÊÂ¼þµÄÊý¾Ý·¢ËÍ¸øGraphDB¡£ÔÚStellarDBÖÐ£¬Êý¾Ý¿âµÄÃ¿Ò»¸öÍ¼¶ÔÓ¦Ò»¸öGraphDBÊµÀý¡£ÎªÁËÊµÏÖÉÏÎÄÌáµ½µÄ´ÅÅÌ¶ÁÐ´¾ùºâ¹¦ÄÜ£¬Ã¿Ò»¸öÍ¼±»»®·Ö³É¶à¸öGraphShard£¬¶øÊý¾Ý¼ÇÂ¼»á±»°´ÕÕÆä¹þÏ£Öµ·ÖÅäµ½¶ÔÓ¦µÄGraphShardÖÐ¡£Í¬Ò»ÕÅÍ¼µÄ²»Í¬GraphShard¿ÉÒÔÓµÓÐ²»Í¬´ÅÅÌÉÏµÄµÄÊý¾Ý´æ´¢Â·¾¶¡£ÕâÑù¾ÍÍ¨¹ýÊý¾ÝµÄ·ÖÍ°ÊµÏÖÁË´ÅÅÌµÄ³ä·ÖÀûÓÃ¡£
-
-StellarDBµÄ¶à¸±±¾±¸·ÝµÄµ¥Î»¾ÍÊÇGraphShard¡£ÔÚGraphShardÀàÖÐ£¬°üº¬ÁËRaftÏûÏ¢Í¬²½»úÖÆ¡£Raft°ïÖúGraphShard½«´ÓGraphDBÊÕµ½µÄÐ´ÈëÊÂ¼þÔÚ¶à¸öÖ÷»úµÄÍ¬Ò»¸öGraphShardÖ®¼ä½øÐÐÍ¬²½¡£ËùÒÔGraphShard²¢²»»áÔÚÊÕµ½GraphDB´«À´µÄÐ´ÈëÊÂ¼þÖ®ºóÁ¢¼´½«ÊÂ¼þ½âÎöÎªÐ´ÈëÊý¾Ý¡£Ð´Èë¶¯×÷Êµ¼ÊÉÏÊÇÓÉRaft masterÔÚ¼¯Èº¼äÍ¬²½µÄÐ´ÈëÊÂ¼þ´¥·¢µÄ¡£
-
 Í¨¹ýRaftÐ­ÒéÊÕµ½ÁËÐ´ÈëÊÂ¼þÖ®ºó£¬GraphShard»á½«Êý¾ÝÐ´Èë×Ô¼ºµÄMem-~table¡£ËäÈ»LSMÊ÷´æ´¢ÊÇ»ùÓÚ´ÅÅÌµÄ£¬µ«StellarDBÑ¡ÔñÏÈ½«Ð´ÈëÊý¾Ý»º´æÔÚÄÚ´æÖÐ£¬Ò²¾ÍÊÇMemtableÀà£¬Ö®ºóÍ¨¹ýflush¹ý³Ì½«»º´æµÄÊý¾ÝÐ´µ½´ÅÅÌ£¬½«ÆäÄÉÈëLSMÊ÷µÄÎ¬»¤»úÖÆÖÐ¡£CompactionHandlerÍ¨¹ý¶¨ÆÚ¼ì²é»úÖÆÓëflush¡¢compaction~µÄ×Ô¶¯´¥·¢¶ÔÓÚ±¾GraphShardµÄLSMÊ÷×´Ì¬½øÐÐ¼´Ê±¼ì²é¡£Èç¹û·¢ÏÖÁË½øÐÐcompaction~µÄÐèÒª£¬CompactionHandler¾Í»áÆô¶¯compactionÈÎÎñ£¬Ê¹Êý¾ÝÁ÷ÏòLSMÊ÷ÏÂ²ã£¬»òÕßÊ¹LSMÊ÷×îÏÂ²ãµÄÎÄ¼þºÏ²¢¡£
 
 LSMÊ÷´æ´¢½á¹¹°ïÖúStellarDBÊµÏÖÁË¶ÁÐ´ÊÂ¼þµÄ´¦ÀíÓëÊý¾ÝÎ¬»¤¹ý³ÌµÄÒì²½»¯¡£ÕâÊ¹µÃÆµ·±Ð´Èë²Ù×÷¶ÔÓÚ¶ÁÈ¡²Ù×÷µÄÐÔÄÜ±äµÃ½ÏÐ¡¡£Èç¹ûÄÜ¹»ÊµÏÖ¸ßÐ§µÄflush¡¢compactionËã·¨£¬³ä·ÖÀûÓÃÓ²¼þµÄÐÔÄÜÎ¬»¤LSMÊ÷´æ´¢£¬Êý¾Ý¿â±ã¿ÉÒÔÍ¬Ê±Ó¦¶Ô¸ß²¢·¢µÄÐ´ÈëÓë¶ÁÈ¡ÇëÇó¡£
 
 \section{LSMÊ÷µÄ»ù±¾Î¬»¤·½Ê½}
+
+±¾½Ú½éÉÜStellarDB¶ÔLSMÊ÷Êý¾Ý½á¹¹µÄÊµÏÖÓëÎ¬»¤·½Ê½¡£
 
 StellarDB½«Í¼µÄµã»ò±ß¶¼ÒÔ¼üÖµ¶ÔµÄÐÎÊ½×÷Îª¼ÇÂ¼´æ´¢£¬ÆäÖÐÖ÷¼üÊÇ×Ö½ÚÊý×é£¬¿ÉÒÔÅÅÐò£»¶ÔÓÚÊý¾ÝµÄ¶îÍâÐ´Èë²Ù×÷£¬±ÈÈçÐÞ¸Äµã»ò±ßµÄÊôÐÔÖµ¡¢É¾³ýÄ³µã»ò±ß£¬StellarDBÒ²»á°ÑËü×÷ÎªÓµÓÐ¶ÔÓ¦µÄÖ÷¼üµÄ¼üÖµ¶ÔÀ´´æ´¢¡£ÕâÑùÒ»À´£¬Ã¿Ò»ÌõÊý¾ÝµÄËùÓÐÐ´ÈëÀúÊ·¶¼ÄÜ¹»¶ÔÓ¦LSMÊ÷µÄÒ»¸ö½Úµã¡£ÔÚStellarDBÖÐ£¬Êý¾Ý´æ´¢ÎÄ¼þ³ÆÎªSegment£»ÔÚSegmentÖÐ£¬Êý¾Ý°´ÕÕÆäÖ÷¼üÒÀÐò´æ´¢¡£ËùÒÔ£¬Segment¾Í³ÉÎªÁËLSMÊ÷ÖÐµÄÒ»¿Ã×ÓÊ÷¡£
 
@@ -106,9 +115,10 @@ StellarDB½«Í¼µÄµã»ò±ß¶¼ÒÔ¼üÖµ¶ÔµÄÐÎÊ½×÷Îª¼ÇÂ¼´æ´¢£¬ÆäÖÐÖ÷¼üÊÇ×Ö½ÚÊý×é£¬¿ÉÒÔÅÅÐò£
   \caption{Compaction²Ù×÷-²Ù×÷½á¹û}\label{compaction-sample-2}
 \end{figure}
 
-\section{ÓÅ»¯Ä£Äâ²âÊÔ³ÌÐò}
+\section{ÓÅ»¯Ä£Äâ²âÊÔ³ÌÐò¹¦ÄÜ}
 
 ¶ÔÓÚÏÂÒ»ÕÂÃèÊöµÄËã·¨ÓÅ»¯£¬³ýÁËÔÚStellarDBÖÐÊµ¼ÊµÄÊµÏÖÓëÑéÖ¤£¬±¾ÎÄ»¹ÊµÏÖÁËÒ»¸ö¶ÔÓÚÓÅ»¯µÄÄ£Äâ³ÌÐò£¬ÓÃÓÚÔÚ¸üÑÏ¸ñµÄÌõ¼þ¿ØÖÆÖ®ÏÂ²âÊÔÓÅ»¯Ëã·¨Ð§¹û¡£
+ÁíÍâ
 
 \subsection{Ä¿±ê}
 
@@ -118,6 +128,67 @@ StellarDBÊ¹ÓÃÄ£ÄâÊý¾ÝÔÚ¼¯Èº»·¾³ÉÏ½øÐÐ²âÊÔËäÈ»¿ÉÒÔÕ¹Ê¾×î½Ó½üÊµ¼ÊÉú²ú»·¾³ÏÂµÄÓÅ»¯Ð
 
 ³ÌÐòÓ¦¶ÔStellarDB´æ´¢Ä£¿é½øÐÐ³éÏó¼ò»¯£¬È¥³ý¶à¸±±¾±¸·Ý¹¦ÄÜ¡¢¶àÍ¼¶àGraphShard¹ÜÀí¹¦ÄÜ¡¢Òì²½ÏìÓ¦¿Í»§¶ÁÐ´ÇëÇó¹¦ÄÜºÍ¶ÔÓÚLSM½á¹¹½øÐÐ³Ö¾Ã»¯µÄ¹¦ÄÜ¡£
 ³ÌÐò±£Áô¶ÔLSMÊ÷µÄ»ù±¾¶ÁÐ´¹¦ÄÜ¡¢LSMÊ÷µÄ°æ±¾¹ÜÀí¹¦ÄÜ¡¢flush¹¦ÄÜ£¨°üÀ¨ÊµÏÖ»ùÓÚÌø±íµÄÄÚ´æ»º³åÇø£©¡¢compaction¹¦ÄÜ¡¢compactionÐÔÄÜÍ³¼Æ¹¦ÄÜ£¨°üº¬¶ÁÐ´Êý¾ÝÁ¿µÄÏêÏ¸Í³¼Æ£©¡£
+
+\section{ÓÅ»¯Ä£Äâ²âÊÔ³ÌÐòµÄÉè¼ÆÓëÊµÏÖ}
+
+±¾½Ú½éÉÜÓÅ»¯Ä£Äâ²âÊÔ³ÌÐòµÄÏêÏ¸ÊµÏÖ¡£ÓÉÓÚStellarDBµÄ¾ßÌåÊµÏÖÒ»¶¨³Ì¶ÈÉÏÉæ¼°±£ÃÜÖÆ¶È£¬±¾ÎÄÖÐµÄ½éÉÜ²»»áÕ¹Ê¾Ïê¾¡µÄÄ£¿é¾Ö²¿Éè¼Æ¡£ÓÅ»¯Ä£Äâ²âÊÔ³ÌÐò³éÈ¡ÁËÉè¼ÆËã·¨ÓÅ»¯µÄStellarDB´æ´¢Ä£¿éµÄ¾Ö²¿½á¹¹£¬×÷Îª¶ÔStellarDB´æ´¢Ä£¿é½á¹¹µÄÒ»Ïî²¹³ä¡£
+
+ÈçÍ¼~\ref{simulator-structure}Îª¼ò»¯ºóµÄÓÅ»¯Ä£Äâ²âÊÔ³ÌÐòÀàÍ¼£¬ÎªÁËÐÅÏ¢ÇåÎú£¬ÆäÖÐÃ»ÓÐÕ¹Ê¾³éÏó½Ó¿Ú¡¢Ëã·¨¶à°æ±¾ÊµÏÖ¡¢¹¤³§ÀàµÈ¸¨ÖúÉè¼Æ£¬½ö°üº¬ºËÐÄÀàÓëÆäÖ÷ÒªµÄ¹«¹²·½·¨¡£
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=5in]{FIGs/c4/simulator-structure.pdf}
+  \caption{ÓÅ»¯Ä£Äâ²âÊÔ³ÌÐòÀàÍ¼£¨¼ò»¯°æ£©}\label{simulator-structure}
+\end{figure}
+
+\subsection{DriverÀà}
+
+DriverÀà°üº¬ÁË²âÊÔÊý¾Ý¹¹Ôì¹ý³ÌÓëÏòDBÀàÐ´ÈëµÄ¹ý³Ì£¬ÊÇ³ÌÐòµÄÈë¿Ú¡£±¾ÓÅ»¯Ä£Äâ²âÊÔ³ÌÐòÓÉÓÚ¹¦ÄÜ¼òÂÔ£¬²¢²»ÊÇÒÔ³ÖÐø·þÎñµÄÐÎÊ½ÔËÐÐ¡£DriverÀà°üº¬ÁËJavaÖÐµÄmain·½·¨£¬·½·¨ÖÐ°üº¬ÁËÔÚÄÚ´æÖÐ¹¹Ôì²âÊÔÊý¾Ý¡¢´´½¨DBÀàÊµÀý¡¢Æô¶¯DB·þÎñ¡¢ÊµÊ±µ÷ÓÃDBÀàµÄÐ´Èë½Ó¿ÚµÄ¹ý³Ì£¬Æä¼äDBÀà»áÒì²½µØ¶ÔÐ´ÈëÊý¾Ý½øÐÐ²Ù×÷¡£²»Í¬DriverÀà¾ßÌåÊµÏÖ¶¼Óë¾ßÌåµÄ²âÊÔÓÃÀýÓÐ¹Ø£¬Ïê¼ûÏÂÎÄµÄ²âÊÔÓÃÀýËµÃ÷¡£
+
+\subsection{DBÀà}
+
+DBÀà¶ÔÓ¦×ÅStellarDBµÄGraphShard£¬ÓÉÓÚ²»¿¼ÂÇ¶àÍ¼¶àshard¹ÜÀí£¬ËùÒÔÔÚÊ¹ÓÃÄ£Äâ³ÌÐò½øÐÐ²âÊÔµÄÊ±ºò£¬ËùÓÐÊý¾Ý´¦Àí¶¼ÔÚÍ¬Ò»¸öGraphShardÖ®ÄÚ£¬Ò²¾ÍÊÇÍ¬Ò»¿ÃLSMÊ÷Ö®ÄÚ¡£
+
+DBÀàÓµÓÐ¶Ô¸÷¹Ø¼üÀàµÄÒýÓÃ£¬·½±ã¸÷¹¦ÄÜÀà³õÊ¼»¯Ê±»ñÈ¡»¥ÏàÖ®¼äµÄÒýÓÃ¡£DB±©Â¶ÁËÒ»¸öÐ´Èë½Ó¿Ú£¬Ö§³ÖÏò±¾Í¼£¨µ¥Ò»GraphShard£©ÄÚÐ´ÈëÒ»Ìõ¼ÇÂ¼£¨Record£©¡£Ëü»áÊ¹ÓÃÄÚ´æ»º³åÇøRecordList£¬Èç¹û»º³åÇøÂú£¬Ôò·¢ËÍÒì²½ÊÂ¼þ£¬ÇëÇóFlushHandler¶ÔÓÚÕâ¸öÄÚ´æ»º³åÇø½øÐÐflush²Ù×÷¡£
+
+\subsection{RecordÀàÓëSegmentÀà}
+
+×÷Îª»ù±¾µÄÊÂÎñÄ£ÐÍ£¬¶àÌõÊý¾Ý¼ÇÂ¼RecordË³ÐòÅÅÁÐ×é³ÉÒ»¸öÊý¾ÝÎÄ¼þSegment¡£RecordÓÉÁ½¸ö×Ö½ÚÊý×é¹¹³É£ºkeyÓëvalue¡£ÔÚ±¾ÏµÍ³ÖÐ£¬RecordÖ±½ÓÒÔ¡°key³¤¶È+key+value³¤¶È+value¡±µÄÐÎÊ½Ö±½Ó±àÂë£¬´æ´¢ÓÚSegmentÖ®ÖÐ¡£SegmentÀàÔò×÷Îª¶ÁÐ´Ê±µÄÖÐ½é£¬ÕÆÎÕÈçºÎ±àÂë¡¢½âÂëÊý¾ÝÎÄ¼þµÄÖªÊ¶¡£
+
+\subsection{FileMetaÀà}
+
+FileMetaÀàÊÇÔÚÏµÍ³ÖÐ£¬ÓÈÆäÊÇÔÚflushÓëcompaction¹ý³ÌÖÐ¶ÔSegmentµÄ´úÀíÓëÔöÇ¿¡£ÓÉÓÚÊý¾ÝÎÄ¼þÔÚLSMÊ÷ÖÐÁ÷¶¯Ê±£¬»áÓµÓÐËù´¦²ãÊý¡¢ÎÄ¼þÅÅÐòID¡¢ÆðÖ¹¼ÇÂ¼·¶Î§µÈ¶ÔÓÚcompactionµ÷¶ÈºÜÖØÒªµÄÔªÐÅÏ¢£¬ËùÒÔÏµÍ³Ê¹ÓÃFileMetaÀàÀ´´æ´¢ÏµÍ³ÔËÐÐÊ±Êý¾ÝÎÄ¼þµÄÔªÐÅÏ¢¡£
+
+\subsection{VersionSetÀàÓëVersionÀà}
+
+VersionÀà±íÊ¾Æä¶ÔÏó±»¹¹½¨³öµÄÄÇÒ»Ê±¿Ì£¨¼°Ö®ºóÒ»¶ÎÊ±¼ä£©ÏµÍ³µÄLSMÊ÷ÖÐµÄÊý¾ÝÎÄ¼þ×´Ì¬£¬ÆäÖÐ±£´æÁËÒ»¸öFileMetaÁÐ±í£¬È·±£ÏµÍ³ÄÜ³ÖÐø×·×Ù¹ÜÀíµÄÊý¾ÝÎÄ¼þ¡£Version¶ÔÏó´Ó¹¹½¨Íê³ÉÖ®ºó×´Ì¬¾Í²»»á¸Ä±ä¡£VersionSet¶ÔÓÚÒ»¸öDBÊÇÎ¨Ò»µÄ£¬ËüÒýÓÃÁËÏµÍ³×îÐÂµÄVersion¡£ÏµÍ³LSMÊ÷ÖÐµÄÊý¾ÝÎÄ¼þ±ä¶¯µÄÊ±ºò£¬ÐèÒªÒÔVersionMod¶ÔÏóÃèÊö×Ô¼ºµÄÐÞ¸ÄÄÚÈÝ£¬µ÷ÓÃVersionSetµÄÐÞ¸Ä·½·¨¡£¶øVersionSet¶ÔÓÚÐÞ¸ÄÇëÇóµÄ´¦ÀíÊÇÍ¬²½µÄÇÒ»á¼ì²éÐÞ¸ÄÊÇ·ñºÏ·¨£¬Õâ¾Í±ÜÃâÁË¡°Òì²½µÄflushÓëcompaction¹ý³Ì¹²Í¬ÐÞ¸ÄLSMÊ÷¡±¿ÉÄÜ´øÀ´µÄ¶àÖÖÎÊÌâ¡£
+
+\subsection{BusÀà}
+
+BusÀà¸ºÔð½«ÏµÍ³ÖÐµÄÊÂ¼þ·Ö·¢µ½Æä¶ÔÓ¦µÄ´¦ÀíÆ÷¡£±¾ÏµÍ³ÖÐ×Ü¹²ÓÐ3ÖÖÊÂ¼þ£º
+
+\begin{enumerate}
+  \item FlushEvent£ºµ±ÄÚ´æ»º³åÇøÂú£¬ÓÉDB·¢³öµÄflushÇëÇó¡£ÊÂ¼þÓÉFlushHandler~´¦Àí¡£
+  \item CompactionEvent£ºÓÉFlushHandler»òÕßCompactionHandler~·¢³ö£¬ÌáÊ¾LSM~Ê÷Ä³Ò»²ãÓÐÐÂÔöÎÄ¼þ£¬¿ÉÄÜÐèÒª¶Ô´Ë²ã½øÐÐcompaction¡£ÊÂ¼þÓÉ~CompactionHandler~´¦Àí¡£
+  \item MetricEvent£ºÓÉFlushHandler»òCompaction~Handler·¢³ö£¬Ìá¹©×Ô¼º´¦ÀíµÄÊý¾Ý´¦ÀíÈÎÎñÐÔÄÜÍ³¼ÆÐÅÏ¢¡£ÊÂ¼þÓÉMetricHandler´¦Àí£¬ÐÔÄÜÐÅÏ¢ÔÚÕâÀï»ã×Ü²¢Í¨¹ýÈÕÖ¾½øÐÐ´òÓ¡¡£
+\end{enumerate}
+
+\subsection{FlushHandler½Ó¿ÚÓëFlushExecutor½Ó¿Ú}
+
+FlushHandlerÏìÓ¦²¢µ÷¶ÈFlushEvent£¬ÎªÆä·ÖÅäFlushExecutor×÷Îªflush²Ù×÷µÄÊµ¼ÊÖ´ÐÐÀà¡£ÓÅ»¯Ç°ºóµÄflushËã·¨·Ö±ð´¦ÓÚ²»Í¬µÄFlushExecutorÖÐ¡£ÎªÁËÈ·¶¨ÐÔ£¬±¾ÏµÍ³ÖÐµÄHandler¶¼Ö»ÓµÓÐÒ»¸öExecutor£¬flushÊÂ¼þ±Ë´ËÖ®¼äÊÇ´®ÐÐ´¦ÀíµÄ¡£
+
+\subsection{CompactionHandler½Ó¿ÚÓëCompactionExecutorÀà}
+
+Óëflush²Ù×÷ÀàËÆ£¬CompactionHandlerµÄ²»Í¬°æ±¾ÊµÏÖ°üº¬ÓÅ»¯Ç°»òÓÅ»¯ºóµÄcompactionËã·¨¡£µ«ÓÉÓÚ¾ßÌåµÄ¶ÁÐ´²Ù×÷ÊÇÏàÍ¬µÄ£¬ËùÒÔ²»Í¬°æ±¾µÄCompactionHandlerÊ¹ÓÃÁËÍ¬Ò»¸öCompactionExecutorÀà¡£
+
+ÐèÒª×¢ÒâµÄÊÇ£¬ÓÉÓÚ±¾Ä£Äâ³ÌÐòÖÐLSMÊ÷²»Í¬µÄ²ã´ÎµÄcompaction²»»áÒì²½½øÐÐ£¬ËùÒÔÄ£Äâ±àÐ´µÄ¡°ÓÅ»¯Ç°¡±µ÷¶ÈËã·¨ÓëStellarDBÖÐÊµ¼ÊµÄÓÅ»¯Ç°µ÷¶ÈËã·¨ÂÔÓÐ²»Í¬¡£ÈçÍ¼~\ref{sim-v1}£¬ÔÚ´ËÊµÏÖÖÐ£¬ÓÉÓÚL1ÎÄ¼þÔÚµ÷¶ÈcompactionÈÎÎñÊ±²»»á±»ÆäËûcompactionÈÎÎñÕ¼ÓÃ£¬ËùÒÔ²ÉÓÃÁË¼òµ¥µÄ¡°È¡ÓÃÈ«²¿ÓëL0ÎÄ¼þÓÐÖ÷¼üÖØµþµÄL1ÎÄ¼þ¡±µÄ·½Ê½¡£ÕâÑùµÄÐÞ¸Ä²¢²»»áÓ°Ïì²âÊÔ½á¹ûµÃ³öµÄ½áÂÛ¡£ÒòÎªStellarDBÔ­Ëã·¨ÔÚ¶îÍâÌÞ³ýÒ»²¿·Ö±»Õ¼ÓÃµÄL1Êý¾ÝÎÄ¼þÖ®ºó£¬Ëùµ÷¶ÈµÄcompactionÈÎÎñ»áÌÞ³ý¸ü¶àµÄL0ÎÄ¼þ£¬µ¼ÖÂ¸üÑÏÖØµÄI/OÀË·Ñ¡£
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=5in]{FIGs/c4/compaction-sim-v1.pdf}
+  \caption{ÓÅ»¯Ä£Äâ²âÊÔ³ÌÐòµÄÓÅ»¯Ç°compactionµ÷¶ÈËã·¨´úÂë}\label{sim-v1}
+\end{figure}
+
 
 \section{±¾ÕÂÐ¡½á}
 

@@ -1,19 +1,40 @@
-\chapter{优化详细设计实现与结果展示}
+\chapter{性能优化详细设计实现与结果展示}
 
-本章介绍在StellarDB存储模块的一次针对产品在生产环境中遭遇的实际性能问题的优化。
+本章介绍在StellarDB存储模块的生产环境中遭遇的实际性能问题的优化。
 
 \section{性能问题说明}
 
-根据同事在客户现场进行产品展示时的经历，团队发现StellarDB在大规模数据集的高并发写入操作之后，很长时间内磁盘与CPU占用居高不下，而且读请求响应超时：虽然系统接收到了客户端的查询请求，但在默认的30秒超时时间内，甚至无法完成第一小批查询结果，导致客户端认为数据库查询失败，而实际上数据库在几分钟之后会向客户端端口发回第一小批查询结果。这样长的查询延迟无法满足客户对系统性能的需求。经过简单排查，发现关键在于数据compaction性能不足。经过flush过程产生的L0的数据文件在L0累积，无法有效地通过compaction过程进入LSM树的下层。在极端条件下，一个GraphShard会同时管理近两千个L0的数据文件，而一个查询请求的处理需要对这上千个L0数据文件都进行搜索。这导致了I/O线程的短缺，使查询情趣难以得到及时处理。
+根据同事在客户现场进行产品展示时的经历，团队发现StellarDB在大规模数据集的高并发写入操作之后，很长时间内磁盘与CPU占用居高不下，而且读请求响应超时：虽然系统接收到了客户端的查询请求，但在默认的30秒超时时间内，甚至无法完成第一小批查询结果，导致客户端认为数据库查询失败，而实际上数据库在几分钟之后会向客户端端口发回第一小批查询结果。这样长的查询延迟无法满足客户对系统性能的需求。在近似场景的测试下重现这个问题，可以发现在经过25分钟的高压写入过程之后，各GraphShard的L0文件数均超过1000；在停止写入30分钟之后，仍然有超过四分之一的GraphShard的L0文件数超过1000。在这种条件下，这些GraphShard不能及时响应读请求。经过简单排查，发现关键在于数据compaction性能不足。经过flush过程产生的L0的数据文件在L0累积，无法有效地通过compaction过程进入LSM树的下层。在极端条件下，一个GraphShard会同时管理约2000个L0的数据文件，而一个查询请求的处理需要对这上千个L0数据文件都进行搜索。这导致了I/O线程的短缺，使查询请求难以得到及时处理。
 
 
 \section{性能问题分析}
 
-在测试过程中，数据的积累只体现在了难以从L0流向L1，而从L1向L2的流动并无明显阻塞。这与L0的特殊性质有关。StellarDB使用内存缓冲区（即Memtable）临时保存写入的记录，等到缓冲区满，再将缓冲区的记录通过flush过程直接写为L0的数据文件。这样的操作使得L0的数据文件不能满足“彼此之间记录的主键范围不重叠”的条件，而LSM树的设计又要求L1的数据必须比L0旧才能保障正确性，所以在从L0向L1的compaction过程中，StellarDB每次会取几个（根据具体参数设置有一个上限）L0的最旧的数据文件，计算他们总共的主键范围，再从L1中找出所有与此范围有交集的数据文件，将它们一起作为源数据进行compaction，生成新的L1数据文件。
+在本人接手此性能优化任务之前，有另一位同事已经对此性能问题进行了分析与优化尝试。但是限于可分析的性能数据有限，他提出的分析与优化尝试效果不佳，没能解决查询请求超时问题。本人接手任务后先完善了系统的性能监控能力，之后再进行了问题分析。
 
-但是，根据使用的测试数据（模拟真实社交网络的LDBC数据集），我们发现，一个L0中的文件的记录主键，很可能均匀分布于几乎整个的主键“定义域”。例如：LDBC中的主键都是随机生成的长整形数，首字符为1至9（此处暂不讨论各个字符出现频率），在合理的compaction之后，如果L1有9个文件，那么大致来说应该第1个的文件里面都是“1”打头的主键的条目，第2个文件里面基本都是“2”打头的主键的条目，以此类推。但是，一个L0文件却同时拥有1至9打头的主键的条目。这就导致每一次的L0到L1的compaction，都需要把所有的L1文件涵盖在输入中。
+\subsection{基于简略的性能数据的问题分析}
 
-这样有两个后果：一、每次L0向L1的compaction任务，不论取了几个L0的文件，都会把L1的所有内容重新读一遍、重新写一遍，造成极大的资源浪费；二、虽然compaction线程池足够大，但是单个GraphShard的L0向L1的compaction~任务每次只能有一个线程执行（因为所有L1文件都被它占用、上锁），并行度差。
+在完善性能数据之前，StellarDB只可以报告各GraphShard的LSM树的各层文件数目，以及执行~compaction~任务的线程数目；通过查询日志，可以得知调度执行的flush任务与compaction任务是否完成。而性能测试的度量，只限于统计“写入开始”、“写入完成”、“compaction基本完成”等时间节点之间的间隔，无法精细地统计具体~compaction~任务的粒度、个数、执行效率等数据。
+
+在这样的条件下，该同事的问题分析包含了对系统现有可调节参数的讨论：
+
+\begin{enumerate}
+  \item 数据文件是否开启压缩：为了节省存储空间，StellarDB的数据文件默认内部按数据块进行压缩。如果取消L0的压缩，可以提升Memtable的flush速度，而且在从L0向L1进行~compaction~时，也可以节省用于解压L0文件数据块的CPU资源。
+  \item Compaction文件限制数：为了避免过大规模的compaction任务长时间占用I/O线程，StellarDB为~compaction~调度限制了输入文件数。如果放宽此限制，就可以减少~compaction~总次数，有可能提高~compaction~并行度，从而提高效率。
+  \item Compaction超时时间：StellarDB会周期性自动触发~compaction~检查。如果此时间设置过短，可能会导致~compaction~线程竞争问题。
+  \item Compaction线程数：如果~compaction~任务之间存在线程竞争情况，那么增大线程池容量可以缓解竞争问题，提升~compaction~总体效率。
+\end{enumerate}
+
+经过具体的参数调整，测试显示，Memtable的flush性能提升了3倍，但~compaction~的性能提升不明显。对LSM树的文件数目变动趋势的观察显示，~compaction~依然阻塞于L0。从“写入开始”到“compaction基本完成”的时间也没有缩短。这说明flush性能并非此问题的性能瓶颈，调节现有参数无法解决~compaction~阻塞问题。
+
+\subsection{基于完善的性能数据的问题分析}
+
+在完善了StellarDB存储模块的性能监控功能之后（具体新增条目参见本章“StellarDB对比测试”一节），本人重新进行了性能测试。测试发现，数据的积累只体现在了难以从L0流向L1，而从L1向L2的流动并无明显阻塞。磁盘读写速度已经没有提升空间，而磁盘的总I/O量与写入StellarDB的数据量及其不匹配。进一步分析发现，compaction过程消耗的L0文件容量与数据集大小匹配，但同时compaction消耗了远远多于L0数据的L1数据。这说明compaction过程中存在对磁盘I/O能力的巨大浪费。
+
+这个现象与L0的特殊性质有关。StellarDB使用内存缓冲区（即Memtable）临时保存写入的记录，等到缓冲区满，再将缓冲区的记录通过flush过程直接写为L0的数据文件。这样的操作使得L0的数据文件不能满足“彼此之间记录的主键范围不重叠”的条件，而LSM树的设计又要求L1的数据必须比L0旧才能保障正确性，所以在从L0向L1的compaction过程中，StellarDB每次会取几个（根据具体参数设置有一个上限）L0的最旧的数据文件，计算他们总共的主键范围，再从L1中找出所有与此范围有交集的数据文件，将它们一起作为源数据进行compaction，生成新的L1数据文件。
+
+但是，根据使用的测试数据（模拟真实社交网络的LDBC数据集），可以发现，一个L0中的文件的记录主键，很可能均匀分布于几乎整个的主键“定义域”。例如：LDBC中的主键都是随机生成的长整形数，首字符为1至9（此处暂不讨论各个字符出现频率），在合理的compaction之后，如果L1有9个文件，那么大致来说应该第1个的文件里面都是“1”打头的主键的条目，第2个文件里面基本都是“2”打头的主键的条目，以此类推。但是，一个L0文件却同时拥有1至9打头的主键的条目。这就导致每一次的L0到L1的compaction，都需要把所有的L1文件涵盖在输入中。
+
+这样有两个后果：其一，每次L0向L1的compaction任务，不论取了几个L0的文件，都会把L1的所有内容重新读一遍、重新写一遍，造成极大的资源浪费；其二，虽然compaction线程池足够大，但是单个GraphShard的L0向L1的compaction~任务每次只能有一个线程执行（因为所有L1文件都被它占用、上锁），并行度差。
 
 
 \section{问题解决思路}
@@ -38,7 +59,7 @@ Compaction过程中，数据从上层流向下层，上下层的文件都需要被读取、解析、排序、合并
 原来图~\ref{Algo-Before}将Segment 1、2 、3 做compaction进入L1，每个任务会使用的输入的大小为（Memtable大小 × 1 + L1大小），输出的大小为(L1大小)，串行执行3遍， 改进后每个任务会使用的输入大小约为(Memtable大小 × 1 + L1大小 / 3)，输出的大小约为(L1大小 / 3)，并行执行3遍。很容易看出，如果认为L0数据取用上限远小于L1大小的话，同样的compaction任务在L0分片树为N时，总读写量变成了约1/N，时间开销有潜力变为1/(N × N).
 
 
-\section{算法细节研究}
+\section{算法优化设计}
 
 \subsection{分片数的设置}
 
@@ -88,7 +109,7 @@ Flush算法为优化所作的修改比较简单。如图~\ref{flush-before}，优化前，flush使用Mem
 
 Compaction算法为优化所作的修改相对复杂，主要可以分为两个部分：L0、L1文件选取顺序倒置，新增L0内部文件选取算法。
 
-\subsubsection{L0、L1文件选取顺序倒置}
+L0、L1文件选取顺序倒置可以减少文件筛选步骤，提高选取率。
 
 如图~\ref{compaction-before-flow}，旧算法先按照时间顺序从L0中取出最旧的文件，计算其主键范围，再从L1中选取所有与此范围重叠的数据文件。实际上，由于原有的并行化设计，L1中的被选取的文件有可能正在进行L1向L2的compaction。此时就要从刚选取的L1文件中剔除正在被占用的文件。根据剔除掉的主键范围再反过来剔除不能被compaction的L0文件。这样会降低文件选取效率。
 
@@ -100,27 +121,30 @@ Compaction算法为优化所作的修改相对复杂，主要可以分为两个部分：L0、L1文件选取顺序
 
 如图~\ref{compaction-after}为改进后调度代码，图~\ref{compaction-after-flow}为算法流程图，新算法使用L1文件数量尽量少，会按照“选用0个L1文件”、“选用1个L1文件”、“选用2个L1文件”这样逐渐增加的顺序尝试，计算出选取L0文件时可以使用的主键范围，根据范围尝试计算合适的L0文件选择计划，从中选择读扩大率最小的进行调度。由于是从L1文件开始选取的，就省去了重新检查、剔除L0文件的步骤，使得逻辑大大简化。
 
-\begin{figure}[htb]
+
+新的L0内部文件选择算法不再使用死板的文件数目限制，将文件总容量、读扩大率等条件都纳入考量，更精细地选取尽量多的L0文件。
+
+
+
+由于在新的flush算法中，一个Memtable（其中的记录视为同一时刻写入的）会被分到多个L0文件中，所以我们给L0文件附上属性“walID”。同一个Memtable生成的L0文件拥有相同的walID；walID越小，数据越久。选取L0文件时，要从旧Segment（walID小）向新Segment（walID大）选。因为每选取完一组walID相同的Segment之后，要根据选取的情况缩小可用的主键范围。
+\begin{figure}[H]
   \centering
   \includegraphics[width=5in]{FIGs/c4/compaction-after.pdf}
   \caption{Compaction算法优化：L0、L1文件选取顺序倒置}\label{compaction-after}
 \end{figure}
 
 \begin{figure}[htb]
-    \centering
-    \includegraphics[width=5in]{FIGs/c4/compaction-algo-after-flow.png}
-    \caption{优化后compaction算法流程图}\label{compaction-after-flow}
+  \centering
+  \includegraphics[width=5in]{FIGs/c4/compaction-algo-after-flow.png}
+  \caption{优化后compaction算法流程图}\label{compaction-after-flow}
 \end{figure}
-
-\subsubsection{L0内部文件选择算法}
-
-由于在新的flush算法中，一个Memtable（其中的记录视为同一时刻写入的）会被分到多个L0文件中，所以我们给L0文件附上属性“walID”。同一个Memtable生成的L0文件拥有相同的walID；walID越小，数据越久。选取L0文件时，要从旧Segment（walID小）向新Segment（walID大）选。因为每选取完一组walID相同的segment之后，要根据选取的情况缩小可用的主键范围。
-
 \begin{figure}[htb]
     \centering
     \includegraphics[width=5in]{FIGs/c4/Algo-Pick.png}
     \caption{Compaction算法优化：L0内部文件选择情景示例}\label{Algo-Pick}
 \end{figure}
+
+
 
 如图~\ref{Algo-Pick}用英文字母表示数据文件里面包含的条目主键，我们想要尝试计算“在L1中只选取Seg85时，能够包含进compaction任务的L0文件”。首先，Seg85的主键范围时[I,K]，但是实际上可以扩大到(G,N)这个开区间。然后根据walID（同一个Memtable生成的L0文件享有相同的walID）顺序选择L0文件并缩小主键范围。首先对于walID=100， 可以选择I与M，同时没有被选取的L0文件无法影响主键范围；然后处理walID=101，只能选择K+L这一个文件，而且由于没被选入的文件影响，主键范围被缩小到了(J,M)；再看walID=102，发现Segment J+M已经不能选择，因为可选主键范围是(J,M)而不是[J,M]，而且，Segmemt J+M直接把可选主键范围缩减到空集，也就没有必要再搜索walID=103的情况了。
 
@@ -136,65 +160,7 @@ Compaction算法为优化所作的修改相对复杂，主要可以分为两个部分：L0、L1文件选取顺序
     \caption{Compaction算法优化：L0内部文件选择算法源码（续）}\label{l0-pick-2}
 \end{figure}
 
-\section{优化模拟测试程序的设计与实现}
 
-本节介绍优化模拟测试程序的详细实现。由于StellarDB的具体实现一定程度上涉及保密制度，上文中的介绍并没有展示详尽的模块局部设计。优化模拟测试程序抽取了设计算法优化的StellarDB存储模块的局部结构。本节的介绍是上文对StellarDB存储模块结构的一项补充。
-
-如图~\ref{simulator-structure}为简化后的优化模拟测试程序类图，为了信息清晰，其中没有展示抽象接口、算法多版本实现、工厂类等辅助设计，仅包含核心类与其主要的公共方法。
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=5in]{FIGs/c4/simulator-structure.pdf}
-  \caption{优化模拟测试程序类图（简化版）}\label{simulator-structure}
-\end{figure}
-
-\subsection{Driver类}
-
-Driver类包含了测试数据构造过程与向DB类写入的过程，是程序的入口。本优化模拟测试程序由于功能简略，并不是以持续服务的形式运行。Driver类包含了Java中的main方法，方法中包含了在内存中构造测试数据、创建DB类实例、启动DB服务、实时调用DB类的写入接口的过程，其间DB类会异步地对写入数据进行操作。不同Driver类具体实现都与具体的测试用例有关，详见下文的测试用例说明。
-
-\subsection{DB类}
-
-DB类对应着StellarDB的GraphShard，由于不考虑多图多shard管理，所以在使用模拟程序进行测试的时候，所有数据处理都在同一个GraphShard之内，也就是同一棵LSM树之内。
-
-DB类拥有对各关键类的引用，方便各功能类初始化时获取互相之间的引用。DB暴露了一个写入接口，支持向本图（单一GraphShard）内写入一条记录（Record）。它会使用内存缓冲区RecordList，如果缓冲区满，则发送异步事件，请求FlushHandler对于这个内存缓冲区进行flush操作。
-
-\subsection{Record类与Segment类}
-
-作为基本的事务模型，多条数据记录Record顺序排列组成一个数据文件Segment。Record由两个字节数组构成：key与value。在本系统中，Record直接以“key长度+key+value长度+value”的形式直接编码，存储于Segment之中。Segment类则作为读写时的中介，掌握如何编码、解码数据文件的知识。
-
-\subsection{FileMeta类}
-
-FileMeta类是在系统中，尤其是在flush与compaction过程中对Segment的代理与增强。由于数据文件在LSM树中流动时，会拥有所处层数、文件排序ID、起止记录范围等对于compaction调度很重要的元信息，所以系统使用FileMeta类来存储系统运行时数据文件的元信息。
-
-\subsection{VersionSet类与Version类}
-
-Version类表示其对象被构建出的那一时刻（及之后一段时间）系统的LSM树中的数据文件状态，其中保存了一个FileMeta列表，确保系统能持续追踪管理的数据文件。Version对象从构建完成之后状态就不会改变。VersionSet对于一个DB是唯一的，它引用了系统最新的Version。系统LSM树中的数据文件变动的时候，需要以VersionMod对象描述自己的修改内容，调用VersionSet的修改方法。而VersionSet对于修改请求的处理是同步的且会检查修改是否合法，这就避免了“异步的flush与compaction过程共同修改LSM树”可能带来的多种问题。
-
-\subsection{Bus类}
-
-Bus类负责将系统中的事件分发到其对应的处理器。本系统中总共有3种事件：
-
-\begin{enumerate}
-  \item FlushEvent：当内存缓冲区满，由DB发出的flush请求。事件由FlushHandler~处理。
-  \item CompactionEvent：由FlushHandler或者CompactionHandler~发出，提示LSM~树某一层有新增文件，可能需要对此层进行compaction。事件由~CompactionHandler~处理。
-  \item MetricEvent：由FlushHandler或Compaction~Handler发出，提供自己处理的数据处理任务性能统计信息。事件由MetricHandler处理，性能信息在这里汇总并通过日志进行打印。
-\end{enumerate}
-
-\subsection{FlushHandler接口与FlushExecutor接口}
-
-FlushHandler响应并调度FlushEvent，为其分配FlushExecutor作为flush操作的实际执行类。优化前后的flush算法分别处于不同的FlushExecutor中。为了确定性，本系统中的Handler都只拥有一个Executor，flush事件彼此之间是串行处理的。
-
-\subsection{CompactionHandler接口与CompactionExecutor类}
-
-与flush操作类似，CompactionHandler的不同版本实现包含优化前或优化后的compaction算法。但由于具体的读写操作是相同的，所以不同版本的CompactionHandler使用了同一个CompactionExecutor类。
-
-需要注意的是，由于本模拟程序中LSM树不同的层次的compaction不会异步进行，所以模拟编写的“优化前”调度算法与StellarDB中实际的优化前调度算法略有不同。如图~\ref{sim-v1}，在此实现中，由于L1文件在调度compaction任务时不会被其他compaction任务占用，所以采用了简单的“取用全部与L0文件有主键重叠的L1文件”的方式。这样的修改并不会影响测试结果得出的结论。因为StellarDB原算法在额外剔除一部分被占用的L1数据文件之后，所调度的compaction任务会剔除更多的L0文件，导致更严重的I/O浪费。
-
-\begin{figure}[htb]
-  \centering
-  \includegraphics[width=5in]{FIGs/c4/compaction-sim-v1.pdf}
-  \caption{优化模拟测试程序的优化前compaction调度算法代码}\label{sim-v1}
-\end{figure}
 
 \section{StellarDB对比测试}
 
@@ -241,11 +207,7 @@ RA_{L_{0}至L_{1}}=\dfrac {(L1-total-read-size)_{L_{0}至L_{1}}}{(L0-total-read-si
   \caption{StellarDB的使用Log4j以表格形式打印性能信息}\label{log-form-exp}
 \end{figure}
 
-\subsection{测试结果}
-
-测试包含多次对比测试，过程中包含算法修改、参数调整。具体的测试变量与结果如下。
-
-\subsubsection{测试：LEG}
+\subsection{测试结果：LEG}
 
 如表~\ref{table:testVarLEG}，本次测试使用未优化的算法。这是优化之前StellarDB的默认参数，包括生产环境也使用这些参数。
 
@@ -289,7 +251,7 @@ RA_{L_{0}至L_{1}}=\dfrac {(L1-total-read-size)_{L_{0}至L_{1}}}{(L0-total-read-si
   \label{table:perfLEG}
   \end{table}
 
-\subsubsection{测试：EXP1}
+\subsection{测试结果：EXP1}
 
 如表~\ref{table:testVarEXP1}，本测试开始使用优化后算法。测试条件描述中相较测试LEG缺失的项表示值与LEG中的值相同，不再重复。
 
@@ -333,7 +295,7 @@ RA_{L_{0}至L_{1}}=\dfrac {(L1-total-read-size)_{L_{0}至L_{1}}}{(L0-total-read-si
     \label{table:perfEXP1}
     \end{table}
 
-\subsubsection{测试：EXP2}
+\subsection{测试结果：EXP2}
 
 如表~\ref{table:testVarEXP2}，同时翻倍分片数与内存缓冲区大小（从而L0文件大小不变），与EXP1对比，观察分片是否越细越好。
 
@@ -375,7 +337,7 @@ EXP2消耗自然时间为23分钟。如表~\ref{table:perfEXP2}，在分片数增加之后，compactio
     \end{table}
   
 
-\subsubsection{测试：EXP3}
+\subsection{测试结果：EXP3}
 
 如表~\ref{table:testVarEXP3}，在EXP2的基础上，引入compaction对应优化，但也并非最终方案：没有对于单次compaction任务中使用L0数据文件的量进行限制。
 
@@ -417,7 +379,7 @@ EXP2消耗自然时间为23分钟。如表~\ref{table:perfEXP2}，在分片数增加之后，compactio
     \label{table:perfEXP3}
     \end{table}
 
-\subsubsection{测试：EXP4}
+\subsection{测试结果：EXP4}
 
 如表~\ref{table:testVarEXP4}，在EXP3的算法基础上，加入单次任务容量的间接限制：限制读取上层数据文件与下层数据文件的容量比例。由于算法追求尽量少读取下层数据文件，所以上层数据文件的用量也得到了控制。这个比例被固定限制为不大于5.0，不小于0.5.
 
@@ -460,7 +422,7 @@ EXP2消耗自然时间为23分钟。如表~\ref{table:perfEXP2}，在分片数增加之后，compactio
 
 本次测试中，观察到存在少量极小的L0文件一直滞留L0，无论经过多长时间都不会被compaction，这是因为增加的限制使得过小的L0文件无法被调度。
 
-\subsubsection{测试：EXP5}
+\subsection{测试结果：EXP5}
 
 如表~\ref{table:testVarEXP5}，在EXP4的基础上，进一步优化L0文件选择策略：“从仅使用一个L1文件开始搜索调度方案”改为“从不使用L1文件开始搜索调度方案”。这样可以进一步降低总读扩大率。
 
@@ -503,7 +465,7 @@ EXP2消耗自然时间为23分钟。如表~\ref{table:perfEXP2}，在分片数增加之后，compactio
     \end{table}
 
 
-\subsubsection{测试：EXP6}
+\subsection{测试结果：EXP6}
 
 如表~\ref{table:testVarEXP6}，在EXP5的基础上，在compaction任务调度时再次引入“单次任务使用L0文件数目”限制，与最初的算法不同，这个限制既包括上限也包括下限。这样既能解决EXP4、EXP5中展现出来的部分L0文件compaction受阻的问题（EXP4中的条件需要与本条件同时不满足时才会停止L0文件的选取），也可以顺便对于compaction任务粒度做出限制。
 
@@ -550,15 +512,15 @@ EXP2消耗自然时间为23分钟。如表~\ref{table:perfEXP2}，在分片数增加之后，compactio
 
 测试使用控制变量的方式，对“是否采用优化算法”与“模拟数据插入顺序”这两个变量进行交叉测试，同时保持其他变量不变，总共进行了4次测试。测试结果关注L0到L1的compaction过程的读写放大率。
 
-\subsubsection{变量：是否采用优化算法}
+\subsection{测试变量：是否采用优化算法}
 
 由于已经拥有在StellarDB上进行算法调优的丰富经验，本模拟程序直接实现了两个版本的优化算法：StellarDB最初的flush、compaction算法，和已经整合了各种任务粒度控制方式、细节优化手段的最终版flush、compaction算法。
 
-\subsubsection{变量：模拟数据插入顺序}
+\subsection{测试变量：模拟数据插入顺序}
 
 优化算法的优化效果基于“数据随机无序插入”的假设。本次实验有两种模拟数据插入方式。首先，模拟数据记录的key与value值相同，都是长度为7的字节数组。将数组分为长度为4的前缀与长度为3的后缀，前缀取值为“0001”至“5000”，后缀取值为“001”至“300”，总计为1500000条模拟记录。一种插入顺序为对每一个后缀遍历所有前缀，这样不论从整体看还是从内存缓冲区对记录进行排序的视角看，插入是高度无序的；另一种插入顺序为对每一个前缀遍历所有后缀，这样的插入方式就是完全按照key顺序插入的。
 
-\subsubsection{不变量}
+测试不变量为：
 
 \begin{enumerate}
   \item 内存缓冲区容量：5000条记录
