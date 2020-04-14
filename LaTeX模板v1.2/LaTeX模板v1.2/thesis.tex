@@ -104,7 +104,7 @@
 % 南大中文封面内容字符串
 \title{图数据库StellarDB存储模块性能优化的设计与实现}
 \author{\kaishu 徐江河}
-\studentnum{-}
+\studentnum{}
 \grade{2018}
 \advisor{\kaishu 邵栋~~教授}
 
@@ -149,7 +149,7 @@
 本文介绍了对问题的分析过程：通过对性能数据的观察，可以看到数据堆积在LSM树的最顶层，向下流动速度极慢，导致读请求搜索数据条目主键的时候需要访问多达上千个数据文件，从而使系统无法在预期时间内回复。这是因为在数据流动过程中，由于LSM树结构本身的固有维护方式，存在大量对旧数据的重新读写，造成了磁盘读写的浪费。而此情景下磁盘已经发挥最大读写速度，所以需要提升对磁盘读写的利用效率，减少浪费。
 
 据此思路，本文实现了减少读写浪费的优化方案。首先，通过修改flush算法对内存缓冲区进行强制分片，优化文件中的数据分布，使得单个L0数据文件主键范围缩小，方便compaction调度。其次，实现更精细compaction算法，根据下层数据文件的主键范围选择尽量多的上层数据文件，并计算I/O浪费最低的方案，能降低compaction过程中的磁盘I/O浪费，加速数据在LSM树向下流动。
-本文详细说明了对flush算法与compaction算法的联合创新性优化方案的设计与实现，并展示了优化过程中的多次性能测试结果，从中解释算法逐步优化的根据与效果。另外，本文通过对StellarDB的存储模块进行抽象简化，实现了一个存储模块模拟程序，用于再次测试、验证优化算法的有效性。
+本文详细说明了对flush算法与compaction算法的联合创新性优化方案的设计与实现，并展示了优化过程中的多次性能测试结果，从中解释算法逐步优化的根据与效果。另外，本文通过对StellarDB的存储模块进行抽象简化，实现了一个存储模块模拟程序，用于测试、验证优化算法的有效性。
 
 最终测试结果显示，从L0到L1的compaction读扩大率从419\%下降至119\%，数据不再堆积于顶层，各层compaction过程顺畅，数据能够较快流动到底层。
 经过优化，StellarDB在高并发大数据集写入情景下的性能问题已经解决，系统能够及时正常响应读请求。目前优化后算法已经在StellarDB中运行，性能稳定。
@@ -163,20 +163,24 @@
 
 % 英文摘要
 \begin{englishabstract}
-Nowadays, graph database is becoming more and more popular because of its advantage in modeling real life and performance advantage in relationship search. Many software companys, countrywide or worldwide, are building their own graph database systems. StellarDB is the graph storage engine of Transwarp Inc. Combined with other Transwarp products, it can support various big data analysis requirements, including graph storage, graph analysis, graph visualization, etc.. StellarDB storage engine adopted Log-Structured Merge-Tree(i.e. LSM-tree) as its underlying data structure for record storage.
 
-However, during deployment and tests on clients' hosts, severe performance issues were encountered that read requests timeouted after high concurrency write operation. StellarDB client couldn't receive response for search requests even if all database servers were active. It could take several minutes for StellarDB to produce a valid response, while the default request timeout was 30 seconds.
+Nowadays, graph databases are becoming increasingly important as basic software due to their modeling advantages in real-life production scenarios and their performance advantages in relationship finding. Many software companys, countrywide or worldwide, are building their own graph database systems. StellarDB is the graph database of Transwarp Inc., which can be combined with other components to achieve important functions such as graph storage, graph analysis, graph visualization, etc. StellarDB storage engine uses Log-Structured Merge-Tree (LSM-tree) data structure as the underlying data storage method.
 
-The thesis introduces the analyze process on the issue and the design and implementation of a combined innovative optimization on flush algorithm and compaction algorithm. 
-According to performance metrics, the data couldn't flow into lower levels of the LSM-tree, causing the system to scan over one thousand data files just for searching one record's key. Therefore, StellarDB failed to respond to read requests within default read timeout. 
-Due to the data structure of LSM-tree, large amount of disk read and write for the old data exists during the flow of data, which caused much disk I/O waste. Considering that the disk I/O was already at full speed in the problem, it's improving the I/O efficiency that can help with speeding up the data flow. 
+
+However, during the actual deployment, StellarDB encountered serious performance issues. StellarDB performance dropped dramatically after high concurrency writes of large data sets. Although the database node is still active, the client cannot receive a response within the expected time after sending a query request. The original response timeout was 30 seconds, but StellarDB actually took several minutes to return the query results.
+
+
+The thesis describes the process of analyzing the problem: by looking at the performance data, it can be seen that the data piles up at the top of the LSM-tree and flows downwards very slowly, resulting in the need to access up to thousands of data files when reading requests to search for the primary key of a data entry, which prevents the system from responding in the expected time. This is because in the data flow process, due to the inherent maintenance of the LSM-tree structure itself, there is a lot of re-write of old data, resulting in the waste of disk reading and writing. And in this scenario disk has played the maximum read and write speed, so it need to enhance the utilization efficiency of the disk read and write, and reduce the waste.
 
 With this method, the thesis implemented the following optimization. Firstly, the new flush algorithm forces memory buffer to be sliced,  making the record key range of data files in L0 become narrow. By optimizing files' data distribution, scheduling compaction tasks became easier. Secondly, the new compaction algorithm can choose files in upper level basing on lower level key range and calculate the compaction schedule plan with least I/O waste. 
 Then the thesis demostrated results of performance test during the optimization process, explaining the evidences on which the optimization was based. Moreover, the thesis implemented an simulator of the storage module for more testing and verification of the influence of the new algorithms.
 
-The results of the performance test showed that the read amplification rate of compaction from L0 to L1 dropped from 419\% to 119\%. Data no longer piled up in L0 and could flow into lower levels without difficulty.
-After this optimization, the performance bottleneck of StellarDB performing compaction under high concurrency write operation was successfully solved, allowing the system to respond to read requests in time. The optimized algorithm has been running in deployed StellarDB instances with steady performance.
+Based on this idea, the thesis achieves an optimization scheme to reduce read and write waste. First, by modifying the flush algorithm to force slicing of the memory buffer and optimize the data distribution in the file, the primary key range of a single L0 data file is narrowed, facilitating compaction scheduling. Secondly, to achieve a more refined compaction algorithm, select as many upper-level data files as possible according to the primary key range of the lower-level data files, and calculate the scheme with the lowest I/O waste. So StellarDB can reduce the disk I/O waste in the compaction process and accelerate the data flow down the LSM tree.
+The thesis details the design and implementation of a joint innovative optimization scheme for the flush algorithm and compaction algorithm, and presents the results of several performance tests during the optimization process to explain the basis and effect of the algorithm step-by-step optimization. In addition, the thesis implements a storage module simulation program for retesting and verifying the validity of the optimization algorithm by abstracting and simplifying the storage module of StellarDB.
 
+
+The final test results showed that the compaction read amplification rate from L0 to L1 dropped from 419\% to 119\%, the data no longer piled up on the top layer, the compaction process at each layer was smooth, and the data could flow to the bottom layer relatively quickly.
+After optimization, StellarDB's performance issues in high concurrent large data set write scenarios have been resolved and the system is able to respond to read requests in a timely and normal manner. The optimized algorithm is currently running in StellarDB with stable performance.
 
 \englishkeywords{Graph database, StellarDB, Log-Structured Merge-Tree, Flush, Compaction}
 \end{englishabstract}
@@ -201,7 +205,7 @@ After this optimization, the performance bottleneck of StellarDB performing comp
 %\include{chapter/Nomenclatures}
 %\def\nomname{缩略语对照表}
 %\printnomenclature[5em]
-\hyphenation{mem-table Mem-table Graph-Shard trans-warp graph-search com-pac-tion Com-pac-tion Com-pac-tion-Hand-ler Com-pac-tion-Exe-cutor Flush-Handler Flush-Executor Elastic-Search Janus-Graph}
+\hyphenation{mem-table Mem-table Graph-Shard trans-warp graph-search com-pac-tion Com-pac-tion Com-pac-tion-Hand-ler Com-pac-tion-Exe-cutor Flush-Handler Flush-Executor Elastic-Search Janus-Graph Ku-ber-ne-tes}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 正文部分

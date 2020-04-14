@@ -58,7 +58,7 @@ Raft¼¯Èº¸÷»úÖ®¼äµÄRPC±¨ÎÄ¿É·ÖÎªÁ½ÖÖ£ºÌí¼ÓÌõÄ¿RPC£¨AppendEntries RPC£¬ÒÔÏÂ¼ò³ÆAE£
 
 LeaderÉú³ÉÁËÐ´²Ù×÷µÄÈÕÖ¾Ö®ºó£¬¾ÍÍ¨¹ýAE½«ÈÕÖ¾ÌõÄ¿·¢ËÍµ½¸÷¸öfollower~´¦£¬ÈÃËüÃÇ°ÑÈÕÖ¾°´ÔçÍíË³Ðò¼ÓÈë×Ô¼ºµÄÈÕÖ¾´æ´¢ÖÐ¡£Èç¹ûÓÐ¼¯Èº¶àÊýµÄ½Úµã£¨°üº¬leader×Ô¼º£©¶¼³É¹¦´æ´¢ÁËÒ»ÌõÈÕÖ¾£¨follower»á»Ø¸´×Ô¼ºµÄ´æ´¢Çé¿ö£©£¬ÄÇÃ´leader¾ÍÈÏÎªÕâÌõÈÕÖ¾¼°¸üÔçµÄÈÕÖ¾µÄ´æ´¢¶¼ÊÇ°²È«µÄ£¬»á»Ø¸´¿Í»§¶ËÐ´²Ù×÷³É¹¦£¬²¢»á¸æÖª¼¯ÈºÒÑ¾­¿ÉÒÔ½«µ½´ËÌõµÄËùÓÐÈÕÖ¾ÖÐµÄÐ´²Ù×÷Êµ¼Ê½øÐÐ£¬ÐÞ¸Ä×Ô¼ºµÄ´æ´¢Êý¾Ý¡£
 
-µ±leaderÉÏÌ¨Ê±£¬»áÒÔ×Ô¼º×Ô¼ºµÄÈÕÖ¾´æ´¢Îª×¼£¬Ê¹ÆäËû½ÚµãÓë×Ô¼º¶ÔÆë¡£Èç¹û±È×Ô¼º¿ì£¬¾Í½Øµô¶àµÄ£»±È×Ô¼ºÂý£¬¾ÍÓÃ×Ô¼ºµÄÈÕÖ¾´æ´¢¸øËüÂýÂý²¹×ã¡£µ«ÊÇÔÚ¸´ÖÆÈÕÖ¾µÄ¹ý³ÌÖÐ£¬¸÷¸öfollower¿ÉÄÜÒò¸÷ÖÖÔ­ÒòËÙ¶È²îÒì½Ï´ó¡£ÄÇÃ´Èç¹ûleaderÍ»È»¹ÊÕÏ£¬¶øÒ»¸ö¸´ÖÆµÄÌØ±ðÂýµÄfollowerÑ¡¾ÙÎªleader£¬¾Í¿ÉÄÜ»áµ¼ÖÂ´óÁ¿Ð´²Ù×÷Ê§Ð§¡£Ö®ËùÒÔÒª±£Ö¤ÈÕÖ¾ÒÑ¾­¸´ÖÆµ½ÁË¶àÊý»úÉÏ£¬²Å¿ÉÈÏÎªÐ´²Ù×÷³É¹¦£¬¾ÍÊÇÎªÁË±ÜÃâÕâÖÖÇé¿ö¡£Ö®Ç°ÔÚ½²½âÑ¡¾Ù»úÖÆÊ±Ìáµ½£ºRVÒª°üº¬candidateµÄÈÕÖ¾´æ´¢°æ±¾ÏûÏ¢£¬Ò²¾Í¾ÍÊÇ×îºóÒ»ÌõÈÕÖ¾µÄterm ID+log index¡£Èç¹ûÍ¶Æ±µÄfollower·¢ÏÖÕâcandidateµÄ°æ±¾ÏûÏ¢±È×Ô¼ºµÄ»¹Òª¾É£¬¾Í»á¾Ü¾ø¸øËüÍ¶Æ±¡£ÓÉÓÚÖ»ÓÐ¸´ÖÆµ½ÁË¶àÊý½ÚµãµÄÈÕÖ¾µÄÐ´²Ù×÷²Å±»»Ø±¨Îª¡°³É¹¦¡±£¬¶øÑ¡¾ÙÊ±±ØÐëÒª»ñµÃ¶àÊýÆ±²ÅÄÜµ±Ñ¡£¬ËùÒÔ×îÖÕµ±Ñ¡µÄleaderÒ»¶¨ÓµÓÐÉÏÒ»¸öleaderËù»Ø±¨Îª³É¹¦µÄ²Ù×÷µÄËùÓÐÈÕÖ¾£¬²»»áÈ±Ê§¡£
+µ±leaderÉÏÌ¨Ê±£¬»áÒÔ×Ô¼º×Ô¼ºµÄÈÕÖ¾´æ´¢Îª×¼£¬Ê¹ÆäËû½ÚµãÓë×Ô¼º¶ÔÆë¡£Èç¹û±È×Ô¼º¿ì£¬¾Í½Øµô¶àµÄ£»±È×Ô¼ºÂý£¬¾ÍÓÃ×Ô¼ºµÄÈÕÖ¾´æ´¢¸øËüÂýÂý²¹×ã¡£µ«ÊÇÔÚ¸´ÖÆÈÕÖ¾µÄ¹ý³ÌÖÐ£¬¸÷¸öfollower¿ÉÄÜÒò¸÷ÖÖÔ­ÒòËÙ¶È²îÒì½Ï´ó¡£ÄÇÃ´Èç¹ûleaderÍ»È»¹ÊÕÏ£¬¶øÒ»¸ö¸´ÖÆµÄÌØ±ðÂýµÄfollowerÑ¡¾ÙÎªleader£¬¾Í¿ÉÄÜ»áµ¼ÖÂ´óÁ¿Ð´²Ù×÷Ê§Ð§¡£Ö®ËùÒÔÒª±£Ö¤ÈÕÖ¾ÒÑ¾­¸´ÖÆµ½ÁË¶àÊý»úÉÏ£¬²Å¿ÉÈÏÎªÐ´²Ù×÷³É¹¦£¬¾ÍÊÇÎªÁË±ÜÃâÕâÖÖÇé¿ö¡£Ö®Ç°ÔÚ½²½âÑ¡¾Ù»úÖÆÊ±Ìáµ½£ºRVÒª°üº¬candidateµÄÈÕÖ¾´æ´¢°æ±¾ÏûÏ¢£¬Ò²¾Í¾ÍÊÇ×îºóÒ»ÌõÈÕÖ¾µÄterm ID+log index¡£Èç¹ûÍ¶Æ±µÄfollower·¢ÏÖÕâcandidateµÄ°æ±¾ÏûÏ¢±È×Ô¼ºµÄ»¹Òª¾É£¬¾Í»á¾Ü¾ø¸øËüÍ¶Æ±¡£ÓÉÓÚÖ»ÓÐ¸´ÖÆµ½ÁË¶àÊý½ÚµãµÄÈÕÖ¾µÄÐ´²Ù×÷²Å±»»Ø±¨Îª³É¹¦£¬¶øÑ¡¾ÙÊ±±ØÐëÒª»ñµÃ¶àÊýÆ±²ÅÄÜµ±Ñ¡£¬ËùÒÔ×îÖÕµ±Ñ¡µÄleaderÒ»¶¨ÓµÓÐÉÏÒ»¸öleaderËù»Ø±¨Îª³É¹¦µÄ²Ù×÷µÄËùÓÐÈÕÖ¾£¬²»»áÈ±Ê§¡£
 
 \section{Zookeeper}
 StellarDB¿Í»§¶ËÊ¹ÓÃZookeeper¶Ô·þÎñÆ÷¶Ë½øÐÐ¸ÐÖª£¬Í¨¹ýÓë·þÎñÆ÷¶Ë¹²ÏíZookeeper¼¯Èº»ñÈ¡¼¯ÈºIPµÈ¹Ø¼üÐÅÏ¢¡£ZooKeeperÊÇÒ»¸ö·Ö²¼Ê½µÄ£¬¿ª·ÅÔ´ÂëµÄ·Ö²¼Ê½Ó¦ÓÃ³ÌÐòÐ­µ÷·þÎñ¡£Zookeeper ÄÜ¹»±£Ö¤ÆäÊý¾ÝµÄ¿É¿¿ÐÔºÍ¸ß¿ÉÓÃÐÔ£¬²¢ÇÒÌá¹©ÁË¶àÖÖ±à³ÌÓïÑÔµÄ API¡£
@@ -67,46 +67,23 @@ Zookeeper ÓÉ¶àÌ¨·þÎñÆ÷×é³É£¬Ã¿Ì¨·þÎñÆ÷ÖÐ¶¼¸´ÖÆÁËÒ»·ÝÔªÊý¾Ý£¬³ÌÐòÍ¨¹ý·ÃÎÊÈÎÒâÒ»Ì¨
 
 Zookeeper ÖÐ£¬Ê¹ÓÃÒ»ÖÖ½á¹¹ÀàËÆÓÚÎÄ¼þ´æ´¢ÏµÍ³µÄÊ÷×´²ã´ÎÄ£ÐÍÀ´´æ´¢Êý¾Ý¡£ÔÚ¸ÃÄ£ÐÍÖÐ£¬½Úµã±»³ÆÎª Znode£¬Ã¿¸ö½Úµã¶¼ÓÐÆäÎ¨Ò»µÄ±êÖ¾Â·¾¶¡£Znode ¼È¿ÉÒÔÖ±½Ó´æ´¢Êý¾Ý£¬ÓÖ¿ÉÒÔÔÚÆäÖÐÐÂ½¨ Znode ×Ó½Úµã¡£Znode ÊÇÓÐ°æ±¾µÄ£¬Ã¿¸ö½ÚµãÖÐ¿ÉÒÔ´æ´¢¶à¸ö°æ±¾µÄÊý¾Ý¡£Znode ¿ÉÒÔ±»ÆäËû³ÌÐò×¢²á¼àÌý£¬µ±¸Ã½Úµã·¢Éú±ä»¯£¨¸üÐÂ£¬É¾³ý£©Ê±£¬Zookeeper ½«»á×Ô¶¯Í¨Öª¼àÌý¸Ã½ÚµãµÄ³ÌÐò~\cite{DBLP:conf/icac/FrommgenHPK17}¡£
 
-\section{HDFS}
-
-HDFS£¨Hadoop Distributed File£©ÊÇApache Hadoop×Ô´øµÄÒ»¸ö¿ªÔ´µÄ·Ö²¼Ê½ÎÄ¼þÏµÍ³¡£HDFSÍ¨¹ý¶à»ú±¸·Ý»úÖÆÊµÏÖÁË¸ßÈÝ´íÒÔ¼°¸ß²¢·¢µÄÌØÐÔ£¬Í¬Ê±ÓÉÓÚ HDFS ¶Ô²¿Êð»úÆ÷ÒªÇó½ÏµÍ£¬ÊÊºÏÓÚ²¿ÊðÔÚ´óÁ¿Í¨ÓÃµÄPC»úÉÏ£¬Òò´ËHDFS±»¹ã·ºÓ¦ÓÃÓÚº£Á¿Êý¾Ý´¦Àí¹ý³ÌÖÐµÄÊý¾Ý´æ´¢~\cite{Hadoop}¡£StellarDBÖ§³Ö´ÓHDFS½âÎöµ¼ÈëÍ¼Êý¾Ý¡£
-
-HDFS ÏµÍ³ÊÇÒ»¸öµäÐÍµÄÖ÷´Ó½á¹¹¼¯Èº£¬¼¯ÈºÖÐµÄ½Úµã·ÖÎªÁ½ÖÖ£¬Ò»¸önamenodeºÍ¶à¸ödatanode¡£NamenodeÊÇÖÐÐÄ·þÎñÆ÷£¬¸ºÔð¹ÜÀí HDFS ÎÄ¼þÏµÍ³µÄÃüÃû¿Õ¼äÒÔ¼°¿Í»§¶Ë¶ÔÎÄ¼þµÄ·ÃÎÊ£¬±£´æÎÄ¼þÏµÍ³Ê÷¡¢·ÃÎÊ¿ØÖÆÐÅÏ¢¡¢ÎÄ¼þ/Êý¾Ý¿éÓ³Éä¹ØÏµµÈÎÄ¼þÔªÊý¾Ý¡£Datanode ¸ºÔð±£´æÊý¾Ý¿é£¬Í¬Ê±ÐèÒªÏìÓ¦ÎÄ¼þÏµÍ³¿Í»§¶ËµÄ¶ÁÐ´ÇëÇó~\cite{DBLP:books/daglib/0035689}¡£
-
-Óë´ÅÅÌµÄ´æ´¢·½Ê½ÀàËÆ£¬ÔÚHDFSÖÐ£¬ÎÄ¼þÒ²ÊÇÒÔÊý¾Ý¿éÎªµ¥Î»½øÐÐ´æ´¢µÄ¡£ÎÄ¼þ´æ´¢µ½ HDFS Ê±»á±»·Ö¸î³ÉÊý¾Ý¿é´óÐ¡µÄ¶à¸ö·Ö¿ª£¬Èç¹ûÎÄ¼þ´óÐ¡Ð¡ÓÚ HDFS ÏµÍ³Éè¶¨µÄÊý¾Ý¿é´óÐ¡£¬ÎÄ¼þ²¢²»»áÕ¼¾ÝÕû¸öÊý¾Ý¿é¿Õ¼ä£¬¶øÊÇ»áÓëÆäËûÎÄ¼þ¹²Í¬Õ¼¾Ý¸ÃÊý¾Ý¿é¡£ÓÉÓÚ¹ý´óµÄÎÄ¼þ»á±»·Ö¸î³É½ÏÐ¡µÄÊý¾Ý¿é£¬Êý¾Ý¿é¿ÉÒÔ´æ´¢ÓÚ HDFS ÏµÍ³ÖÐµÄÈÎÒâ´ÅÅÌÖÐ£¬ËùÒÔ HDFS ÏµÍ³ÖÐ¿ÉÒÔ´æ´¢³¬´óµÄÎÄ¼þ£¬¶ø²»ÐèÒªÊÜµ½´ÅÅÌ´óÐ¡µÄÏÞÖÆ¡£
-
-ÓÉÓÚÊý¾Ý¿éµÄ´óÐ¡ÊÇ¹Ì¶¨µÄ£¬ËùÒÔ¼«´óµÄ¼ò»¯ÁË HDFS ÏµÍ³µÄÉè¼Æ¸´ÔÓ¶È¡£¶øÇÒÎÄ¼þµÄÈ¨ÏÞÐÅÏ¢µÈÔªÊý¾ÝµÃÒÔÓëÎÄ¼þÊý¾Ý·Ö¿ª¹ÜÀí¡£Óë´ËÍ¬Ê±£¬HDFSÏµÍ³Í¨¹ý½«Ã¿¸öÊý¾Ý¿éÔÚ¶àÌ¨»úÆ÷ÉÏ½øÐÐ±¸·Ý£¬Ìá¸ßÁËÊý¾Ý·ÃÎÊµÄ²¢·¢¶ÈÒÔ¼°ÎÄ¼þÏµÍ³µÄÈÝ´íÄÜÁ¦£¬½ø¶ø½µµÍÁË¶ÔÓÚ²¿Êð»úÆ÷µÄÓ²¼þË®Æ½µÄÒªÇó£¬Ê¹µÃ HDFS¿ÉÒÔ²¿ÊðÔÚÆÕÍ¨µÄ PC »ú¼¯ÈºÉÏ¶ø²»»á·¢ÉúÊý¾Ý¶ªÊ§¡£
-
-µ±ÐèÒª¶ÁÊý¾ÝÊ±£¬¿Í»§¶ËÊ×ÏÈÒªÏònamenode·¢ËÍ¶ÁÊý¾ÝÇëÇó£»namenode¸ù¾Ý¿Í»§¶ËÌá¹©µÄÎÄ¼þÐÅÏ¢£¬ÅÐ¶ÏÎÄ¼þÊÇ·ñ´æÔÚÒÔ¼°¿Í»§¶ËÊÇ·ñ¾ßÓÐÏàÓ¦ÎÄ¼þ
-µÄ¶ÁÈ¡È¨ÏÞ£¬²¢·µ»ØÎÄ¼þµØÖ·»ò¾Ü¾ø·ÃÎÊÏìÓ¦£»Èç¹û¿Í»§¶ËÊÕµ½ÎÄ¼þµØÖ·£¬»á¸ù¾ÝÎÄ¼þµØÖ·Ïò¶ÔÓ¦µÄ datanode Ö±½Ó·¢ËÍ¶ÁÊý¾ÝÇëÇó£»datanode ½ÓÊÕµ½¿Í»§¶Ë
-µÄÇëÇóºó»á·µ»ØÊý¾Ý¡£
-
-µ±ÐèÒªÐ´Êý¾ÝÊ±£¬¿Í»§¶ËÒªÏònamenode·¢ËÍÐ´Êý¾ÝÇëÇó£»namenodeÅÐ¶ÏÊÇ·ñÔÊÐíÐ´Èë£¬²¢Ïò¿Í»§¶Ë·µ»ØÅÐ¶Ï½á¹û£»Èç¹û¿Í»§¶ËÊÕµ½ÔÊÐíÐ´ÈëÏìÓ¦£¬»á½«ÎÄ¼þ½øÐÐ·Ö¿é£¬²¢ÏònamenodeÉêÇëÊý¾Ý¿é¿Õ¼änamenode½«·µ»ØÊý¾ÝÒªÐ´ÈëµÄ datanode ÁÐ±í£»×îºó£¬¿Í»§¶Ë½«Êý¾ÝÐ´Èëdatanode¡£
-
 \section{Docker}
 
 ÓÉÓÚ»ùÓÚÐéÄâ»ú£¨Virtual Machine£©½øÐÐµÄ´«Í³Ó¦ÓÃ²¿Êð·½Ê½ËùÕ¼ÓÃµÄ×ÊÔ´½Ï¶à£¬²Ù×÷²½Öè½ÏÈßÔÓ·±¶à£¬ÇÒÆô¶¯ËÙ¶È·Ç³£»ºÂý£¬ÎÞ·¨ºÜºÃµØÊÊÓ¦µ±Ç°ÒµÎñÁ÷Á¿µÄ¸ß¶Èµ¯ÐÔ»¯ÒÔ¼°Î¢·þÎñ¼Ü¹¹µÄ¼¼Êõ»·¾³¡£ÁíÍâÒ»ÖÖÐéÄâ»¯¼¼Êõ¨D¨DÈÝÆ÷£¨Container£©¼¼ÊõÓ¦ÔË¶øÉú£¬ÈÝÆ÷¼¼ÊõÒòÎªÆäÆô¶¯ËÙ¶È¿ì¡¢×ÊÔ´Õ¼ÓÃÉÙ¡¢Ìå»ýÐ¡µÄÖî¶àÓÅµãÑ¸ËÙµÃµ½Ö÷Á÷Èí¼þ¿ª·¢Òµ½çµÄ×·Åõ¡£
 
-DockerÊÇÒ»¸ö¿ªÔ´µÄÇáÁ¿¼¶Ó¦ÓÃÈÝÆ÷ÒýÇæ£¬»ùÓÚGoÓïÑÔÊµÏÖ£¬²¢ÇÒ×ñ´ÓApache 2.0¿ªÔ´Ð­Òé~\cite{Docker}¡£DockerÊÇÄ¿Ç°Òµ½ç×îÎªÁ÷ÐÐµÄÈÝÆ÷½â¾ö·½°¸£¬¿ÉÒÔ
-¿´×öÊÇ¶ÔÈÝÆ÷µÄÒ»ÖÖ·â×°£¬Îª¿ª·¢ÕßÌá¹©ÁË·½±ãÒ×ÓÃµÄÈÝÆ÷Ê¹ÓÃ½Ó¿Ú¡£
+DockerÊÇÒ»¸ö¿ªÔ´µÄÇáÁ¿¼¶Ó¦ÓÃÈÝÆ÷ÒýÇæ£¬»ùÓÚGoÓïÑÔÊµÏÖ£¬²¢ÇÒ×ñ´ÓApache 2.0¿ªÔ´Ð­Òé~\cite{Docker}¡£DockerÊÇÄ¿Ç°Òµ½ç×îÎªÁ÷ÐÐµÄÈÝÆ÷½â¾ö·½°¸£¬¿ÉÒÔ¿´×öÊÇ¶ÔÈÝÆ÷µÄÒ»ÖÖ·â×°£¬Îª¿ª·¢ÕßÌá¹©ÁË·½±ãÒ×ÓÃµÄÈÝÆ÷Ê¹ÓÃ½Ó¿Ú¡£
 
-DockerÄÜ¹»°ïÖú¿ª·¢Õß¶ÔÓÚÓ¦ÓÃÒÔ¼°ÒÀÀµ´ò°üµ½Ò»¸öÇáÁ¿¼¶¡¢¿ÉÒÆÖ²µÄÈÝÆ÷¾µÏñ£¨Docker Image£©ÖÐ~\cite{DockerTutorial}¡£´ò°üÍê³ÉÖ®ºó£¬Ò»·½Ãæ¿ÉÒÔ½«´ò°üºóµÄÈÝÆ÷
-¾µÏñ·¢²¼µ½Windows»òÕßÖ÷Á÷µÄLinux»úÆ÷ÉÏ£»ÁíÍâÒ»·½ÃæÒ²¿ÉÒÔÊµÏÖÐéÄâ»¯¡£DockerÈÝÆ÷ÍêÈ«»ùÓÚÉ³Ïä»úÖÆ£¬Ïà»¥Ö®¼ä²»´æÔÚÈÎºÎ½Ó¿Ú¡£³ý´ËÖ®Íâ£¬Ïà±ÈÓÚ
-ÐéÄâ»ú£¬ÈÝÆ÷ÐÔÄÜ¿ªÏúÒ²·Ç³£µÍ¡£DockerµÄ½Ó¿Ú·Ç³£¼òµ¥£¬Òò´Ë¿ª·¢Õß¿ÉÒÔ¼«Îª·½±ãµØ´´½¨ºÍÊ¹ÓÃÈÝÆ÷£¬ÒÔ¼°½«Ó¦ÓÃ³ÌÐò·ÅÈëDockerÈÝÆ÷ÖÐ£¬²¢¶ÔDockerÈÝ
-Æ÷½øÐÐ°æ±¾¹ÜÀíÒÔ¼°ÐÞ¸Ä¡£
+DockerÄÜ¹»°ïÖú¿ª·¢Õß¶ÔÓÚÓ¦ÓÃÒÔ¼°ÒÀÀµ´ò°üµ½Ò»¸öÇáÁ¿¼¶¡¢¿ÉÒÆÖ²µÄÈÝÆ÷¾µÏñ£¨Docker Image£©ÖÐ¡£´ò°üÍê³ÉÖ®ºó£¬Ò»·½Ãæ¿ÉÒÔ½«´ò°üºóµÄÈÝÆ÷¾µÏñ·¢²¼µ½Windows»òÕßÖ÷Á÷µÄLinux»úÆ÷ÉÏ£»ÁíÍâÒ»·½ÃæÒ²¿ÉÒÔÊµÏÖÐéÄâ»¯¡£DockerÈÝÆ÷ÍêÈ«»ùÓÚÉ³Ïä»úÖÆ£¬Ïà»¥Ö®¼ä²»´æÔÚÈÎºÎ½Ó¿Ú¡£³ý´ËÖ®Íâ£¬Ïà±ÈÓÚÐéÄâ»ú£¬ÈÝÆ÷ÐÔÄÜ¿ªÏúÒ²·Ç³£µÍ¡£DockerµÄ½Ó¿Ú·Ç³£¼òµ¥£¬Òò´Ë¿ª·¢Õß¿ÉÒÔ¼«Îª·½±ãµØ´´½¨ºÍÊ¹ÓÃÈÝÆ÷£¬ÒÔ¼°½«Ó¦ÓÃ³ÌÐò·ÅÈëDockerÈÝÆ÷ÖÐ£¬²¢¶ÔDockerÈÝÆ÷½øÐÐ°æ±¾¹ÜÀíÒÔ¼°ÐÞ¸Ä¡£~\cite{DBLP:journals/usenix-login/Lidl17}
 
-ÔÚÔÆ¼ÆËãÊ±´ú£¬Ó¦ÓÃµÄµ¯ÐÔÉìËõÄÜÁ¦ÖÁ¹ØÖØÒª¡£¶øDockerÈÝÆ÷¿ÉÒÔËæ¿ªËæ¹Ø£¬Òò´Ë·Ç³£ÊÊºÏÓÃÓÚµ¯ÐÔÀ©ÈÝºÍËõÈÝ¡£´ËÍâ£¬¶ÔÓÚÎ¢·þÎñ¼Ü¹¹¶øÑÔ£¬½è
-ÖúDockerµÈÈÝÆ÷¼¼Êõ£¬¿ÉÒÔÊ¹¶à¸ö·þÎñÊµÀýÔÚÍ¬Ò»Ì¨ÎïÀí»úÉÏÔËÐÐ£¬ÄÜ¹»ÓÐÐ§µØ½µµÍ×ÊÔ´ÏûºÄ¡£´ËÍâ£¬DockerÊ¹µÃ¿ª·¢ÕßÄÜ¹»½«Ó¦ÓÃ³ÌÐòºÍ»ù´¡¼Ü¹¹½øÐÐ·Ö
-Àë£¬²¢Ê¹ÓÃÓë¹ÜÀíÓ¦ÓÃ³ÌÐòÏàÍ¬µÄ·½Ê½À´¹ÜÀí»ù´¡¼Ü¹¹£¬´Ó¶øÊµÏÖÓ¦ÓÃ³ÌÐòµÄ¿ìËÙ½»¸¶ºÍ¿ìËÙ²¿Êð£¬´ó´ó¼õÉÙÓ¦ÓÃ³ÌÐò´Ó¿ª·¢»·¾³µÄ±àÐ´µ½ÔÚÉú²ú»·¾³ÖÐÊµ
-¼ÊÔËÐÐÖ®¼äµÄÑÓ³Ù¡£StellarDBµÄ²¿Êð·½Ê½±ãÊÇÒÔDockerÈÝÆ÷µÄÐÎÊ½ÔËÐÐÓÚ·þÎñÆ÷¡£
+ÔÚÔÆ¼ÆËãÊ±´ú£¬Ó¦ÓÃµÄµ¯ÐÔÉìËõÄÜÁ¦ÖÁ¹ØÖØÒª¡£¶øDockerÈÝÆ÷¿ÉÒÔËæ¿ªËæ¹Ø£¬Òò´Ë·Ç³£ÊÊºÏÓÃÓÚµ¯ÐÔÀ©ÈÝºÍËõÈÝ¡£´ËÍâ£¬¶ÔÓÚÎ¢·þÎñ¼Ü¹¹¶øÑÔ£¬½èÖúDockerµÈÈÝÆ÷¼¼Êõ£¬¿ÉÒÔÊ¹¶à¸ö·þÎñÊµÀýÔÚÍ¬Ò»Ì¨ÎïÀí»úÉÏÔËÐÐ£¬ÄÜ¹»ÓÐÐ§µØ½µµÍ×ÊÔ´ÏûºÄ¡£´ËÍâ£¬DockerÊ¹µÃ¿ª·¢ÕßÄÜ¹»½«Ó¦ÓÃ³ÌÐòºÍ»ù´¡¼Ü¹¹½øÐÐ·ÖÀë£¬²¢Ê¹ÓÃÓë¹ÜÀíÓ¦ÓÃ³ÌÐòÏàÍ¬µÄ·½Ê½À´¹ÜÀí»ù´¡¼Ü¹¹£¬´Ó¶øÊµÏÖÓ¦ÓÃ³ÌÐòµÄ¿ìËÙ½»¸¶ºÍ¿ìËÙ²¿Êð£¬´ó´ó¼õÉÙÓ¦ÓÃ³ÌÐò´Ó¿ª·¢»·¾³µÄ±àÐ´µ½ÔÚÉú²ú»·¾³ÖÐÊµ¼ÊÔËÐÐÖ®¼äµÄÑÓ³Ù¡£StellarDBµÄ²¿Êð·½Ê½±ãÊÇÒÔDockerÈÝÆ÷µÄÐÎÊ½ÔËÐÐÓÚ·þÎñÆ÷¡£~\cite{DBLP:journals/corr/abs-1710-03675}
 
 \section{Kubernetes}
 
-KubernetesÊÇGoogleÓÚ2014ÄêÆô¶¯µÄ×Ô¶¯»¯ÈÝÆ÷²Ù×÷µÄÏîÄ¿£¬ÓÉ¿ªÔ´ÉçÇøÎ¬»¤¡£ ´Ë¼¼ÊõÖ¼ÔÚ½â¾ö¼¯ÈºÖÐÈÝÆ÷µÄ²¿Êð¡¢ ¸üÐÂ¡¢ Î¬»¤µÈÒ»ÏµÁÐÎÊÌâ¡£KubernetesÔ´ÓÚGoogleÄÚ²¿µÄBrogÈÝÆ÷¹ÜÀíÏµÍ³£¬ÆäºËÐÄ¾ÍÊÇ½«·Ö²¼ÔÚ²»Í¬Ö÷»úµÄÓ¦ÓÃÈÝÆ÷£¬Í¨¹ýÍøÂç×é¼þÁ¬½Ó³ÉÒ»¸öÍøÂç£¬´Ó¶øÊµÏÖ·þÎñµÄ·Ö²¼Ê½¼ÆËã¡£StellarDB²¿Êð²ÉÓÃKubenetes¹ÜÀíDockerÈÝÆ÷£¬ÒÔÀûÓÃÆä¶ÔÈÝÆ÷µÄ×Ô¶¯´´½¨¡¢¹ÊÕÏÖØÆô¡¢ÍøÂç¹²ÏíµÈ¹¦ÄÜ½µµÍÔËÎ¬ÄÑ¶È¡£
+KubernetesÊÇÒ»¸ö×Ô¶¯»¯ÈÝÆ÷²Ù×÷µÄÏîÄ¿£¬ÓÉGoogleÓÚ2014ÄêÆô¶¯£¬Ä¿Ç°ÓÉ¿ªÔ´ÉçÇøÎ¬»¤¡£ ´Ë¼¼ÊõÖ¼ÔÚ½â¾ö¼¯ÈºÖÐÈÝÆ÷µÄ²¿Êð¡¢ ¸üÐÂ¡¢ Î¬»¤µÈÒ»ÏµÁÐÎÊÌâ¡£KubernetesÔ´×ÔÓÚGoogleÄÚ²¿µÄBrogÈÝÆ÷¹ÜÀíÏµÍ³£¬±¾Éí²¢²»ÊÇÈÝÆ÷µÄÊµÏÖ£¬ÆäºËÐÄÊÇ½«·Ö²¼ÔÚ²»Í¬Ö÷»úµÄÓ¦ÓÃÈÝÆ÷£¬Í¨¹ýÍøÂç×é¼þÁ¬½Ó³ÉÒ»¸öÍøÂç£¬´Ó¶øÊµÏÖ·þÎñµÄ·Ö²¼Ê½¼ÆËã¡£StellarDB²¿Êð²ÉÓÃKubenetes¹ÜÀíDockerÈÝÆ÷£¬ÒÔÀûÓÃÆä¶ÔÈÝÆ÷µÄ×Ô¶¯´´½¨¡¢¹ÊÕÏÖØÆô¡¢ÍøÂç¹²ÏíµÈ¹¦ÄÜ½µµÍÔËÎ¬ÄÑ¶È~\cite{K8S}¡£
 
 
-Kubernetes°üÀ¨ÒÔÏÂ¼¸¸öÖØÒªµÄ¸ÅÄî£ºCluster¡¢Master¡¢ Node¡¢ Pod¡¢ Service¡£ Ò»¸öKubernetes ÏµÍ³Í¨³£³ÆÎªÒ»¸ö¼¯Èº£¬¼¯ÈºÖ÷Òª°üÀ¨Ò»¸öMasterºÍÈô¸ÉNode¡£ Master½Úµã°üÀ¨API Server¡¢ Scheduler¡¢Controller Manager¡¢etcd£¬Ö÷Òª¸ºÔð¹ÜÀíºÍ¿ØÖÆ¡£ÆäÖÐAPI ServerÊÇÕû¸öÏµÍ³µÄ¶ÔÍâ½Ó¿Ú£¬¿É¹©¿Í»§¶ËºÍÆäËû×é¼þµ÷ÓÃ£»Scheduler¸ºÔð¶Ô¼¯ÈºÄÚ²¿µÄ×ÊÔ´½øÐÐµ÷¶È£»Controller Manager ¸ºÔð¹ÜÀí¿ØÖÆÆ÷¡£Node½Úµã°üÀ¨Docker¡¢Kubelet¡¢Kube-proxy¡¢Fluentd¡¢Kube-dnsÒÔ¼°Pod¡£Service¿ÉÒÔ¿´×÷Ò»×éÌá¹©ÏàÍ¬·þÎñµÄPod µÄ¶ÔÍâ·ÃÎÊ½Ó¿Ú¡£DockerÓÃÓÚ´´½¨ÈÝÆ÷£»KubeletÖ÷Òª¸ºÔð¼àÊÓÖ¸ÅÉµ½ËüËùÔÚNodeÉÏµÄPod£¬°üÀ¨´´½¨¡¢ÐÞ¸Ä¡¢¼à¿Ø¡¢É¾³ýµÈ²Ù×÷£»Kube-proxyÖ÷Òª¸ºÔðÎªPod¶ÔÏóÌá¹©´úÀí£»FluentdÖ÷Òª¸ºÔðÈÕÖ¾ÊÕ¼¯¡¢´æ´¢Óë²éÑ¯~\cite{K8S}¡£
+Kubernetes°üÀ¨ÒÔÏÂ¼¸¸öÖØÒªµÄ¸ÅÄî£ºCluster¡¢Master¡¢ Node¡¢ Pod¡¢ Service¡£ Ò»¸öKubernetes ÏµÍ³Í¨³£³ÆÎªÒ»¸ö¼¯Èº£¬¼¯ÈºÖ÷Òª°üÀ¨Ò»¸öMaster½ÚµãºÍÈô¸ÉNode½Úµã¡£ Master½Úµã°üÀ¨API Server¡¢ Scheduler¡¢Controller Manager¡¢etcdµÈ£¬Ö÷Òª¸ºÔð¹ÜÀíºÍ¿ØÖÆ¡£ÆäÖÐAPI ServerÊÇÕû¸öÏµÍ³µÄ¶ÔÍâ½Ó¿Ú£¬¿É¹©¿Í»§¶ËºÍÆäËû×é¼þµ÷ÓÃ£»Scheduler¸ºÔð¶Ô¼¯ÈºÄÚ²¿µÄ×ÊÔ´½øÐÐµ÷¶È£»Controller Manager ¸ºÔð¹ÜÀí¿ØÖÆÆ÷¡£Node½Úµã°üÀ¨Docker¡¢Kubelet¡¢Kube-proxy¡¢Fluentd¡¢Kube-dnsÒÔ¼°Pod¡£PodÊÇ¹ÜÀí£¬´´½¨£¬¼Æ»®µÄ×îÐ¡µ¥Ôª£¬ÊÇÒ»¸öÈÝÆ÷»·¾³ÏÂµÄ¡°Âß¼­Ö÷»ú¡±¡£Ëü¿ÉÄÜ°üº¬Ò»¸ö»òÕß¶à¸ö½ôÃÜÏàÁ¬µÄÓ¦ÓÃ£¬ÕâÐ©Ó¦ÓÃ¿ÉÄÜÊÇÔÚÍ¬Ò»¸öÎïÀíÖ÷»ú»òÐéÄâ»úÉÏ¡£~\cite{K8S-CN}Service¿ÉÒÔ¿´×÷Ò»×éÌá¹©ÏàÍ¬·þÎñµÄPod µÄ¶ÔÍâ·ÃÎÊ½Ó¿Ú¡£DockerÓÃÓÚ´´½¨ÈÝÆ÷£»KubeletÖ÷Òª¸ºÔð¼àÊÓÖ¸ÅÉµ½ËüËùÔÚNodeÉÏµÄPod£¬°üÀ¨´´½¨¡¢ÐÞ¸Ä¡¢¼à¿Ø¡¢É¾³ýµÈ²Ù×÷£»Kube-proxyÖ÷Òª¸ºÔðÎªPod¶ÔÏóÌá¹©´úÀí£»FluentdÖ÷Òª¸ºÔðÈÕÖ¾ÊÕ¼¯¡¢´æ´¢Óë²éÑ¯~\cite{DBLP:conf/sigcomm/HajaSSPT19}¡£
 
 \section{±¾ÕÂÐ¡½á}
 
-±¾ÕÂ½éÉÜÁËStellarDB´æ´¢Ä£¿éÖ÷ÒªÊ¹ÓÃµÄ¼¸ÖÖ¼¼Êõ£ºÓÃÓÚ±£´æÊý¾Ý¡¢Ìá¸ßÐ´ÈëÐÔÄÜµÄLSMÊ÷Êý¾Ý½á¹¹£¬ÓÃÓÚ±£ÕÏ¶à¸±±¾Êý¾ÝÒ»ÖÂÐÔµÄRaftÒ»ÖÂÐÔÐ­Òé£¬ÓÃÓÚ¼¯Èº¼äÍ¬²½Óë·þÎñÆ÷Ì½²éµÄZookeeper£¬»ù´¡µÄ·Ö²¼Ê½´æ´¢HDFS£¬ÓÃÓÚStellarDB²¿ÊðµÄDockerºÍKubernetes¡£¶ÔÓÚLSMÊ÷µÄÏêÏ¸½éÉÜ»áÓëÏµÍ³Éè¼ÆÒ»Æð°üº¬ÓÚÏÂÒ»ÕÂ¡£
+±¾ÕÂ½éÉÜÁËStellarDB´æ´¢Ä£¿éÖ÷ÒªÊ¹ÓÃµÄ¼¸ÖÖ¼¼Êõ£ºÓÃÓÚ±£´æÊý¾Ý¡¢Ìá¸ßÐ´ÈëÐÔÄÜµÄLSMÊ÷Êý¾Ý½á¹¹£¬ÓÃÓÚ±£ÕÏ¶à¸±±¾Êý¾ÝÒ»ÖÂÐÔµÄRaftÒ»ÖÂÐÔÐ­Òé£¬ÓÃÓÚ¼¯Èº¼äÍ¬²½Óë·þÎñÆ÷Ì½²éµÄZookeeper£¬ÓÃÓÚStellarDB²¿ÊðµÄ~Docker~ºÍ~Kubernetes~¡£¶ÔÓÚLSMÊ÷µÄÏêÏ¸½éÉÜ»áÓëÏµÍ³Éè¼ÆÒ»Æð°üº¬ÓÚÏÂÒ»ÕÂ¡£

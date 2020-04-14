@@ -9,13 +9,13 @@
 
 \section{性能问题分析}
 
-在本人接手此性能优化任务之前，有另一位同事已经对此性能问题进行了分析与优化尝试。但是限于可分析的性能数据有限，他提出的分析与优化尝试效果不佳，没能解决查询请求超时问题。本人接手任务后先完善了系统的性能监控能力，之后再进行了问题分析。
+在此次性能优化之前，公司技术人员已经对此性能问题进行了分析与优化尝试。但是限于可分析的性能数据有限，提出的分析与优化尝试效果不佳，未能解决查询请求超时问题。此次接手任务先完善了系统的性能监控能力，之后再全面进行了问题分析。
 
 \subsection{基于简略的性能数据的问题分析}
 
 在完善性能数据之前，StellarDB只可以报告各GraphShard的LSM树的各层文件数目，以及执行~compaction~任务的线程数目；通过查询日志，可以得知调度执行的flush任务与compaction任务是否完成。而性能测试的度量，只限于统计“写入开始”、“写入完成”、“compaction基本完成”等时间节点之间的间隔，无法精细地统计具体~compaction~任务的粒度、个数、执行效率等数据。
 
-在这样的条件下，该同事的问题分析包含了对系统现有可调节参数的讨论：
+在这样的条件下，问题分析只包含了对系统现有可调节参数的讨论：
 
 \begin{enumerate}
   \item 数据文件是否开启压缩：为了节省存储空间，StellarDB的数据文件默认内部按数据块进行压缩。如果取消L0的压缩，可以提升Memtable的flush速度，而且在从L0向L1进行~compaction~时，也可以节省用于解压L0文件数据块的CPU资源。
@@ -28,7 +28,7 @@
 
 \subsection{基于完善的性能数据的问题分析}
 
-在完善了StellarDB存储模块的性能监控功能之后（具体新增条目参见本章“StellarDB对比测试”一节），本人重新进行了性能测试。测试发现，数据的积累只体现在了难以从L0流向L1，而从L1向L2的流动并无明显阻塞。磁盘读写速度已经没有提升空间，而磁盘的总I/O量与写入StellarDB的数据量及其不匹配。进一步分析发现，compaction过程消耗的L0文件容量与数据集大小匹配，但同时compaction消耗了远远多于L0数据的L1数据。这说明compaction过程中存在对磁盘I/O能力的巨大浪费。
+在完善了StellarDB存储模块的性能监控功能之后（具体新增条目参见本章“StellarDB对比测试”一节），StellarDB重新进行了性能测试。测试发现，数据的积累只体现在了难以从L0流向L1，而从L1向L2的流动并无明显阻塞。磁盘读写速度已经没有提升空间，而磁盘的总I/O量与写入StellarDB的数据量及其不匹配。进一步分析发现，compaction过程消耗的L0文件容量与数据集大小匹配，但同时compaction消耗了远远多于L0数据的L1数据。这说明compaction过程中存在对磁盘I/O能力的巨大浪费。
 
 这个现象与L0的特殊性质有关。StellarDB使用内存缓冲区（即Memtable）临时保存写入的记录，等到缓冲区满，再将缓冲区的记录通过flush过程直接写为L0的数据文件。这样的操作使得L0的数据文件不能满足“彼此之间记录的主键范围不重叠”的条件，而LSM树的设计又要求L1的数据必须比L0旧才能保障正确性，所以在从L0向L1的compaction过程中，StellarDB每次会取几个（根据具体参数设置有一个上限）L0的最旧的数据文件，计算他们总共的主键范围，再从L1中找出所有与此范围有交集的数据文件，将它们一起作为源数据进行compaction，生成新的L1数据文件。
 
@@ -122,11 +122,23 @@ L0、L1文件选取顺序倒置可以减少文件筛选步骤，提高选取率。
 如图~\ref{compaction-after}为改进后调度代码，图~\ref{compaction-after-flow}为算法流程图，新算法使用L1文件数量尽量少，会按照“选用0个L1文件”、“选用1个L1文件”、“选用2个L1文件”这样逐渐增加的顺序尝试，计算出选取L0文件时可以使用的主键范围，根据范围尝试计算合适的L0文件选择计划，从中选择读扩大率最小的进行调度。由于是从L1文件开始选取的，就省去了重新检查、剔除L0文件的步骤，使得逻辑大大简化。
 
 
-新的L0内部文件选择算法不再使用死板的文件数目限制，将文件总容量、读扩大率等条件都纳入考量，更精细地选取尽量多的L0文件。
-
+如图~\ref{l0-pick-1}、图~\ref{l0-pick-2}，新的L0内部文件选择算法不再使用死板的文件数目限制，将文件总容量、读扩大率等条件都纳入考量，更精细地选取尽量多的L0文件。
 
 
 由于在新的flush算法中，一个Memtable（其中的记录视为同一时刻写入的）会被分到多个L0文件中，所以我们给L0文件附上属性“walID”。同一个Memtable生成的L0文件拥有相同的walID；walID越小，数据越久。选取L0文件时，要从旧Segment（walID小）向新Segment（walID大）选。因为每选取完一组walID相同的Segment之后，要根据选取的情况缩小可用的主键范围。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=5in]{FIGs/c4/l0-pick-1.pdf}
+  \caption{Compaction算法优化：L0内部文件选择算法源码}\label{l0-pick-1}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=5in]{FIGs/c4/l0-pick-2.pdf}
+  \caption{Compaction算法优化：L0内部文件选择算法源码（续）}\label{l0-pick-2}
+\end{figure}
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=5in]{FIGs/c4/compaction-after.pdf}
@@ -148,17 +160,7 @@ L0、L1文件选取顺序倒置可以减少文件筛选步骤，提高选取率。
 
 如图~\ref{Algo-Pick}用英文字母表示数据文件里面包含的条目主键，我们想要尝试计算“在L1中只选取Seg85时，能够包含进compaction任务的L0文件”。首先，Seg85的主键范围时[I,K]，但是实际上可以扩大到(G,N)这个开区间。然后根据walID（同一个Memtable生成的L0文件享有相同的walID）顺序选择L0文件并缩小主键范围。首先对于walID=100， 可以选择I与M，同时没有被选取的L0文件无法影响主键范围；然后处理walID=101，只能选择K+L这一个文件，而且由于没被选入的文件影响，主键范围被缩小到了(J,M)；再看walID=102，发现Segment J+M已经不能选择，因为可选主键范围是(J,M)而不是[J,M]，而且，Segmemt J+M直接把可选主键范围缩减到空集，也就没有必要再搜索walID=103的情况了。
 
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=5in]{FIGs/c4/l0-pick-1.pdf}
-    \caption{Compaction算法优化：L0内部文件选择算法源码}\label{l0-pick-1}
-\end{figure}
 
-\begin{figure}[htb]
-    \centering
-    \includegraphics[width=5in]{FIGs/c4/l0-pick-2.pdf}
-    \caption{Compaction算法优化：L0内部文件选择算法源码（续）}\label{l0-pick-2}
-\end{figure}
 
 
 
