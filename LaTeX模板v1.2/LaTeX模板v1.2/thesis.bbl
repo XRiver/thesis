@@ -1,0 +1,178 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+
+\bibitem{StellarDBMainPage}
+星环科技, Stellardb产品白皮书,
+  \url{http://transwarp.io/transwarp/product-StellarDB.html?categoryId=21}.
+
+\bibitem{DB-popularity}
+DB-Engines, 数据库流行度趋势, \url{https://db-engines.com/en/ranking_trend}.
+
+\bibitem{graph-db-popularity}
+DB-Engines, 主流图数据库流行度,
+  \url{https://db-engines.com/en/ranking/graph+dbms}.
+
+\bibitem{DBLP:conf/btw/Wiese19}
+L.~Wiese, Data analytics with graph algorithms - {A} hands-on tutorial with
+  neo4j, in: H.~Meyer, N.~Ritter, A.~Thor, D.~Nicklas, A.~Heuer, M.~Klettke
+  (Eds.), Datenbanksysteme f{\"{u}}r Business, Technologie und Web {(BTW}
+  2019), 18. Fachtagung des GI-Fachbereichs ,,Datenbanken und
+  Informationssysteme" (DBIS), 4.-8. M{\"{a}}rz 2019, Rostock, Germany,
+  Workshopband, Vol. {P-290} of {LNI}, Gesellschaft f{\"{u}}r Informatik, Bonn,
+  2019, pp. 259--261.
+\newline\urlprefix\url{https://doi.org/10.18420/btw2019-ws-26}
+
+\bibitem{Bolt}
+{Neo4j, Inc.}, Bolt协议主页, \url{http://boltprotocol.org/}.
+
+\bibitem{Neo4jMainpage}
+{Neo4j, Inc.}, Neo4j产品主页, \url{https://neo4j.com/neo4j-graph-database/}.
+
+\bibitem{JanusMainpage}
+{The Linux Foundation}, {JanusGraph}产品主页, \url{https://janusgraph.org/}.
+
+\bibitem{JanusSupport}
+D.~Harris, Google, {IBM} back new open source graph database project,
+  {JanusGraph},
+  \url{https://architecht.io/google-ibm-back-new-open-source-graph-database-project-janusgraph-1d74fb78db6b}.
+
+\bibitem{DBLP:journals/corr/abs-1901-08248}
+A.~Deutsch, Y.~Xu, M.~Wu, V.~Lee, Tigergraph: {A} native {MPP} graph database,
+  CoRR abs/1901.08248.
+\newline\urlprefix\url{http://arxiv.org/abs/1901.08248}
+
+\bibitem{TigerGraph}
+{TigerGraph, Inc.}, Tigergraph主页, \url{https://www.tigergraph.com/}.
+
+\bibitem{DBLP:conf/icdt/Reutter20}
+J.~L. Reutter, Current challenges in graph databases (invited talk), in:
+  C.~Lutz, J.~C. Jung (Eds.), 23rd International Conference on Database Theory,
+  {ICDT} 2020, March 30-April 2, 2020, Copenhagen, Denmark, Vol. 155 of LIPIcs,
+  Schloss Dagstuhl - Leibniz-Zentrum f{\"{u}}r Informatik, 2020, pp. 3:1--3:1.
+\newline\urlprefix\url{https://doi.org/10.4230/LIPIcs.ICDT.2020.3}
+
+\bibitem{GraphDB}
+GraphDB, Graphdb主页, \url{http://graphdb.net/}.
+
+\bibitem{DBLP:journals/acta/ONeilCGO96}
+P.~E. O'Neil, E.~Cheng, D.~Gawlick, E.~J. O'Neil, The log-structured merge-tree
+  (lsm-tree), Acta Inf. 33~(4) (1996) 351--385.
+\newline\urlprefix\url{https://doi.org/10.1007/s002360050048}
+
+\bibitem{DBLP:conf/socc/MittalN19}
+N.~Mittal, F.~Nawab, {C-LSM:} cooperative log structured merge trees, in:
+  Proceedings of the {ACM} Symposium on Cloud Computing, SoCC 2019, Santa Cruz,
+  CA, USA, November 20-23, 2019, {ACM}, 2019, p. 481.
+\newline\urlprefix\url{https://doi.org/10.1145/3357223.3365443}
+
+\bibitem{DBLP:conf/apweb/ZhuHQZLZ17}
+T.~Zhu, H.~Hu, W.~Qian, A.~Zhou, M.~Liu, Q.~Zhao, Precise data access on
+  distributed log-structured merge-tree, in: L.~Chen, C.~S. Jensen, C.~Shahabi,
+  X.~Yang, X.~Lian (Eds.), Web and Big Data - First International Joint
+  Conference, APWeb-WAIM 2017, Beijing, China, July 7-9, 2017, Proceedings,
+  Part {II}, Vol. 10367 of Lecture Notes in Computer Science, Springer, 2017,
+  pp. 210--218.
+\newline\urlprefix\url{https://doi.org/10.1007/978-3-319-63564-4\_17}
+
+\bibitem{DBLP:conf/IEEEcloud/SongYH18}
+N.~Y. Song, H.~Y. Yeom, H.~Han, Efficient key-value stores with ranged
+  log-structured merge trees, in: 11th {IEEE} International Conference on Cloud
+  Computing, {CLOUD} 2018, San Francisco, CA, USA, July 2-7, 2018, {IEEE}
+  Computer Society, 2018, pp. 652--659.
+\newline\urlprefix\url{https://doi.org/10.1109/CLOUD.2018.00090}
+
+\bibitem{LSMT-blog}
+B.~Stopford, Log structured merge trees,
+  \url{http://www.benstopford.com/2015/02/14/log-structured-merge-trees/}.
+
+\bibitem{CompactionInCass}
+J.~Ellis, Leveled compaction in apache cassandra,
+  \url{https://www.datastax.com/blog/2011/10/leveled-compaction-apache-cassandra}.
+
+\bibitem{DBLP:conf/usenix/OngaroO14}
+D.~Ongaro, J.~K. Ousterhout, In search of an understandable consensus
+  algorithm, in: G.~Gibson, N.~Zeldovich (Eds.), 2014 {USENIX} Annual Technical
+  Conference, {USENIX} {ATC} '14, Philadelphia, PA, USA, June 19-20, 2014,
+  {USENIX} Association, 2014, pp. 305--319.
+\newline\urlprefix\url{https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro}
+
+\bibitem{DBLP:journals/tocs/Lamport98}
+L.~Lamport, The part-time parliament, {ACM} Trans. Comput. Syst. 16~(2) (1998)
+  133--169.
+\newline\urlprefix\url{https://doi.org/10.1145/279227.279229}
+
+\bibitem{DBLP:journals/cj/Munoz-EscoiJGMB19}
+F.~D. Mu{\~{n}}oz{-}Esco{\'{\i}}, R.~de~Juan{-}Mar{\'{\i}}n,
+  J.~Garc{\'{\i}}a{-}Escriv{\'{a}}, J.~R.~G. de~Mend{\'{\i}}vil, J.~M.
+  Bernab{\'{e}}u{-}Aub{\'{a}}n, {CAP} theorem: Revision of its related
+  consistency models, Comput. J. 62~(6) (2019) 943--960.
+\newline\urlprefix\url{https://doi.org/10.1093/comjnl/bxy142}
+
+\bibitem{DBLP:conf/usenix/HuntKJR10}
+P.~Hunt, M.~Konar, F.~P. Junqueira, B.~Reed, Zookeeper: Wait-free coordination
+  for internet-scale systems, in: P.~Barham, T.~Roscoe (Eds.), 2010 {USENIX}
+  Annual Technical Conference, Boston, MA, USA, June 23-25, 2010, {USENIX}
+  Association, 2010.
+\newline\urlprefix\url{https://www.usenix.org/conference/usenix-atc-10/zookeeper-wait-free-coordination-internet-scale-systems}
+
+\bibitem{DBLP:conf/podc/JunqueiraR09}
+F.~P. Junqueira, B.~Reed, The life and times of a zookeeper, in: S.~Tirthapura,
+  L.~Alvisi (Eds.), Proceedings of the 28th Annual {ACM} Symposium on
+  Principles of Distributed Computing, {PODC} 2009, Calgary, Alberta, Canada,
+  August 10-12, 2009, {ACM}, 2009, p.~4.
+\newline\urlprefix\url{https://doi.org/10.1145/1582716.1582721}
+
+\bibitem{DBLP:conf/srds/HalalaiSRF14}
+R.~Halalai, P.~Sutra, E.~Riviere, P.~Felber, Zoofence: Principled service
+  partitioning and application to the zookeeper coordination service, in: 33rd
+  {IEEE} International Symposium on Reliable Distributed Systems, {SRDS} 2014,
+  Nara, Japan, October 6-9, 2014, {IEEE} Computer Society, 2014, pp. 67--78.
+\newline\urlprefix\url{https://doi.org/10.1109/SRDS.2014.41}
+
+\bibitem{DBLP:conf/icac/FrommgenHPK17}
+A.~Fr{\"{o}}mmgen, S.~Haas, M.~Pfannem{\"{u}}ller, B.~Koldehofe, Switching
+  zookeeper's consensus protocol at runtime, in: X.~Wang, C.~Stewart, H.~Lei
+  (Eds.), 2017 {IEEE} International Conference on Autonomic Computing, {ICAC}
+  2017, Columbus, OH, USA, July 17-21, 2017, {IEEE} Computer Society, 2017, pp.
+  81--82.
+\newline\urlprefix\url{https://doi.org/10.1109/ICAC.2017.54}
+
+\bibitem{Docker}
+Docker, Docker主页, \url{https://www.docker.com/}.
+
+\bibitem{DBLP:journals/usenix-login/Lidl17}
+K.~J. Lidl, Understanding docker, login Usenix Mag. 42~(4).
+\newline\urlprefix\url{https://www.usenix.org/publications/login/winter2017/lidl}
+
+\bibitem{DBLP:journals/corr/abs-1710-03675}
+C.~Boettiger, D.~Eddelbuettel, An introduction to rocker: Docker containers for
+  {R}, CoRR abs/1710.03675.
+\newline\urlprefix\url{http://arxiv.org/abs/1710.03675}
+
+\bibitem{K8S}
+Kubernetes, Kubernetes主页, \url{https://kubernetes.io/}.
+
+\bibitem{K8S-CN}
+Kubernetes, Kubernetes中文文档, \url{https://www.kubernetes.org.cn/docs}.
+
+\bibitem{DBLP:conf/sigcomm/HajaSSPT19}
+D.~Haja, M.~Szalay, B.~Sonkoly, G.~Pongr{\'{a}}cz, L.~Toka, Sharpening
+  kubernetes for the edge, in: Proceedings of the {ACM} {SIGCOMM} 2019
+  Conference Posters and Demos, {SIGCOMM} 2019, Beijing, China, August 19-23,
+  2019, {ACM}, 2019, pp. 136--137.
+\newline\urlprefix\url{https://doi.org/10.1145/3342280.3342335}
+
+\bibitem{DBLP:conf/icpp/GongHGL19}
+C.~Gong, S.~He, Y.~Gong, Y.~Lei, On integration of appends and merges in
+  log-structured merge trees, in: Proceedings of the 48th International
+  Conference on Parallel Processing, {ICPP} 2019, Kyoto, Japan, August 05-08,
+  2019, {ACM}, 2019, pp. 103:1--103:10.
+\newline\urlprefix\url{https://doi.org/10.1145/3337821.3337836}
+
+\bibitem{LDBC}
+ldbc, Synthetic data generator for the ldbc social network benchmark and ldbc
+  graphalytics, \url{https://github.com/ldbc/ldbc_snb_datagen}.
+
+\end{thebibliography}

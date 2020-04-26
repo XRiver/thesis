@@ -1,0 +1,2082 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2020.2.16)  14 APR 2020 19:46
+entering extended mode
+**G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/thesis.tex
+(G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/thesis.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+(G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\NJUthesis.cls
+Document Class: NJUthesis 2010/05/14 v0.2d NJUthesisdocument class
+(e:\CTEX\MiKTeX\tex\latex\ctex\ctexbook.cls
+Document Class: ctexbook 2011/03/11 v1.02c ctexbook document class
+(e:\CTEX\MiKTeX\tex\latex\ctex\opt\ctex-common-opts.def)
+(e:\CTEX\MiKTeX\tex\latex\ctex\opt\ctex-caption-opts.def
+\c@CTEX@sectiondepth=\count79
+)
+(e:\CTEX\MiKTeX\tex\latex\ctex\opt\ctex-class-opts.def)
+(e:\CTEX\CTeX\tex\latex\ctex\cfg\ctexopts.cfg)
+(e:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-loadclass.def
+(e:\CTEX\MiKTeX\tex\latex\base\book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(e:\CTEX\MiKTeX\tex\latex\base\bk12.clo
+File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+))
+(e:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-common.def
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\expl3.sty
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3names.sty
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3bootstrap.sty
+Package: l3bootstrap 2011/12/29 v3110 L3 Experimental bootstrap code
+)
+Package: l3names 2011/12/30 v3113 L3 Experimental namespace for primitives
+)
+(e:\CTEX\MiKTeX\tex\latex\misc\etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count89
+)
+Package: expl3 2012/02/26 v3471 L3 Experimental code bundle wrapper
+
+(e:\CTEX\MiKTeX\tex\latex\graphics\color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(e:\CTEX\MiKTeX\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+(e:\CTEX\MiKTeX\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(e:\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(e:\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count90
+))
+(e:\CTEX\MiKTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(e:\CTEX\MiKTeX\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(e:\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3basics.sty
+Package: l3basics 2012/02/26 v3460 L3 Experimental basic definitions
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3expan.sty
+Package: l3expan 2012/02/26 v3460 L3 Experimental argument expansion
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3tl.sty
+Package: l3tl 2012/02/26 v3460 L3 Experimental token lists
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3seq.sty
+Package: l3seq 2012/01/09 v3158 L3 Experimental sequences and stacks
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3int.sty
+Package: l3int 2012/02/26 v3460 L3 Experimental integers
+\c_max_int=\count91
+\l_tmpa_int=\count92
+\l_tmpb_int=\count93
+\l_tmpc_int=\count94
+\g_tmpa_int=\count95
+\g_tmpb_int=\count96
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3quark.sty
+Package: l3quark 2012/02/12 v3384 L3 Experimental quarks
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3prg.sty
+Package: l3prg 2012/02/26 v3464 L3 Experimental control structures
+\g_prg_map_int=\count97
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3clist.sty
+Package: l3clist 2012/02/26 v3460 L3 Experimental comma separated lists
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3token.sty
+Package: l3token 2012/02/26 v3460 L3 Experimental token manipulation
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3prop.sty
+Package: l3prop 2012/02/26 v3460 L3 Experimental property lists
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3msg.sty
+Package: l3msg 2012/02/26 v3470 L3 Experimental messages
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3file.sty
+Package: l3file 2012/02/26 v3464 L3 Experimental file and I/O operations
+\l_iow_stream_int=\count98
+\l_iow_line_length_int=\count99
+\l_iow_target_length_int=\count100
+\l_iow_current_line_int=\count101
+\l_iow_current_word_int=\count102
+\l_iow_current_indentation_int=\count103
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3skip.sty
+Package: l3skip 2012/02/26 v3460 L3 Experimental dimensions and skips
+\l_tmpa_dim=\dimen103
+\l_tmpb_dim=\dimen104
+\l_tmpc_dim=\dimen105
+\g_tmpa_dim=\dimen106
+\g_tmpb_dim=\dimen107
+\l_tmpa_skip=\skip43
+\l_tmpb_skip=\skip44
+\l_tmpc_skip=\skip45
+\g_tmpa_skip=\skip46
+\g_tmpb_skip=\skip47
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3keys.sty
+Package: l3keys 2011/12/22 v3086 L3 Experimental key-value interfaces
+\g_keyval_level_int=\count104
+\l_keys_choice_int=\count105
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3fp.sty
+Package: l3fp 2012/02/06 v3315 L3 Experimental floating-point operations
+\c_one_million=\count106
+\c_one_hundred_million=\count107
+\c_five_hundred_million=\count108
+\c_one_thousand_million=\count109
+\c_fp_pi_by_four_decimal_int=\count110
+\c_fp_pi_by_four_extended_int=\count111
+\c_fp_pi_decimal_int=\count112
+\c_fp_pi_extended_int=\count113
+\c_fp_two_pi_decimal_int=\count114
+\c_fp_two_pi_extended_int=\count115
+\l_fp_count_int=\count116
+\l_fp_div_offset_int=\count117
+\l_fp_exp_integer_int=\count118
+\l_fp_exp_decimal_int=\count119
+\l_fp_exp_extended_int=\count120
+\l_fp_exp_exponent_int=\count121
+\l_fp_input_a_sign_int=\count122
+\l_fp_input_a_integer_int=\count123
+\l_fp_input_a_decimal_int=\count124
+\l_fp_input_a_exponent_int=\count125
+\l_fp_input_b_sign_int=\count126
+\l_fp_input_b_integer_int=\count127
+\l_fp_input_b_decimal_int=\count128
+\l_fp_input_b_exponent_int=\count129
+\l_fp_input_a_extended_int=\count130
+\l_fp_input_b_extended_int=\count131
+\l_fp_mul_a_i_int=\count132
+\l_fp_mul_a_ii_int=\count133
+\l_fp_mul_a_iii_int=\count134
+\l_fp_mul_a_iv_int=\count135
+\l_fp_mul_a_v_int=\count136
+\l_fp_mul_a_vi_int=\count137
+\l_fp_mul_b_i_int=\count138
+\l_fp_mul_b_ii_int=\count139
+\l_fp_mul_b_iii_int=\count140
+\l_fp_mul_b_iv_int=\count141
+\l_fp_mul_b_v_int=\count142
+\l_fp_mul_b_vi_int=\count143
+\l_fp_mul_output_int=\count144
+\l_fp_output_sign_int=\count145
+\l_fp_output_integer_int=\count146
+\l_fp_output_decimal_int=\count147
+\l_fp_output_exponent_int=\count148
+\l_fp_output_extended_int=\count149
+\l_fp_round_position_int=\count150
+\l_fp_round_target_int=\count151
+\l_fp_split_sign_int=\count152
+\l_fp_internal_int=\count153
+\l_fp_trig_octant_int=\count154
+\l_fp_trig_sign_int=\count155
+\l_fp_trig_decimal_int=\count156
+\l_fp_trig_extended_int=\count157
+\l_fp_internal_dim=\dimen108
+\l_fp_internal_skip=\skip48
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3box.sty
+Package: l3box 2012/02/18 v3432 L3 Experimental boxes
+\l_tmpb_box=\box26
+\l_box_top_dim=\dimen109
+\l_box_bottom_dim=\dimen110
+\l_box_left_dim=\dimen111
+\l_box_right_dim=\dimen112
+\l_box_top_new_dim=\dimen113
+\l_box_bottom_new_dim=\dimen114
+\l_box_left_new_dim=\dimen115
+\l_box_right_new_dim=\dimen116
+\l_box_internal_box=\box27
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3coffins.sty
+Package: l3coffins 2012/02/26 v3460 L3 Experimental coffin code layer
+\l_coffin_internal_box=\box28
+\l_coffin_internal_dim=\dimen117
+\l_coffin_offset_x_dim=\dimen118
+\l_coffin_offset_y_dim=\dimen119
+\l_coffin_x_dim=\dimen120
+\l_coffin_y_dim=\dimen121
+\l_coffin_x_prime_dim=\dimen122
+\l_coffin_y_prime_dim=\dimen123
+\l_coffin_Depth_dim=\dimen124
+\l_coffin_Height_dim=\dimen125
+\l_coffin_TotalHeight_dim=\dimen126
+\l_coffin_Width_dim=\dimen127
+\c_empty_coffin=\box29
+\l_coffin_aligned_coffin=\box30
+\l_coffin_aligned_internal_coffin=\box31
+\l_coffin_bounding_shift_dim=\dimen128
+\l_coffin_left_corner_dim=\dimen129
+\l_coffin_right_corner_dim=\dimen130
+\l_coffin_bottom_corner_dim=\dimen131
+\l_coffin_top_corner_dim=\dimen132
+\l_coffin_scaled_total_height_dim=\dimen133
+\l_coffin_scaled_width_dim=\dimen134
+\l_coffin_display_coffin=\box32
+\l_coffin_display_coord_coffin=\box33
+\l_coffin_display_pole_coffin=\box34
+\l_coffin_display_offset_dim=\dimen135
+\l_coffin_display_x_dim=\dimen136
+\l_coffin_display_y_dim=\dimen137
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3color.sty
+Package: l3color 2011/09/07 v2776 L3 Experimental colour support
+)
+(e:\CTEX\MiKTeX\tex\latex\l3kernel\l3luatex.sty
+Package: l3luatex 2012/02/09 v3355 L3 Experimental LuaTeX-specific functions
+\g_cctab_allocate_int=\count158
+\g_cctab_stack_int=\count159
+))
+(e:\CTEX\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
+\etb@tempcnta=\count160
+)
+(e:\CTEX\MiKTeX\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(e:\CTEX\MiKTeX\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(e:\CTEX\MiKTeX\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(e:\CTEX\MiKTeX\tex\latex\tools\indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(e:\CTEX\MiKTeX\tex\latex\base\fix-cm.sty
+Package: fix-cm 2006/09/13 v1.1m fixes to LaTeX
+
+(e:\CTEX\MiKTeX\tex\latex\base\ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+))
+(e:\CTEX\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+\fancy@headwidth=\skip49
+\f@ncyO@elh=\skip50
+\f@ncyO@erh=\skip51
+\f@ncyO@olh=\skip52
+\f@ncyO@orh=\skip53
+\f@ncyO@elf=\skip54
+\f@ncyO@erf=\skip55
+\f@ncyO@olf=\skip56
+\f@ncyO@orf=\skip57
+)
+(e:\CTEX\MiKTeX\tex\latex\ctex\engine\ctex-cjk-engine.def
+(e:\CTEX\MiKTeX\tex\latex\cjk\CJK.sty
+Package: CJK 2008/12/29 4.8.2
+
+(e:\CTEX\MiKTeX\tex\latex\cjk\mule\MULEenc.sty
+Package: MULEenc 2008/12/29 4.8.2
+)
+(e:\CTEX\MiKTeX\tex\latex\cjk\CJK.enc
+File: CJK.enc 2008/12/29 4.8.2
+)
+LaTeX Info: Redefining \selectfont on input line 756.
+\CJK@indent=\box35
+)
+(e:\CTEX\CTeX\tex\latex\CJKpunct\CJKpunct.sty
+Package: CJKpunct 2010/02/21 4.8.2-2
+\CJKpunct@cnta=\count161
+\CJKpunct@cntb=\count162
+\CJKpunct@cntc=\count163
+\CJKpunct@cntd=\count164
+\CJKpunct@cnte=\count165
+
+(e:\CTEX\CTeX\tex\latex\CJKpunct\CJKpunct.spa))
+(e:\CTEX\MiKTeX\tex\latex\ctex\engine\ctex-cjk-common.def
+(e:\CTEX\CTeX\tex\latex\CJK\CJKfntef.sty
+Package: CJKfntef 2008/12/29 4.8.2
+
+(e:\CTEX\MiKTeX\tex\latex\cjk\CJKulem.sty
+Package: CJKulem 2008/12/29 4.8.2
+
+(e:\CTEX\MiKTeX\tex\latex\ulem\ulem.sty
+\UL@box=\box36
+\UL@hyphenbox=\box37
+\UL@skip=\skip58
+\UL@hook=\toks15
+\UL@height=\dimen138
+\UL@pe=\count166
+\UL@pixel=\dimen139
+\ULC@box=\box38
+Package: ulem 2011/03/18
+\ULdepth=\dimen140
+)
+\UL@lastkern=\dimen141
+\CJK@skip=\skip59
+)
+\CJK@fntefSkip=\skip60
+\CJK@nest=\count167
+\CJK@fntefDimen=\dimen142
+\CJK@underdotBox=\box39
+\CJK@ULbox=\box40
+\CJK@underanyskip=\dimen143
+)
+\ccwd=\dimen144
+)
+(e:\CTEX\MiKTeX\tex\latex\ctex\fontset\ctex-cjk-winfonts.def
+(e:\CTEX\MiKTeX\tex\generic\zhmetrics\zhwinfonts.tex
+(e:\CTEX\MiKTeX\tex\generic\oberdiek\ifpdf.sty
+Package ifpdf Info: The package is already loaded, stopped on input line 64.
+){e:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}})))
+\CTEX@q=\count168
+\CTEX@r=\count169
+)
+(e:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-caption.def)
+(e:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-class.def)
+(e:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-book.def))
+(e:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-gbk.def)
+(e:\CTEX\MiKTeX\tex\latex\ctex\cfg\ctexcap.cfg
+(e:\CTEX\MiKTeX\tex\latex\ctex\cfg\ctexcap-gbk.cfg))
+(e:\CTEX\MiKTeX\tex\latex\ctex\cfg\ctex.cfg)
+(e:\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip61
+
+For additional information on amsmath, use the `?' option.
+(e:\CTEX\MiKTeX\tex\latex\ams\math\amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(e:\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen145
+))
+(e:\CTEX\MiKTeX\tex\latex\ams\math\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen146
+)
+(e:\CTEX\MiKTeX\tex\latex\ams\math\amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count170
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count171
+\leftroot@=\count172
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count173
+\DOTSCASE@=\count174
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box41
+\strutbox@=\box42
+\big@size=\dimen147
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count175
+\c@MaxMatrixCols=\count176
+\dotsspace@=\muskip10
+\c@parentequation=\count177
+\dspbrk@lvl=\count178
+\tag@help=\toks17
+\row@=\count179
+\column@=\count180
+\maxfields@=\count181
+\andhelp@=\toks18
+\eqnshift@=\dimen148
+\alignsep@=\dimen149
+\tagshift@=\dimen150
+\tagwidth@=\dimen151
+\totwidth@=\dimen152
+\lineht@=\dimen153
+\@envbody=\toks19
+\multlinegap=\skip62
+\multlinetaggap=\skip63
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(e:\CTEX\MiKTeX\tex\latex\ams\classes\amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks21
+\thm@bodyfont=\toks22
+\thm@headfont=\toks23
+\thm@notefont=\toks24
+\thm@headpunct=\toks25
+\thm@preskip=\skip64
+\thm@postskip=\skip65
+\thm@headsep=\skip66
+\dth@everypar=\toks26
+)
+(e:\CTEX\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)
+(e:\CTEX\MiKTeX\tex\latex\amsfonts\amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+)
+(e:\CTEX\MiKTeX\tex\latex\tools\bm.sty
+Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
+LaTeX Info: Redefining \bm on input line 204.
+)
+(e:\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen154
+\Gin@req@width=\dimen155
+)
+(e:\CTEX\MiKTeX\tex\latex\hyperref\hyperref.sty
+Package: hyperref 2012/02/06 v6.82o Hypertext links for LaTeX
+
+(e:\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-hyperref.sty
+Package: hobsub-hyperref 2011/04/23 v1.4 Bundle oberdiek, subset hyperref (HO)
+
+(e:\CTEX\MiKTeX\tex\generic\oberdiek\hobsub-generic.sty
+Package: hobsub-generic 2011/04/23 v1.4 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2011/04/23 v1.4 Subsetting bundle oberdiek (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/04/04 v1.12 Provides string conversions (HO)
+Package: bigintcalc 2011/01/30 v1.2 Expandable big integer calculations (HO)
+Package: bitset 2011/01/30 v1.1 Data type bit set (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provides unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/01/30 v1.0 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/04/23 v1.7 Hooks at very end of document (HO)
+Package: atbegshi 2011/01/30 v1.15 At begin shipout hook (HO)
+Package: refcount 2010/12/01 v3.2 Data extraction from references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
+)
+(e:\CTEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+)
+\@linkdim=\dimen156
+\Hy@linkcounter=\count182
+\Hy@pagecounter=\count183
+
+(e:\CTEX\MiKTeX\tex\latex\hyperref\pd1enc.def
+File: pd1enc.def 2012/02/06 v6.82o Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count184
+
+(e:\CTEX\MiKTeX\tex\latex\00miktex\hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4046.
+Package hyperref Info: Link nesting OFF on input line 4051.
+Package hyperref Info: Hyper index ON on input line 4054.
+Package hyperref Info: Plain pages OFF on input line 4061.
+Package hyperref Info: Backreferencing OFF on input line 4066.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4284.
+\c@Hy@tempcnt=\count185
+
+(e:\CTEX\MiKTeX\tex\latex\ltxmisc\url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4637.
+\Fld@menulength=\count186
+\Field@Width=\dimen157
+\Fld@charsize=\dimen158
+Package hyperref Info: Hyper figures OFF on input line 5757.
+Package hyperref Info: Link nesting OFF on input line 5762.
+Package hyperref Info: Hyper index ON on input line 5765.
+Package hyperref Info: backreferencing OFF on input line 5772.
+Package hyperref Info: Link coloring OFF on input line 5777.
+Package hyperref Info: Link coloring with OCG OFF on input line 5782.
+Package hyperref Info: PDF/A mode OFF on input line 5787.
+LaTeX Info: Redefining \ref on input line 5827.
+LaTeX Info: Redefining \pageref on input line 5831.
+\Hy@abspage=\count187
+\c@Item=\count188
+\c@Hfootnote=\count189
+)
+
+Package hyperref Message: Driver: hpdftex.
+
+(e:\CTEX\MiKTeX\tex\latex\hyperref\hpdftex.def
+File: hpdftex.def 2012/02/06 v6.82o Hyperref driver for pdfTeX
+\Fld@listcount=\count190
+\c@bookmark@seq@number=\count191
+
+(e:\CTEX\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip67
+)
+(e:\CTEX\MiKTeX\tex\latex\natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip68
+\bibsep=\skip69
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count192
+)
+Package hyperref Info: Option `CJKbookmarks' set `true' on input line 97.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 97.
+Package hyperref Info: Option `colorlinks' set `true' on input line 97.
+Package hyperref Info: Option `plainpages' set `false' on input line 97.
+
+(e:\CTEX\MiKTeX\tex\latex\geometry\geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen159
+\Gm@wd@mp=\dimen160
+\Gm@odd@mp=\dimen161
+\Gm@even@mp=\dimen162
+\Gm@layoutwidth=\dimen163
+\Gm@layoutheight=\dimen164
+\Gm@layouthoffset=\dimen165
+\Gm@layoutvoffset=\dimen166
+\Gm@dimlist=\toks27
+
+(e:\CTEX\MiKTeX\tex\latex\geometry\geometry.cfg)))
+(G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\NJUthesis.cfg
+File: NJUthesis.cfg 2010/05/14 v0.2d NJUthesisconfiguration file
+\c@algo=\count196
+\c@thm=\count197
+\c@defn=\count198
+\c@conj=\count199
+\c@exmp=\count200
+\c@rem=\count201
+Normal \count register pool exhausted, switching to extended pool.
+\c@case=\count277
+)
+(e:\CTEX\MiKTeX\tex\latex\tools\longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip70
+\LTright=\skip71
+\LTpre=\skip72
+\LTpost=\skip73
+\LTchunksize=\count278
+\LTcapwidth=\dimen167
+\LT@head=\box43
+\LT@firsthead=\box44
+\LT@foot=\box45
+\LT@lastfoot=\box46
+\LT@cols=\count279
+\LT@rows=\count280
+\c@LT@tables=\count281
+\c@LT@chunks=\count282
+\LT@p@ftn=\toks28
+)
+(e:\CTEX\MiKTeX\tex\latex\multirow\multirow.sty
+\bigstrutjot=\dimen168
+)
+(e:\CTEX\MiKTeX\tex\latex\psnfss\times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(e:\CTEX\MiKTeX\tex\latex\fancyvrb\fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count283
+\FV@InFile=\read1
+\FV@TabBox=\box47
+\c@FancyVerbLine=\count284
+\FV@StepNumber=\count285
+\FV@OutFile=\write3
+) (e:\CTEX\MiKTeX\tex\latex\enumitem\enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip74
+\enit@outerparindent=\dimen169
+\enit@toks=\toks29
+\enit@inbox=\box48
+\enitdp@description=\count286
+)
+(e:\CTEX\MiKTeX\tex\latex\breakurl\breakurl.sty
+Package: breakurl 2009/01/24 v1.30 Breakable hyperref URLs
+
+(e:\CTEX\MiKTeX\tex\latex\xkeyval\xkeyval.sty
+Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+
+(e:\CTEX\MiKTeX\tex\generic\xkeyval\xkeyval.tex
+\XKV@toks=\toks30
+\XKV@tempa@toks=\toks31
+\XKV@depth=\count287
+File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+))
+
+Package breakurl Warning: You are using breakurl while processing via pdflatex.
+
+(breakurl)                \burl will be just a synonym of \url.
+(breakurl)                 on input line 47.
+
+) (e:\CTEX\MiKTeX\tex\latex\moreverb\moreverb.sty
+Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
+
+(e:\CTEX\MiKTeX\tex\latex\tools\verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks32
+\verbatim@line=\toks33
+\verbatim@in@stream=\read2
+)
+\tab@position=\count288
+\tab@size=\count289
+\listing@line=\count290
+)
+(e:\CTEX\MiKTeX\tex\latex\txfonts\txfonts.sty
+Package: txfonts 2008/01/22 v3.2.1
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 21.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/txr/m/n on input line 21.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/txr/m/n on input line 21.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/txr/m/n --> OT1/txr/bx/n on input line 22.
+\symitalic=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `italic' in version `bold'
+(Font)                  OT1/txr/m/it --> OT1/txr/bx/it on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 29.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/txr/m/it on input line 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/txr/m/it on input line 30.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/txr/m/it --> OT1/txr/bx/it on input line 31.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 40.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/txss/m/n on input line 40.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/txss/m/n on input line 40.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/txss/m/n --> OT1/txss/b/n on input line 41.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 50.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/txtt/m/n on input line 50.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/txtt/m/n on input line 50.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/txtt/m/n --> OT1/txtt/b/n on input line 51.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 58.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/txmi/m/it on input line 58.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/txmi/m/it on input line 58.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/txmi/m/it --> OML/txmi/bx/it on input line 59.
+\symlettersA=\mathgroup10
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
+(Font)                  U/txmia/m/it --> U/txmia/bx/it on input line 67.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 70.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 77.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/txsy/m/n on input line 77.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/txsy/m/n on input line 77.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/txsy/m/n --> OMS/txsy/bx/n on input line 78.
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 93.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
+(Font)                  U/msa/m/n --> U/txsya/m/n on input line 93.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
+(Font)                  U/msa/m/n --> U/txsya/m/n on input line 93.
+LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
+(Font)                  U/txsya/m/n --> U/txsya/bx/n on input line 94.
+LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 102.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `normal'
+(Font)                  U/msb/m/n --> U/txsyb/m/n on input line 102.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
+(Font)                  U/msb/m/n --> U/txsyb/m/n on input line 102.
+LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
+(Font)                  U/txsyb/m/n --> U/txsyb/bx/n on input line 103.
+\symsymbolsC=\mathgroup11
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
+(Font)                  U/txsyc/m/n --> U/txsyc/bx/n on input line 113.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 120.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/txex/m/n on input line 120.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/txex/m/n on input line 120.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/txex/m/n --> OMX/txex/bx/n on input line 121.
+\symlargesymbolsA=\mathgroup12
+LaTeX Font Info:    Overwriting symbol font `largesymbolsA' in version `bold'
+(Font)                  U/txexa/m/n --> U/txexa/bx/n on input line 129.
+LaTeX Info: Redefining \not on input line 1043.
+LaTeX Info: Redefining \textsquare on input line 1063.
+LaTeX Info: Redefining \openbox on input line 1064.
+)
+(e:\CTEX\MiKTeX\tex\latex\mathcomp\mathcomp.sty
+Package: mathcomp 2001/01/07 v0.1f (TBo)
+
+(e:\CTEX\MiKTeX\tex\latex\base\textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(e:\CTEX\MiKTeX\tex\latex\base\ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 42.
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+\symTC=\mathgroup13
+LaTeX Font Info:    Overwriting symbol font `TC' in version `bold'
+(Font)                  TS1/cmr/m/n --> TS1/cmr/bx/n on input line 25.
+LaTeX Font Info:    Redeclaring math symbol \dagger on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \ddagger on input line 48.
+)
+(e:\CTEX\MiKTeX\tex\latex\subfigure\subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip75
+\subfigcapskip=\skip76
+\subfigcaptopadj=\dimen170
+\subfigbottomskip=\skip77
+\subfigcapmargin=\dimen171
+\subfiglabelskip=\skip78
+\c@subfigure=\count291
+\c@lofdepth=\count292
+\c@subtable=\count293
+\c@lotdepth=\count294
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(e:\CTEX\MiKTeX\tex\latex\subfigure\subfigure.cfg)
+\subfig@top=\skip79
+\subfig@bottom=\skip80
+)
+(e:\CTEX\MiKTeX\tex\latex\algorithm2e\algorithm2e.sty
+Package: algorithm2e 2008/00/00 v3.10 algorithms environments
+\c@AlgoLine=\count295
+
+(e:\CTEX\MiKTeX\tex\latex\base\ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(e:\CTEX\MiKTeX\tex\latex\tools\xspace.sty
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+)
+(e:\CTEX\MiKTeX\tex\latex\ltxmisc\relsize.sty
+Package: relsize 2003/07/04 ver 3.1
+)
+********************************************************
+Package `algorithm2e' Release 4.01 -- december 14 2009 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (fiorio@lirmm.fr)
+********************************************************
+\skiptotal=\skip81
+\skiplinenumber=\skip82
+\skiprule=\skip83
+\skiphlne=\skip84
+\skiptext=\skip85
+\skiplength=\skip86
+\algomargin=\skip87
+\skipalgocfslide=\skip88
+\algowidth=\dimen172
+\inoutsize=\dimen173
+\inoutline=\dimen174
+\interspacetitleruled=\dimen175
+\interspacealgoruled=\dimen176
+\interspacetitleboxruled=\dimen177
+\algocf@inoutbox=\box49
+\algocf@inputbox=\box50
+\AlCapSkip=\skip89
+\AlCapHSkip=\skip90
+\algocf@nlbox=\box51
+\algocf@hangingbox=\box52
+\algocf@capbox=\box53
+\algoheightruledefault=\skip91
+\algoheightrule=\skip92
+\algotitleheightruledefault=\skip93
+\algotitleheightrule=\skip94
+\c@algocfline=\count296
+\c@algocfproc=\count297
+\c@algocf=\count298
+\algocf@algoframe=\box54
+\algocf@algobox=\box55
+) (e:\CTEX\MiKTeX\tex\latex\tools\array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen178
+\extrarowheight=\dimen179
+\NC@list=\toks34
+\extratabsurround=\skip95
+\backup@length=\skip96
+)
+(e:\CTEX\MiKTeX\tex\latex\extarrows\extarrows.sty
+Package: extarrows 2008/05/15 v1.0b Some extensible arrows
+)
+(e:\CTEX\MiKTeX\tex\latex\nomencl\nomencl.sty
+Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
+\nomlabelwidth=\dimen180
+\nom@tempdim=\dimen181
+\nomitemsep=\skip97
+)
+(e:\CTEX\MiKTeX\tex\latex\booktabs\booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen182
+\lightrulewidth=\dimen183
+\cmidrulewidth=\dimen184
+\belowrulesep=\dimen185
+\belowbottomsep=\dimen186
+\aboverulesep=\dimen187
+\abovetopsep=\dimen188
+\cmidrulesep=\dimen189
+\cmidrulekern=\dimen190
+\defaultaddspace=\dimen191
+\@cmidla=\count299
+\@cmidlb=\count300
+\@aboverulesep=\dimen192
+\@belowrulesep=\dimen193
+\@thisruleclass=\count301
+\@lastruleclass=\count302
+\@thisrulewidth=\dimen194
+)
+(e:\CTEX\CTeX\tex\latex\ccmap\ccmap.sty
+Package: ccmap 2006/11/18
+\CCT@hooka@@=\toks35
+)
+(e:\CTEX\MiKTeX\tex\latex\float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count303
+\float@exts=\toks36
+\float@box=\box56
+\@float@everytoks=\toks37
+\@floatcapt=\box57
+)
+\@nomenclaturefile=\write4
+
+Writing nomenclature file thesis.nlo
+\c@definition=\count304
+\c@lemma=\count305
+\c@theorem=\count306
+\c@property=\count307
+\c@example=\count308
+\c@myrule=\count309
+(G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\thesis.aux)
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 82.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 82.
+
+
+(e:\CTEX\MiKTeX\tex\latex\txfonts\omltxmi.fd
+File: omltxmi.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 82.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 82.
+
+
+(e:\CTEX\MiKTeX\tex\latex\txfonts\omstxsy.fd
+File: omstxsy.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 82.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 82.
+
+
+(e:\CTEX\MiKTeX\tex\latex\txfonts\omxtxex.fd
+File: omxtxex.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 82.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 82.
+
+(e:\CTEX\MiKTeX\tex\latex\txfonts\utxexa.fd
+File: utxexa.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 82.
+
+(e:\CTEX\MiKTeX\tex\latex\txfonts\ot1txr.fd
+File: ot1txr.fd 2000/12/15 v3.1
+)<<ot1.cmap>>
+(e:\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count310
+\scratchdimen=\dimen195
+\scratchbox=\box58
+\nofMPsegments=\count311
+\nofMParguments=\count312
+\everyMPshowfont=\toks38
+\MPscratchCnt=\count313
+\MPscratchDim=\dimen196
+\MPnumerator=\count314
+\makeMPintoPDFobject=\count315
+\everyMPtoPDFconversion=\toks39
+)
+\AtBeginShipoutBox=\box59
+Package hyperref Info: Link coloring ON on input line 82.
+ (e:\CTEX\MiKTeX\tex\latex\hyperref\nameref.sty
+Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
+
+(e:\CTEX\MiKTeX\tex\generic\oberdiek\gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count316
+)
+LaTeX Info: Redefining \ref on input line 82.
+LaTeX Info: Redefining \pageref on input line 82.
+LaTeX Info: Redefining \nameref on input line 82.
+
+(G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\thesis.out)
+(G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\thesis.out)
+\@outlinefile=\write5
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(91.04872pt, 415.41043pt, 91.04872pt)
+* v-part:(T,H,B)=(99.58464pt, 645.87756pt, 99.58464pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=415.41043pt
+* \textheight=645.87756pt
+* \oddsidemargin=18.77873pt
+* \evensidemargin=18.77873pt
+* \topmargin=-55.19849pt
+* \headheight=73.97733pt
+* \headsep=8.53581pt
+* \topskip=12.0pt
+* \footskip=36.98857pt
+* \marginparwidth=38.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(e:\CTEX\MiKTeX\tex\latex\cjk\standard.bdg
+File: standard.bdg 2008/12/29 4.8.2
+)
+(e:\CTEX\MiKTeX\tex\latex\cjk\extended.enc
+File: extended.enc 2008/12/29 4.8.2
+)
+(e:\CTEX\MiKTeX\tex\latex\cjk\extended.chr
+File: extended.chr 2008/12/29 4.8.2
+)
+
+pdfTeX warning: pdflatex.EXE (file G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FI
+Gs/reviewPlaceholder.pdf): PDF inclusion: found PDF version <1.7>, but at most 
+version <1.5> allowed
+<FIGs/reviewPlaceholder.pdf, id=336, 845.07724pt x 597.55246pt>
+File: FIGs/reviewPlaceholder.pdf Graphic file (type pdf)
+
+<use FIGs/reviewPlaceholder.pdf>
+Package pdftex.def Info: FIGs/reviewPlaceholder.pdf used on input line 130.
+(pdftex.def)             Requested size: 55.76758pt x 39.42581pt.
+File: FIGs/reviewPlaceholder.pdf Graphic file (type pdf)
+ <use FIGs/reviewPlaceholder.pdf>
+Package pdftex.def Info: FIGs/reviewPlaceholder.pdf used on input line 130.
+(pdftex.def)             Requested size: 55.76758pt x 39.42581pt.
+LaTeX Font Info:    Try loading font information for C19+zhkai on input line 13
+0.
+
+(e:\CTEX\MiKTeX\tex\latex\zhmetrics\c19zhkai.fd
+File: c19zhkai.fd 2009/09/23 4.8.2
+)<<c1960.cmap>><<c1946.cmap>><<c1955.cmap>><<c1937.cmap>><<c1961.cmap>><<c1949.
+cmap>><<c1958.cmap>><<c1926.cmap>>
+Package CJKpunct Info: punctuation spaces for family 'zhkai' do not exist. Use 
+family 'def' instead. on input line 130.
+<<c1953.cmap>><<c1942.cmap>><<c1938.cmap>><<c1956.cmap>><<oml.cmap>><<oms.cmap>
+><<omx.cmap>>
+LaTeX Font Info:    Try loading font information for U+txsya on input line 130.
+
+ (e:\CTEX\MiKTeX\tex\latex\txfonts\utxsya.fd
+File: utxsya.fd 2000/12/15 v3.1
+)
+
+LaTeX Warning: File u.cmap not found on input line 130.
+
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 130.
+
+(e:\CTEX\MiKTeX\tex\latex\txfonts\utxsyb.fd
+File: utxsyb.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+txmia on input line 130.
+
+
+(e:\CTEX\MiKTeX\tex\latex\txfonts\utxmia.fd
+File: utxmia.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 130.
+
+
+(e:\CTEX\MiKTeX\tex\latex\txfonts\utxsyc.fd
+File: utxsyc.fd 2000/12/15 v3.1
+)
+
+LaTeX Warning: File ts1.cmap not found on input line 130.
+
+<<c1925.cmap>><<c1957.cmap>><<c1951.cmap>><<c1947.cmap>><<c1939.cmap>><<c1962.c
+map>><<c1944.cmap>><<c1940.cmap>><<c1945.cmap>><<c1959.cmap>><<c1965.cmap>><<c1
+963.cmap>><<c1950.cmap>><<c1954.cmap>><<c1941.cmap>><<c1964.cmap>>
+Overfull \hbox (14.38182pt too wide) in paragraph at lines 130--130
+ [][] 
+ []
+
+[1
+
+
+ <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/reviewPlaceholder.pdf>]<<c1943
+.cmap>><<c1952.cmap>> [2
+
+]
+File: FIGs/reviewPlaceholder.pdf Graphic file (type pdf)
+ <use FIGs/reviewPlaceholder.pdf>
+Package pdftex.def Info: FIGs/reviewPlaceholder.pdf used on input line 135.
+(pdftex.def)             Requested size: 55.76758pt x 39.42581pt.
+ [3
+
+]
+LaTeX Font Info:    Try loading font information for C19+zhhei on input line 14
+3.
+
+(e:\CTEX\MiKTeX\tex\latex\zhmetrics\c19zhhei.fd
+File: c19zhhei.fd 2009/09/23 4.8.2
+)
+Package CJKpunct Info: punctuation spaces for family 'zhhei' do not exist. Use 
+family 'def' instead. on input line 143.
+LaTeX Font Info:    Try loading font information for C19+rm on input line 145.
+
+(e:\CTEX\MiKTeX\tex\latex\ctex\fd\c19rm.fd
+File: c19rm.fd 2007/05/06 v0.8a ctex font definition file
+)
+Package CJKpunct Info: punctuation spaces for family 'zhsong' do not exist. Use
+ family 'def' instead. on input line 145.
+<<c1948.cmap>><<c1936.cmap>>
+[1
+
+
+] [2] [3
+
+] [4]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                \hskip 12.05pt
+(hyperref)                replaced by space on input line 190.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                \hskip 12.05pt
+(hyperref)                replaced by space on input line 190.
+
+(G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\thesis.toc [5
+
+] [6])
+\tf@toc=\write6
+ [7]
+(G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\thesis.lot)
+\tf@lot=\write7
+ [8
+
+]
+(G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\thesis.lof)
+\tf@lof=\write8
+ [9
+
+] [10]
+(G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\chapter/c1.tex
+µ⁄“ª’¬
+<FIGs/c1/graph-model.png, id=683, 804.75656pt x 611.28375pt>
+File: FIGs/c1/graph-model.png Graphic file (type png)
+
+<use FIGs/c1/graph-model.png>
+Package pdftex.def Info: FIGs/c1/graph-model.png used on input line 10.
+(pdftex.def)             Requested size: 361.34999pt x 274.47818pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.15 
+      [1
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.15 
+      <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c1/graph-model.png>]
+<FIGs/c1/DB-trends.png, id=693, 1222.5675pt x 610.53094pt>
+File: FIGs/c1/DB-trends.png Graphic file (type png)
+
+<use FIGs/c1/DB-trends.png>
+Package pdftex.def Info: FIGs/c1/DB-trends.png used on input line 20.
+(pdftex.def)             Requested size: 361.34999pt x 180.44975pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.29 
+      [2pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.1.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.29 
+      <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c1/DB-trends.png>]
+Overfull \hbox (28.49945pt too wide) in paragraph at lines 39--40
+\C19/rm/m/n/12.05/46 ‚ \C19/rm/m/n/12.05/47 • \C19/rm/m/n/12.05/38  \C19/rm/m/
+n/12.05/52 ¨|\C19/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.05/54 X\OT1/txr/m/n/12.05 N
+eo4j, Janus Graph|\C19/rm/m/n/12.05/26 ∂| \C19/rm/m/n/12.05/62 k \C19/rm/m/n/12
+.05/60 
+ \C19/rm/m/n/12.05/63 K \C19/rm/m/n/12.05/55 ¥ \C19/rm/m/n/12.05/39 å \C19/rm/m
+/n/12.05/42 ˙ \C19/rm/m/n/12.05/56 i \C19/rm/m/n/12.05/47 m \C19/rm/m/n/12.05/4
+1 u \C19/rm/m/n/12.05/65 g \C19/rm/m/n/12.05/62 ^|\C19/rm/m/n/12.05/26 ß| \C19/
+rm/m/n/12.05/54 X\OT1/txr/m/n/12.05 Facebook\C19/rm/m/n/12.05/40 \OT1/txr/m/n/
+12.05 RocksDB|\C19/rm/m/n/12.05/25 !|
+ []
+
+<FIGs/c1/graph-db-trend.png, id=702, 775.39688pt x 582.67688pt>
+File: FIGs/c1/graph-db-trend.png Graphic file (type png)
+
+<use FIGs/c1/graph-db-trend.png>
+Package pdftex.def Info: FIGs/c1/graph-db-trend.png used on input line 43.
+(pdftex.def)             Requested size: 361.34999pt x 271.53764pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.52 
+      [3]
+Overfull \hbox (8.30334pt too wide) in paragraph at lines 59--60
+\OT1/txr/m/n/12.05 Gi-raph|\C19/rm/m/n/12.05/25 !| \OT1/txr/m/n/12.05 Apache Ha
+doop\C19/rm/m/n/12.05/40  \C19/rm/m/n/12.05/46 ? \C19/rm/m/n/12.05/60 1\OT1/tx
+r/m/n/12.05 ETL\C19/rm/m/n/12.05/45 8 \C19/rm/m/n/12.05/38 §|\C19/rm/m/n/12.05/
+25 "| \OT1/txr/m/n/12.05 JanusGraph\C19/rm/m/n/12.05/64 | \C19/rm/m/n/12.05/38 
+± \C19/rm/m/n/12.05/58 	 \C19/rm/m/n/12.05/37 ‹ \C19/rm/m/n/12.05/56 ¢ \C19/rm/
+m/n/12.05/61 ⁄ \C19/rm/m/n/12.05/39  ;|\C19/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.
+05/54 X\OT1/txr/m/n/12.05 Elastic
+ []
+
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.1.3}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.62 T
+      igerGraph «“ªøÓ∏ﬂ–‘ƒ‹°¢∏ﬂ…ÏÀı–‘µƒÕº ˝æ›ø‚£¨Õ®π˝∂‘Õº ˝æ›Ω·ππµƒµ◊≤„ µœ÷£...
+ <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c1/graph-db-trend.png>]
+[5]
+
+LaTeX Warning: File ot140.cmap not found on input line 98.
+
+[6]) (G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\chapter/c2.tex [7]
+µ⁄∂˛’¬
+<FIGs/c2/LSM-1.png, id=751, 729.32475pt x 292.6935pt>
+File: FIGs/c2/LSM-1.png Graphic file (type png)
+ <use FIGs/c2/LSM-1.png>
+Package pdftex.def Info: FIGs/c2/LSM-1.png used on input line 15.
+(pdftex.def)             Requested size: 361.34999pt x 145.01547pt.
+
+[8
+
+] <FIGs/c2/LSM-2.png, id=762, 823.27576pt x 407.121pt>
+File: FIGs/c2/LSM-2.png Graphic file (type png)
+
+<use FIGs/c2/LSM-2.png>
+Package pdftex.def Info: FIGs/c2/LSM-2.png used on input line 25.
+(pdftex.def)             Requested size: 361.34999pt x 178.69273pt.
+ [9pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.32 
+     pdfTeX warning (ext4): destination with the same identifier (name{figure.2
+.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.32 
+      <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c2/LSM-1.png> <G:/thesis/
+LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c2/LSM-2.png>] [10]
+Overfull \hbox (6.93002pt too wide) in paragraph at lines 51--52
+[]\C19/rm/m/n/12.05/54 X \C19/rm/m/n/12.05/43 J \C19/rm/m/n/12.05/38 á \C19/rm/
+m/n/12.05/43 L \C19/rm/m/n/12.05/61 ò \C19/rm/m/n/12.05/40 Ω \C19/rm/m/n/12.05/
+55 û \C19/rm/m/n/12.05/45 m|\C19/rm/m/n/12.05/26 ß| \OT1/txr/m/n/12.05 follower
+\C19/rm/m/n/12.05/45 u \C19/rm/m/n/12.05/37 ˇ ÿ \C19/rm/m/n/12.05/40  \C19/rm/
+m/n/12.05/48 5 \C19/rm/m/n/12.05/65 g\OT1/txr/m/n/12.05 leader\C19/rm/m/n/12.05
+/40  \C19/rm/m/n/12.05/64 ± \C19/rm/m/n/12.05/52 œ \C19/rm/m/n/12.05/60 5 % \C
+19/rm/m/n/12.05/57 a \C19/rm/m/n/12.05/59 û E |\C19/rm/m/n/12.05/26 £|\OT1/txr/
+m/n/12.05 leader\C19/rm/m/n/12.05/45 Ú
+ []
+
+[11] [12]<<c1929.cmap>> [13]
+Overfull \hbox (5.68776pt too wide) in paragraph at lines 85--86
+[]\OT1/txr/m/n/12.05 Kubernetes\C19/rm/m/n/12.05/36 ù \C19/rm/m/n/12.05/48 ) \C
+19/rm/m/n/12.05/61 ± \C19/rm/m/n/12.05/59 e \C19/rm/m/n/12.05/45 A \C19/rm/m/n/
+12.05/42 á \C19/rm/m/n/12.05/64 ≠ \C19/rm/m/n/12.05/61 á \C19/rm/m/n/12.05/40 
+ \C19/rm/m/n/12.05/42 V \C19/rm/m/n/12.05/51 g|\C19/rm/m/n/12.05/26 µ| \OT1/txr
+/m/n/12.05 Cluster|\C19/rm/m/n/12.05/25 !| \OT1/txr/m/n/12.05 Master|\C19/rm/m/
+n/12.05/25 !| \OT1/txr/m/n/12.05 Node|\C19/rm/m/n/12.05/25 !| \OT1/txr/m/n/12.0
+5 Pod|\C19/rm/m/n/12.05/25 !| \OT1/txr/m/n/12.05 Service|\C19/rm/m/n/12.05/25 "
+|
+ []
+
+
+Overfull \hbox (5.00041pt too wide) in paragraph at lines 85--86
+\C19/rm/m/n/12.05/42 Z\OT1/txr/m/n/12.05 Node\C19/rm/m/n/12.05/46 ! \C19/rm/m/n
+/12.05/40 :|\C19/rm/m/n/12.05/25 "| \OT1/txr/m/n/12.05 Master\C19/rm/m/n/12.05/
+46 ! \C19/rm/m/n/12.05/40 : \C19/rm/m/n/12.05/36 ù \C19/rm/m/n/12.05/48 )\OT1/t
+xr/m/n/12.05 API Serv-er|\C19/rm/m/n/12.05/25 !| \OT1/txr/m/n/12.05 Scheduler|\
+C19/rm/m/n/12.05/25 !| \OT1/txr/m/n/12.05 Controller Man-ag-er|\C19/rm/m/n/12.0
+5/25 !| \OT1/txr/m/n/12.05 etcd\C19/rm/m/n/12.05/40 |\C19/rm/m/n/12.05/26 ß|
+ []
+
+) (G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\chapter/c3.tex [14]
+µ⁄»˝’¬
+<FIGs/c3/StellarDB-structure.png, id=823, 1023.825pt x 569.12625pt>
+File: FIGs/c3/StellarDB-structure.png Graphic file (type png)
+
+<use FIGs/c3/StellarDB-structure.png>
+Package pdftex.def Info: FIGs/c3/StellarDB-structure.png used on input line 7.
+(pdftex.def)             Requested size: 361.34999pt x 200.86453pt.
+
+<FIGs/c3/stellarDB-modules.png, id=824, 1023.825pt x 569.12625pt>
+File: FIGs/c3/stellarDB-modules.png Graphic file (type png)
+
+<use FIGs/c3/stellarDB-modules.png>
+Package pdftex.def Info: FIGs/c3/stellarDB-modules.png used on input line 15.
+(pdftex.def)             Requested size: 361.34999pt x 200.86453pt.
+ [15
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.30 
+      <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c3/StellarDB-structure.pn
+g>] [16pdfTeX warning (ext4): destination with the same identifier (name{figure
+.3.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.46 
+      <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c3/stellarDB-modules.png>
+] <FIGs/c3/storage-overview.png, id=838, 1018.80624pt x 1275.76625pt>
+File: FIGs/c3/storage-overview.png Graphic file (type png)
+
+<use FIGs/c3/storage-overview.png>
+Package pdftex.def Info: FIGs/c3/storage-overview.png used on input line 49.
+(pdftex.def)             Requested size: 361.34999pt x 452.48166pt.
+ [17pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.57 
+      <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c3/storage-overview.png>]
+<FIGs/c3/storage-inner.pdf, id=845, 838.13126pt x 857.2025pt>
+File: FIGs/c3/storage-inner.pdf Graphic file (type pdf)
+
+<use FIGs/c3/storage-inner.pdf>
+Package pdftex.def Info: FIGs/c3/storage-inner.pdf used on input line 76.
+(pdftex.def)             Requested size: 361.34999pt x 369.57088pt.
+ [18] [19pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.3.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.89 
+      <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c3/storage-inner.pdf>]
+<FIGs/c3/LSMT-basic-sample.png, id=883, 957.5775pt x 546.54187pt>
+File: FIGs/c3/LSMT-basic-sample.png Graphic file (type png)
+
+<use FIGs/c3/LSMT-basic-sample.png>
+Package pdftex.def Info: FIGs/c3/LSMT-basic-sample.png used on input line 94.
+(pdftex.def)             Requested size: 361.34999pt x 206.23698pt.
+ [20pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.103 
+       <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c3/LSMT-basic-sample.png
+>]
+<FIGs/c3/compaction-detail-sample-1.png, id=890, 1269.99469pt x 434.37282pt>
+File: FIGs/c3/compaction-detail-sample-1.png Graphic file (type png)
+
+<use FIGs/c3/compaction-detail-sample-1.png>
+Package pdftex.def Info: FIGs/c3/compaction-detail-sample-1.png used on input l
+ine 106.
+(pdftex.def)             Requested size: 361.34999pt x 123.59207pt.
+
+<FIGs/c3/compaction-detail-sample-2.png, id=893, 1066.7353pt x 563.85657pt>
+File: FIGs/c3/compaction-detail-sample-2.png Graphic file (type png)
+
+<use FIGs/c3/compaction-detail-sample-2.png>
+Package pdftex.def Info: FIGs/c3/compaction-detail-sample-2.png used on input l
+ine 114.
+(pdftex.def)             Requested size: 361.34999pt x 191.00319pt.
+ [21pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.121 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.121 
+       <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c3/compaction-detail-sam
+ple-1.png> <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c3/compaction-detail
+-sample-2.png>]
+<FIGs/c4/simulator-structure.pdf, id=902, 1004.75375pt x 808.01875pt>
+File: FIGs/c4/simulator-structure.pdf Graphic file (type pdf)
+
+<use FIGs/c4/simulator-structure.pdf>
+Package pdftex.def Info: FIGs/c4/simulator-structure.pdf used on input line 139
+.
+(pdftex.def)             Requested size: 361.34999pt x 290.59062pt.
+ [22] [23pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.3.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.156 
+       <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c4/simulator-structure.p
+df>] [24] <FIGs/c4/compaction-sim-v1.pdf, id=936, 597.55246pt x 845.07718pt>
+File: FIGs/c4/compaction-sim-v1.pdf Graphic file (type pdf)
+
+<use FIGs/c4/compaction-sim-v1.pdf>
+Package pdftex.def Info: FIGs/c4/compaction-sim-v1.pdf used on input line 187.
+(pdftex.def)             Requested size: 361.34999pt x 511.04762pt.
+)
+(G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\chapter/c4.tex [25] [26pdfTeX warnin
+g (ext4): destination with the same identifier (name{figure.3.9}) has been alre
+ady used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {–‘ƒ‹”≈ªØœÍœ∏…Ëº∆ µœ÷”ÎΩ·π˚’π æ} <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®
+°Êùøv1.2/FIGs/c4/compaction-sim-v1.pdf>]
+µ⁄Àƒ’¬
+[27
+
+] [28]
+Overfull \hbox (2.71268pt too wide) in paragraph at lines 37--38
+[]\C19/rm/m/n/12.05/63 ˘ \C19/rm/m/n/12.05/61  \C19/rm/m/n/12.05/62 k \C19/rm/
+m/n/12.05/48 ¸ \C19/rm/m/n/12.05/42 á \C19/rm/m/n/12.05/44   \C19/rm/m/n/12.05/
+43 J|\C19/rm/m/n/12.05/26 µ| \C19/rm/m/n/12.05/52 Ÿ \C19/rm/m/n/12.05/61 ò|\C19
+/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.05/50 z \C19/rm/m/n/12.05/39 g\OT1/txr/m/n/1
+2.05 L0\C19/rm/m/n/12.05/59 ï\OT1/txr/m/n/12.05 L1\C19/rm/m/n/12.05/40 \OT1/tx
+r/m/n/12.05 compaction\C19/rm/m/n/12.05/54 ? \C19/rm/m/n/12.05/58 ÷|\C19/rm/m/n
+/12.05/26 ß| \C19/rm/m/n/12.05/37 ÿ \C19/rm/m/n/12.05/49 ÿ \C19/rm/m/n/12.05/54
+  \C19/rm/m/n/12.05/49 
+ \C19/rm/m/n/12.05/45 A \C19/rm/m/n/12.05/42 á\OT1/txr/m/n/12.05 L0\C19/rm/m/n/
+12.05/40 
+ []
+
+
+Overfull \hbox (8.58096pt too wide) in paragraph at lines 37--38
+\C19/rm/m/n/12.05/52 Ÿ \C19/rm/m/n/12.05/41 |\C19/rm/m/n/12.05/26 ß| \C19/rm/m
+/n/12.05/56 è \C19/rm/m/n/12.05/54 ,\OT1/txr/m/n/12.05 compaction\C19/rm/m/n/12
+.05/59 Ç \C19/rm/m/n/12.05/38 ß ≥ \C19/rm/m/n/12.05/65 v \C19/rm/m/n/12.05/43 
+ \C19/rm/m/n/12.05/39 å|\C19/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.05/40  \C19/rm/
+m/n/12.05/55 ¥ \C19/rm/m/n/12.05/39 ¸ \C19/rm/m/n/12.05/42 á\OT1/txr/m/n/12.05 
+GraphShard\C19/rm/m/n/12.05/40 \OT1/txr/m/n/12.05 L0\C19/rm/m/n/12.05/59 ï\OT1
+/txr/m/n/12.05 L1\C19/rm/m/n/12.05/40 \OT1/txr/m/n/12.05 compaction
+ []
+
+<FIGs/c4/Algo-Before.png, id=985, 953.5625pt x 452.69125pt>
+File: FIGs/c4/Algo-Before.png Graphic file (type png)
+
+<use FIGs/c4/Algo-Before.png>
+Package pdftex.def Info: FIGs/c4/Algo-Before.png used on input line 46.
+(pdftex.def)             Requested size: 361.34999pt x 171.54784pt.
+
+<FIGs/c4/Algo-After.png, id=986, 953.5625pt x 546.04pt>
+File: FIGs/c4/Algo-After.png Graphic file (type png)
+
+<use FIGs/c4/Algo-After.png>
+Package pdftex.def Info: FIGs/c4/Algo-After.png used on input line 52.
+(pdftex.def)             Requested size: 361.34999pt x 206.92245pt.
+ [29] [30pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.4.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.73 
+      <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c4/Algo-Before.png>]
+<FIGs/c4/Algo-Problem.png, id=999, 953.5625pt x 411.5375pt>
+File: FIGs/c4/Algo-Problem.png Graphic file (type png)
+
+<use FIGs/c4/Algo-Problem.png>
+Package pdftex.def Info: FIGs/c4/Algo-Problem.png used on input line 82.
+(pdftex.def)             Requested size: 361.34999pt x 155.95258pt.
+ [31pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.87 
+      <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c4/Algo-After.png>]
+Overfull \hbox (10.47284pt too wide) in paragraph at lines 92--93
+[]\OT1/txr/m/n/12.05 Flush\C19/rm/m/n/12.05/56 é \C19/rm/m/n/12.05/41 { \C19/rm
+/m/n/12.05/58 è \C19/rm/m/n/12.05/62 ` \C19/rm/m/n/12.05/44 z \C19/rm/m/n/12.05
+/56 § \C19/rm/m/n/12.05/65 ä \C19/rm/m/n/12.05/40  \C19/rm/m/n/12.05/60 ? \C19
+/rm/m/n/12.05/42 U \C19/rm/m/n/12.05/37 ' \C19/rm/m/n/12.05/46  \C19/rm/m/n/12
+.05/45 { \C19/rm/m/n/12.05/39 ¸|\C19/rm/m/n/12.05/25 "| \C19/rm/m/n/12.05/54 X 
+\C19/rm/m/n/12.05/57 „ [][]\OT1/txr/m/n/12.05 4.4[][]|\C19/rm/m/n/12.05/26 ß| \
+C19/rm/m/n/12.05/62 ` \C19/rm/m/n/12.05/44 z \C19/rm/m/n/12.05/53 c|\C19/rm/m/n
+/12.05/26 ß| \OT1/txr/m/n/12.05 flush\C19/rm/m/n/12.05/55 ¶ \C19/rm/m/n/12.05/6
+2 ^\OT1/txr/m/n/12.05 Memtable
+ []
+
+<FIGs/c4/flush-before.png, id=1007, 1255.69125pt x 520.94624pt>
+File: FIGs/c4/flush-before.png Graphic file (type png)
+
+<use FIGs/c4/flush-before.png>
+Package pdftex.def Info: FIGs/c4/flush-before.png used on input line 96.
+(pdftex.def)             Requested size: 361.34999pt x 149.90999pt.
+
+<FIGs/c4/flush-after.png, id=1009, 1017.8025pt x 810.02625pt>
+File: FIGs/c4/flush-after.png Graphic file (type png)
+
+<use FIGs/c4/flush-after.png>
+Package pdftex.def Info: FIGs/c4/flush-after.png used on input line 104.
+(pdftex.def)             Requested size: 361.34999pt x 287.57986pt.
+ [32pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.112 L
+       0°¢L1Œƒº˛—°»°À≥–Úµπ÷√ø…“‘ºı…ŸŒƒº˛…∏—°≤Ω÷Ë£¨Ã·∏ﬂ—°»°¬ °£pdfTeX warning (e
+xt4): destination with the same identifier (name{figure.4.4}) has been already 
+used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.112 L
+       0°¢L1Œƒº˛—°»°À≥–Úµπ÷√ø…“‘ºı…ŸŒƒº˛…∏—°≤Ω÷Ë£¨Ã·∏ﬂ—°»°¬ °£ <G:/thesis/LaTeX
+Ê®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c4/Algo-Problem.png> <G:/thesis/LaTeXÊ®°Êùøv1.2
+/LaTeXÊ®°Êùøv1.2/FIGs/c4/flush-before.png>]
+<FIGs/c4/compaction-algo-before-flow.png, id=1017, 916.42375pt x 947.54pt>
+File: FIGs/c4/compaction-algo-before-flow.png Graphic file (type png)
+
+<use FIGs/c4/compaction-algo-before-flow.png>
+Package pdftex.def Info: FIGs/c4/compaction-algo-before-flow.png used on input 
+line 118.
+(pdftex.def)             Requested size: 361.34999pt x 373.61635pt.
+
+
+LaTeX Warning: File ot162.cmap not found on input line 128.
+
+[33pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.128 ”…
+        ”⁄‘⁄–¬µƒflushÀ„∑®÷–£¨“ª∏ˆMemtable£®∆‰÷–µƒº«¬º ”Œ™Õ¨“ª ±øÃ–¥»Îµƒ£©ª·±...
+ <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c4/flush-after.png>]
+<FIGs/c4/l0-pick-1.pdf, id=1027, 597.55246pt x 845.07718pt>
+File: FIGs/c4/l0-pick-1.pdf Graphic file (type pdf)
+
+<use FIGs/c4/l0-pick-1.pdf>
+Package pdftex.def Info: FIGs/c4/l0-pick-1.pdf used on input line 132.
+(pdftex.def)             Requested size: 361.34999pt x 511.04762pt.
+ [34pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.135 
+       <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c4/compaction-algo-befor
+e-flow.png>] <FIGs/c4/l0-pick-2.pdf, id=1033, 597.55246pt x 845.07718pt>
+File: FIGs/c4/l0-pick-2.pdf Graphic file (type pdf)
+
+<use FIGs/c4/l0-pick-2.pdf>
+Package pdftex.def Info: FIGs/c4/l0-pick-2.pdf used on input line 138.
+(pdftex.def)             Requested size: 361.34999pt x 511.04762pt.
+ [35pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.141 
+       <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c4/l0-pick-1.pdf>]
+<FIGs/c4/compaction-after.pdf, id=1057, 597.55246pt x 845.07718pt>
+File: FIGs/c4/compaction-after.pdf Graphic file (type pdf)
+
+<use FIGs/c4/compaction-after.pdf>
+Package pdftex.def Info: FIGs/c4/compaction-after.pdf used on input line 144.
+(pdftex.def)             Requested size: 361.34999pt x 511.04762pt.
+ [36pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.147 
+       <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c4/l0-pick-2.pdf>]
+<FIGs/c4/compaction-algo-after-flow.png, id=1082, 1051.93pt x 891.33pt>
+File: FIGs/c4/compaction-algo-after-flow.png Graphic file (type png)
+
+<use FIGs/c4/compaction-algo-after-flow.png>
+Package pdftex.def Info: FIGs/c4/compaction-algo-after-flow.png used on input l
+ine 150.
+(pdftex.def)             Requested size: 361.34999pt x 306.17633pt.
+
+<FIGs/c4/Algo-Pick.png, id=1083, 953.5625pt x 546.04pt>
+File: FIGs/c4/Algo-Pick.png Graphic file (type png)
+
+<use FIGs/c4/Algo-Pick.png>
+Package pdftex.def Info: FIGs/c4/Algo-Pick.png used on input line 155.
+(pdftex.def)             Requested size: 361.34999pt x 206.92245pt.
+ [37pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.162 
+       <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c4/compaction-after.pdf>
+]
+Overfull \hbox (8.44855pt too wide) in paragraph at lines 171--172
+[]\C19/rm/m/n/12.05/37 ˇ \C19/rm/m/n/12.05/55 ¡ \C19/rm/m/n/12.05/44 Ç \C19/rm/
+m/n/12.05/46 ∏ \C19/rm/m/n/12.05/58 è \C19/rm/m/n/12.05/60 ( \C19/rm/m/n/12.05/
+44 Ç \C19/rm/m/n/12.05/42 ˙ \C19/rm/m/n/12.05/56 i \C19/rm/m/n/12.05/51 S \C19/
+rm/m/n/12.05/37 ‹ \C19/rm/m/n/12.05/47 m \C19/rm/m/n/12.05/41 u \C19/rm/m/n/12.
+05/62 ^ \C19/rm/m/n/12.05/45 8 \C19/rm/m/n/12.05/54 +|\C19/rm/m/n/12.05/25 "| \
+C19/rm/m/n/12.05/55 ¶ \C19/rm/m/n/12.05/62 ^ \C19/rm/m/n/12.05/54 n \C19/rm/m/n
+/12.05/57  \C19/rm/m/n/12.05/64 Ã \C19/rm/m/n/12.05/44 ≈|\C19/rm/m/n/12.05/26 
+ß| \C19/rm/m/n/12.05/50 z \C19/rm/m/n/12.05/57  \C19/rm/m/n/12.05/64 Ã \C19/rm
+/m/n/12.05/44 ≈ \C19/rm/m/n/12.05/62 k\OT1/txr/m/n/12.05 24\C19/rm/m/n/12.05/43
+ ÿ\OT1/txr/m/n/12.05 CPU|\C19/rm/m/n/12.05/26 ß|
+ []
+
+[38pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+0}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.176 
+       <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c4/compaction-algo-after
+-flow.png>]
+Overfull \hbox (0.67259pt too wide) in paragraph at lines 182--183
+[] |\C19/rm/m/n/12.05/25 /|\OT1/txr/m/n/12.05 BeforeLevelIds|\C19/rm/m/n/12.05/
+25 0||\C19/rm/m/n/12.05/26 µ| \OT1/txr/m/n/12.05 compaction\C19/rm/m/n/12.05/43
+ L \C19/rm/m/n/12.05/38 ß \C19/rm/m/n/12.05/55 ¥ \C19/rm/m/n/12.05/40 È \C19/rm
+/m/n/12.05/62 u\OT1/txr/m/n/12.05 LSM\C19/rm/m/n/12.05/55 ‰ \C19/rm/m/n/12.05/4
+0  \C19/rm/m/n/12.05/51 = \C19/rm/m/n/12.05/38   \C19/rm/m/n/12.05/46 ? \C19/r
+m/m/n/12.05/60 1 \C19/rm/m/n/12.05/40 |\C19/rm/m/n/12.05/25 "| \C19/rm/m/n/12.
+05/57 „ [][]\OT1/txr/m/n/12.05 4.12[][]\C19/rm/m/n/12.05/64 •
+ []
+
+[39pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.185   \item °
+               ∞totalCompactionCount°±£∫◊‹π≤Ω¯––µƒcompaction»ŒŒÒ ˝°£¥À≤Œ ˝Ω·...
+ <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c4/Algo-Pick.png>]
+Overfull \hbox (2.35991pt too wide) in paragraph at lines 186--187
+\C19/rm/m/n/12.05/37 '\OT1/txr/m/n/12.05 compaction\C19/rm/m/n/12.05/46 ≤ \C19/
+rm/m/n/12.05/43 L \C19/rm/m/n/12.05/40  \C19/rm/m/n/12.05/65 g \C19/rm/m/n/12.
+05/54 , \C19/rm/m/n/12.05/55 û \C19/rm/m/n/12.05/45 m \C19/rm/m/n/12.05/61 á \C
+19/rm/m/n/12.05/38  \C19/rm/m/n/12.05/43 È \C19/rm/m/n/12.05/40 ı \C19/rm/m/n/
+12.05/37 |\C19/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.05/40  \C19/rm/m/n/12.05/51 
+U \C19/rm/m/n/12.05/42 ç \C19/rm/m/n/12.05/46 ∞ \C19/rm/m/n/12.05/54 ( \C19/rm/
+m/n/12.05/40 / \C19/rm/m/n/12.05/57 N \C19/rm/m/n/12.05/59 y\OT1/txr/m/n/12.05 
+compaction\C19/rm/m/n/12.05/59 û
+ []
+
+<FIGs/c4/restful-log-exp.png, id=1126, 712.16063pt x 801.74532pt>
+File: FIGs/c4/restful-log-exp.png Graphic file (type png)
+
+<use FIGs/c4/restful-log-exp.png>
+Package pdftex.def Info: FIGs/c4/restful-log-exp.png used on input line 193.
+(pdftex.def)             Requested size: 361.34999pt x 406.805pt.
+Missing character: There is no ñ in font txr!
+Missing character: There is no ñ in font txr!
+Missing character: There is no ñ in font txr!
+Missing character: There is no ñ in font txr!
+Missing character: There is no ñ in font txr!
+Missing character: There is no ñ in font txr!
+
+<FIGs/c4/log-form-exp-2.png, id=1128, 1041.8925pt x 274.77657pt>
+File: FIGs/c4/log-form-exp-2.png Graphic file (type png)
+
+<use FIGs/c4/log-form-exp-2.png>
+Package pdftex.def Info: FIGs/c4/log-form-exp-2.png used on input line 208.
+(pdftex.def)             Requested size: 361.34999pt x 95.29694pt.
+ [40] [41pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.4.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.259 
+       <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c4/restful-log-exp.png>]
+[42pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.279 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.4
+.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.279 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.4
+.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.279 
+       <G:/thesis/LaTeXÊ®°Êùøv1.2/LaTeXÊ®°Êùøv1.2/FIGs/c4/log-form-exp-2.png>]
+[43pdfTeX warning (ext4): destination with the same identifier (name{table.4.3}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.339     \end{table}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{table.4.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.339     \end{table}
+                     pdfTeX warning (ext4): destination with the same identifie
+r (name{table.4.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.339     \end{table}
+                     ] [44pdfTeX warning (ext4): destination with the same iden
+tifier (name{table.4.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.387 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.4
+.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.387 
+      ]
+Underfull \hbox (badness 4242) in paragraph at lines 439--440
+[]|\C19/rm/m/n/9.03/38 } \C19/rm/m/n/9.03/55 ¡ \C19/rm/m/n/9.03/62 ` \C19/rm/m/
+n/9.03/59 k \C19/rm/m/n/9.03/56 | ¢ \C19/rm/m/n/9.03/37 ÿ \C19/rm/m/n/9.03/55 ¶
+ \C19/rm/m/n/9.03/62 ^\OT1/txr/m/n/9.03 L1\C19/rm/m/n/9.03/55 Í \C19/rm/m/n/9.0
+3/46 ‚ \C19/rm/m/n/9.03/58 © \C19/rm/m/n/9.03/45 á
+ []
+
+[45pdfTeX warning (ext4): destination with the same identifier (name{table.4.8}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.446   \end{table}
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{table.4.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.446   \end{table}
+                   pdfTeX warning (ext4): destination with the same identifier 
+(name{table.4.10}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.446   \end{table}
+                   ]
+Overfull \hbox (2.59233pt too wide) in paragraph at lines 448--449
+\C19/rm/m/n/12.05/40 È\OT1/txr/m/n/12.05 EXP4|\C19/rm/m/n/12.05/26 ß| \C19/rm/m
+/n/12.05/62 ` \C19/rm/m/n/12.05/44 z \C19/rm/m/n/12.05/60  \C19/rm/m/n/12.05/4
+3 J \C19/rm/m/n/12.05/42 ç \C19/rm/m/n/12.05/46 ? \C19/rm/m/n/12.05/61 ò \C19/r
+m/m/n/12.05/37 ⁄|\C19/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.05/40  \C19/rm/m/n/12.
+05/61 è \C19/rm/m/n/12.05/50 v \C19/rm/m/n/12.05/62 k \C19/rm/m/n/12.05/46 ) ˚\
+OT1/txr/m/n/12.05 EXP4\C19/rm/m/n/12.05/64 • \C19/rm/m/n/12.05/57 N \C19/rm/m/n
+/12.05/59 y \C19/rm/m/n/12.05/38 — \C19/rm/m/n/12.05/40  \C19/rm/m/n/12.05/58 
+© \C19/rm/m/n/12.05/45 á \C19/rm/m/n/12.05/64 ¢ \C19/rm/m/n/12.05/49 3\OT1/txr/
+m/n/12.05 L0\C19/rm/m/n/12.05/40 \OT1/txr/m/n/12.05 bug|\C19/rm/m/n/12.05/25 "
+|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 448--449
+
+ []
+
+[46pdfTeX warning (ext4): destination with the same identifier (name{table.4.11
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.499     \item «
+                 Âø’L0”√ ±¥Û∑˘Àı∂Ã£¨’‚“‚Œ∂◊≈º«¬ºƒ‹πª‘⁄∏¸∂Ã ±º‰ƒ⁄“‘’˚ÃÂ”––Úµƒ...
+pdfTeX warning (ext4): destination with the same identifier (name{table.4.12}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.499     \item «
+                 Âø’L0”√ ±¥Û∑˘Àı∂Ã£¨’‚“‚Œ∂◊≈º«¬ºƒ‹πª‘⁄∏¸∂Ã ±º‰ƒ⁄“‘’˚ÃÂ”––Úµƒ...
+]
+Overfull \hbox (0.3509pt too wide) in paragraph at lines 509--510
+[]\C19/rm/m/n/12.05/37 ˇ \C19/rm/m/n/12.05/55 ¡ \C19/rm/m/n/12.05/44 Ç \C19/rm/
+m/n/12.05/46 ∏ \C19/rm/m/n/12.05/58 è \C19/rm/m/n/12.05/56 h \C19/rm/m/n/12.05/
+54 < \C19/rm/m/n/12.05/37 ) \C19/rm/m/n/12.05/45 P \C19/rm/m/n/12.05/37  \C19/
+rm/m/n/12.05/40 > \C19/rm/m/n/12.05/51 M|\C19/rm/m/n/12.05/26 ß| \C19/rm/m/n/12
+.05/55 ¶ \C19/rm/m/n/12.05/62 ^ \C19/rm/m/n/12.05/39 ¸ \C19/rm/m/n/12.05/47 ¨ \
+C19/rm/m/n/12.05/44 ≈ \C19/rm/m/n/12.05/60  \C19/rm/m/n/12.05/62 M \C19/rm/m/n
+/12.05/52  \C19/rm/m/n/12.05/62 Ü\OT1/txr/m/n/12.05 16\C19/rm/m/n/12.05/43 ÿ \
+C19/rm/m/n/12.05/60 %\OT1/txr/m/n/12.05 2.6GHz\C19/rm/m/n/12.05/64 Ã \C19/rm/m/
+n/12.05/52 ™\OT1/txr/m/n/12.05 CPU|\C19/rm/m/n/12.05/25 "|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
+
+ []
+
+[47pdfTeX warning (ext4): destination with the same identifier (name{table.4.13
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.517 \subsection
+                 {≤‚ ‘±‰¡ø£∫ «∑Ò≤…”√”≈ªØÀ„∑®}] [48]
+Overfull \hbox (2.44748pt too wide) in paragraph at lines 562--563
+\C19/rm/m/n/12.05/63 3\OT1/txr/m/n/12.05 compaction\C19/rm/m/n/12.05/43 L \C19/
+rm/m/n/12.05/38 ß \C19/rm/m/n/12.05/46 ∞ \C19/rm/m/n/12.05/59 [ \C19/rm/m/n/12.
+05/45 O \C19/rm/m/n/12.05/56 é \C19/rm/m/n/12.05/37 ÿ \C19/rm/m/n/12.05/57 ” \C
+19/rm/m/n/12.05/40 N › \C19/rm/m/n/12.05/41 ê \C19/rm/m/n/12.05/55 ™ \C19/rm/m/
+n/12.05/47 å \C19/rm/m/n/12.05/61 ± \C19/rm/m/n/12.05/55 ¢ \C19/rm/m/n/12.05/59
+ y \C19/rm/m/n/12.05/40  ÷ \C19/rm/m/n/12.05/48 * \C19/rm/m/n/12.05/39 å \C19/
+rm/m/n/12.05/49 «|\C19/rm/m/n/12.05/26 ß| \OT1/txr/m/n/12.05 StellarDB\C19/rm/m
+/n/12.05/63 3\OT1/txr/m/n/12.05 L0\C19/rm/m/n/12.05/40 
+ []
+
+
+Overfull \hbox (6.44781pt too wide) in paragraph at lines 562--563
+\OT1/txr/m/n/12.05 com-pac-tion\C19/rm/m/n/12.05/40 ÷ \C19/rm/m/n/12.05/48 * \C
+19/rm/m/n/12.05/39 å \C19/rm/m/n/12.05/49 « \C19/rm/m/n/12.05/39 l\OT1/txr/m/n/
+12.05 419%\C19/rm/m/n/12.05/45 ¸ \C19/rm/m/n/12.05/40 $  \C19/rm/m/n/12.05/49 
+
+\OT1/txr/m/n/12.05 119%|\C19/rm/m/n/12.05/25 "| \C19/rm/m/n/12.05/63 ˘ \C19/rm/
+m/n/12.05/61  \C19/rm/m/n/12.05/40  \C19/rm/m/n/12.05/46 ? \C19/rm/m/n/12.05/
+37 ⁄ \C19/rm/m/n/12.05/57 ‚ \C19/rm/m/n/12.05/52 ª \C19/rm/m/n/12.05/49 
+\OT1/txr/m/n/12.05 compaction\C19/rm/m/n/12.05/63 3\OT1/txr/m/n/12.05 L0\C19/rm
+/m/n/12.05/40 
+ []
+
+) (G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\chapter/c5.tex [49pdfTeX warning (
+ext4): destination with the same identifier (name{table.4.14}) has been already
+ used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+            {◊‹Ω·”Î’πÕ˚}]
+µ⁄ŒÂ’¬
+[50
+
+]) (G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\thesis.bbl [51]
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 8.
+
+(e:\CTEX\MiKTeX\tex\latex\txfonts\ot1txtt.fd
+File: ot1txtt.fd 2000/12/15 v3.1
+)
+Underfull \hbox (badness 2277) in paragraph at lines 11--12
+[]\OT1/txr/m/n/12.05 DB-Engines, \C19/rm/m/n/12.05/55 Í \C19/rm/m/n/12.05/46 ‚ 
+\C19/rm/m/n/12.05/47 • \C19/rm/m/n/12.05/49 6 \C19/rm/m/n/12.05/60 1 \C19/rm/m/
+n/12.05/40 › \C19/rm/m/n/12.05/53 ™ \C19/rm/m/n/12.05/55 ≥\OT1/txr/m/n/12.05 , 
+[][]$\OT1/txtt/m/n/12.05 https : / / db -[] engines\OML/txmi/m/it/12.05 :\OT1/t
+xtt/m/n/12.05 com / en /$
+ []
+
+[52
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 95--100
+\OT1/txr/m/n/12.05 URL [][]$\OT1/txtt/m/n/12.05 https : / / www\OML/txmi/m/it/1
+2.05 :\OT1/txtt/m/n/12.05 usenix\OML/txmi/m/it/12.05 :\OT1/txtt/m/n/12.05 org /
+ conference / atc14 / technical -[]$
+ []
+
+[53] [54]) [55]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                \hskip 12.05pt
+(hyperref)                replaced by space on input line 244.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                \hskip 12.05pt
+(hyperref)                replaced by space on input line 244.
+
+[56
+
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
+ (G:\thesis\LaTeXÊ®°Êùøv1.2\LaTeXÊ®°Êùøv1.2\thesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: A9BE9306204F54F07B8559DDDF0E9FCA;5768.
+ ) 
+Here is how much of TeX's memory you used:
+ 20924 strings out of 495354
+ 329853 string characters out of 3183859
+ 408752 words of memory out of 3000000
+ 22784 multiletter control sequences out of 15000+200000
+ 156059 words of font info for 471 fonts, out of 3000000 for 9000
+ 26 hyphenation exceptions out of 8191
+ 47i,14n,51p,1015b,1142s stack positions out of 5000i,500n,10000p,200000b,50000s
+{e:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/WINDOWS/Fonts/simhei.ttf>
+<C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/sim
+hei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/F
+onts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/W
+INDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.t
+tf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/
+simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOW
+S/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C
+:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhe
+i.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fon
+ts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WIN
+DOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc
+><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/si
+msun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/
+Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/
+WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.
+ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts
+/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDO
+WS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><
+C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/sims
+un.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fo
+nts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WI
+NDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.tt
+c><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/s
+imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS
+/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:
+/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai
+.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Font
+s/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WIND
+OWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf>
+<C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/sim
+kai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/F
+onts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/W
+INDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.t
+tf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/
+simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><e:/CTEX/MiKTeX/fonts/type1/public/txfo
+nts/rtxmi.pfb><e:/CTEX/MiKTeX/fonts/type1/public/txfonts/rtxr.pfb><e:/CTEX/MiKT
+eX/fonts/type1/public/txfonts/txsy.pfb><e:/CTEX/MiKTeX/fonts/type1/public/txfon
+ts/txtt.pfb><e:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><e:/CTEX/MiKTeX/fo
+nts/type1/urw/times/utmr8a.pfb><e:/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on thesis.pdf (69 pages, 2520192 bytes).
+PDF statistics:
+ 1649 PDF objects out of 1728 (max. 8388607)
+ 256 named destinations out of 1000 (max. 500000)
+ 953 words of extra memory for PDF output out of 10000 (max. 10000000)
+
